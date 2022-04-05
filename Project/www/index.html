@@ -4,27 +4,223 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/font.css" />
+    <link rel="stylesheet" href="css/index_body.css" />
+    <link rel="stylesheet" href="css/header_footer.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="shortcut icon" type="image/icon" href="favicon.ico"/>
     <title>ACS Voyages</title>
 </head>
-
     <body>
-
         <header>
-
-
+            <div id="fix-menu">
+                <div class="logo-name" id="logo-header">
+                    <img title="logo" src="img/logo site voyage_final.png" alt="logo" />
+                    <p>ACS Voyage</p>
+                </div>
+                <nav>
+                    <ul id="head_right">
+                    <li>
+                        <a href="./index.html">Accueil</a>
+                    </li>
+                    <li id="submenu_categories">
+                        Catégorie
+                        <ul class="submenu" id="submenu_categorie">
+                            <li>
+                                <a href="./pages/vol.html">Vol+hôtel</a>
+                            </li>
+                            <li>
+                                <a href="./pages/train.html">Train+hôtel</a>
+                            </li>
+                            <li>
+                                <a href="./pages/croisiere.html">Croisière</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#section_commande">Connexion</a>
+                    </li>
+                    </ul>
+                </nav>
+            </div>
         </header>
-
-        
-
-
-
-
-
+        <section id="section-promo">
+            <p id="title_promo">PROMO</p>
+            <div id="vignettes-promos">
+                <article id="voyage-1">
+                    <h6>Vol+hôtel</h6>
+                    <figure class="pourcentage"><p>-15%</p></figure>
+                    <figure class="vignette-promo">
+                        <p class="titre_voyage_promo">Marseille</p>
+                        <div class="prix-promo"><p>750€</p></div>
+                        <img title="voyage-1" src="./img/Kiel_Grand.jpg" alt="Kiel_Grand" />
+                    </figure>
+                </article>
+                <article id="voyage-1">
+                    <h6>Train+hôtel</h6>
+                    <figure class="pourcentage"><p>-20%</p></figure>
+                    <figure class="vignette-promo">
+                        <p class="titre_voyage_promo">Marseille</p>
+                        <p class="prix-promo">750€</p>
+                        <img title="voyage-1" src="./img/Kiel_Grand.jpg" alt="Kiel_Grand" />
+                    </figure>
+                </article>
+                <article id="voyage-1">
+                    <h6>Croisière</h6>
+                    <figure class="pourcentage"><p>-35%</p></figure>
+                    <figure class="vignette-promo">
+                        <p class="titre_voyage_promo">Marseille</p>
+                        <p class="prix-promo">750€</p>
+                        <img title="voyage-1" src="./img/Kiel_Grand.jpg" alt="Kiel_Grand" />
+                    </figure>
+                </article>
+            </div>
+        </section>
+        <section class="separateur_section">
+            <img titre="clous" alt="clous" src="./img/clous.svg" />
+            <img titre="clous" alt="clous" src="./img/clous.svg" />
+            <img titre="clous" alt="clous" src="./img/clous.svg" />
+            <img titre="clous" alt="clous" src="./img/clous.svg" />
+        </section>
+        <section id="recherche">
+            <figure id="form_find" class="tabbled">
+                <ul>
+                  <li id="onglet_one" class="onglet_default onglet_active">
+                    Vol+hôtel
+                  </li>
+                  <li id="onglet_two" class="onglet_default">
+                    Train+hôtel
+                  </li>
+                  <li id="onglet_three" class="onglet_default">
+                    Croisière
+                  </li>
+                </ul>
+              
+                <form class="form_active">
+                  mon texte 1
+                </form>
+              
+              </figure>
+        </section>
+        <section class="separateur_section">
+            <img titre="clous" alt="clous" src="./img/clous.svg" />
+            <img titre="clous" alt="clous" src="./img/clous.svg" />
+            <img titre="clous" alt="clous" src="./img/clous.svg" />
+            <img titre="clous" alt="clous" src="./img/clous.svg" />
+        </section>
+        <section id="voyages">
+            <div class="categorie" id="categorie1">
+                <p class="vertical-texte">Vol+hôtel</p>
+                <figure class="vignette_voyage">
+                    <p class="titre_voyage">Marseille</p>
+                    <p class="prix-voyage">750€</p>
+                    <img title="voyage" alt="voyage" src="./img/Kiel_Grand.jpg" />
+                </figure>
+                <figure class="vignette_voyage">
+                    <p class="titre_voyage">Marseille</p>
+                    <p class="prix-voyage">750€</p>
+                    <img title="voyage" alt="voyage" src="./img/Kiel_Grand.jpg" />
+                </figure>
+            </div>
+            <div class="categorie" id="categorie2">
+                <p class="vertical-texte">Train+hôtel</p>
+                <figure class="vignette_voyage">
+                    <p class="titre_voyage">Marseille</p>
+                    <p class="prix-voyage">750€</p>
+                    <img title="voyage" alt="voyage" src="./img/Kiel_Grand.jpg" />
+                </figure>
+                <figure class="vignette_voyage">
+                    <p class="titre_voyage">Marseille</p>
+                    <p class="prix-voyage">750€</p>
+                    <img title="voyage" alt="voyage" src="./img/Kiel_Grand.jpg" />
+                </figure>
+            </div>
+            
+            <div class="categorie" id="categorie3">
+                <p class="vertical-texte">Croisière</p>
+                <figure class="vignette_voyage">
+                    <p class="titre_voyage">Marseille</p>
+                    <p class="prix-voyage">750€</p>
+                    <img title="voyage" alt="voyage" src="./img/Kiel_Grand.jpg" />
+                </figure>
+                <figure class="vignette_voyage">
+                    <p class="titre_voyage">Marseille</p>
+                    <p class="prix-voyage">750€</p>
+                    <img title="voyage" alt="voyage" src="./img/Kiel_Grand.jpg" />
+                </figure>
+            </div>
+        </section>
         <footer>
-
-
+            <figure>
+                <div class="block_footer logo-name" id="logo-footer">
+                    <img title="logo" src="img/logo site voyage_final.png" alt="logo" />
+                    <p>ACS Voyage</p>
+                </div>
+                <div class="block_footer">
+                    <ul>
+                      <li class="title">Entreprise</li>
+                      <li><a href="#">A propos</a></li>
+                      <li><a href="#">Mentions Légales</a></li>
+                      <li><a href="#">CGV</a></li>
+                    </ul>
+          
+                    <ul id="footer_title_right">
+                      <li class="title">Contact</li>
+                      <li><a href="#">Particulier</a></li>
+                      <li><a href="#">Professionel</a></li>
+                    </ul>
+                </div>
+          
+                <div class="block_footer" id="logos">
+                    <p>Suivez-nous</p>
+                    <img
+                        class="img-logo"
+                        id="logo_facebook"
+                        title="logo facebook"
+                        src="img/facebook.svg"
+                        alt="logo facebook"
+                    />
+                    <img
+                        class="img-logo"
+                        id="logo_instagram"
+                        title="logo instagram"
+                        src="img/insta.svg"
+                        alt="logo instagram"
+                    />
+                    <img
+                        class="img-logo"
+                        id="logo_twitter"
+                        title="logo twitter"
+                        src="img/twitter.svg"
+                        alt="logo twitter"
+                    />
+                    <br /><br />
+                    <p>Paiement sécurisé</p>
+                    <img
+                        class="img-logo-carte"
+                        id="logo_carte_bleu"
+                        title="logo carte bleu"
+                        src="img/picto-cb.svg"
+                        alt="logo carte bleu"
+                    />
+                    <img
+                        class="img-logo-carte"
+                        id="logo_carte_master"
+                        title="logo master carte"
+                        src="img/picto-mastercard.svg"
+                        alt="logo master carte"
+                    />
+                    <img
+                        class="img-logo-carte"
+                        id="logo_carte_visa"
+                        title="logo carte visa"
+                        src="img/picto-visa.svg"
+                        alt="logo carte visa"
+                    />
+                  </div>
+            </figure>
+            
+            <p id="droits_reserves">Tous droits réservés 2022</p>
         </footer>
-
     </body>
-
 </html>

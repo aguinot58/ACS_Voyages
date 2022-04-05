@@ -1,0 +1,209 @@
+/* les bases de la page */
+header, section, footer {
+    max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+}
+
+.logo-name {
+    font-family: "Inter-Bold";
+    color: #0091C6;
+}
+
+/* le menu et le footer */
+#fix-menu, footer {
+    background-color: #EFEFEF;
+    display: flex;
+    max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    border: #8F8F8F 1px solid;
+    box-shadow: 5px 5px 10px RGBa(0, 0, 0, 0.5);
+}
+
+#fix-menu {
+    margin-top: -6px;
+    margin-left: -5px;
+    padding-left: 11px;
+    position: fixed;
+    width: 950px;
+    z-index: 4;
+}
+
+/* dans le header */
+#logo-header, #logo-footer img {
+    max-height: 25px;
+    display: flex;
+}
+
+#logo-header img {
+    max-width: 25px;
+    display: flex;
+}
+
+#logo-header p, #logo-footer p {
+    margin-left: 10px;
+    font-size: 25px;
+}
+
+nav {
+    display: inline;
+    float: right;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+  
+header ul {
+    float: right;
+    margin-left: 0;
+    padding-left: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    list-style: none;
+}
+  
+header ul li {
+    display: inline;
+    padding: 10px;
+}
+
+header ul li:hover {
+    transform: scale(1.2);
+}
+  
+header #head_logo_01 {
+    margin-top: 20px;
+    margin-left: 130px;
+    width: 29px;
+    height: 29px;
+}
+  
+header a,
+header a:link {
+    color: black;
+    text-decoration: none;
+}
+
+.submenu {
+    background-color: #EFEFEF;
+    display: none;
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 82px;
+    width: 150px;
+    border: #8F8F8F 1px solid;
+    box-shadow: 5px 5px 10px RGBa(0, 0, 0, 0.5);
+}
+
+.submenu li {
+    display: inline-block;
+    float: none;
+    text-align: left;
+    line-height: 25px;
+    padding: 1px 10px;
+}
+
+.submenu li:hover {
+    transform: scale(1.2);
+}
+
+header ul #submenu_categories:hover #submenu_categorie, header ul #submenu_categories #submenu_categorie:hover {
+    display: block;
+}
+
+/* le footer de la page */
+footer {
+    text-align: center;
+    padding: 15px;
+    padding-top: 20px;
+}
+
+footer #droits_reserves {
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+    padding-top: 30px;
+}
+
+footer #droits_reserves {
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+    padding-top: 30px;
+}
+
+footer ul {
+    float: right;
+    margin-left: 0;
+    padding-left: 0;
+    padding-top: 10px;
+    list-style: none;
+}
+  
+footer ul li {
+    text-align: left;
+    padding: 5px;
+    margin-top: -10px;
+}
+
+footer ul li a,
+footer ul li a:link {
+  color: black;
+  text-decoration: none;
+}
+
+footer ul li a:hover {
+  text-decoration: underline;
+}
+
+footer ul li.title {
+    font-family: "Inter-Bold";
+    padding-bottom: 15px;
+    transform: rotate();
+}
+
+footer ul {
+    margin-left: 20px;
+    float: left;
+}
+
+footer ul#footer_title_right {
+    margin-left: 37px;
+    float: right;
+}
+
+footer .img-logo {
+    width: 25px;
+}
+
+footer figure {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0px 20px;
+}
+
+footer .block_footer {
+    text-align: left;
+}
+
+footer #logos {
+    font-family: "Inter-Bold";
+}
+
+.img-logo-carte {
+    border: black 1px solid;
+    border-radius: 5px;
+}
+
+#logo-footer img {
+    max-height: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 15px;
+}
