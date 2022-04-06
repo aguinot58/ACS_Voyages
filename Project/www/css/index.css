@@ -1,4 +1,5 @@
-/* les bases de la page index */
+/* -------------------- */
+/* la base des sections */
 section {
     max-width: 950px;
     margin-left: auto;
@@ -11,6 +12,8 @@ section {
     border-radius: 20px;
     border: #000000 1px solid;
     padding: 40px 0px;
+    transition-property: border-radius;
+    transition-duration: 0.5s;
 }
 
 .separateur_section {
@@ -22,6 +25,8 @@ section {
     justify-content: space-between;
     margin-top: -24px;
     margin-bottom: -25px;
+    transition-property: margin-bottom, margin-top;
+    transition-duration: 0.5s;
 }
 
 .separateur_section img {
@@ -29,6 +34,8 @@ section {
     border: #8A8A8A 1px solid;
     border-radius: 18px;
     box-shadow: 4px 3px 7px rgba(0, 0, 0, 0.45);
+    transition-property: width;
+    transition-duration: 0.5s;
 }
 
 
@@ -80,6 +87,11 @@ section {
     width: 508px;
     margin-left: -50%;
 }
+
+.vignette-promo:hover {
+    transform: scale(1.1);
+}
+
 
 .vignette-promo .prix-promo {
     content: "";
@@ -139,6 +151,15 @@ section {
     overflow: hidden;
     border: black 1px solid;
     border-radius: 20px;
+}
+
+.vignette_voyage img {
+    width: 150%;
+    margin-left: -50%;
+}
+
+.vignette_voyage:hover {
+    transform: scale(1.1) rotate(5deg);
 }
 
 
@@ -247,3 +268,46 @@ section {
     margin-left: -37px;
 }
 
+/**********************/
+/** version < 950px ***/
+/**********************/
+@media screen and (max-width: 950px) {
+    section {
+        border-radius: unset;
+    }
+
+    .separateur_section img {
+        width: 9px;
+        margin-top: 0;
+        transition-property: width, opacity;
+        transition-duration: 0.5s;
+    }
+}
+
+/**********************/
+/** version < 950px ***/
+/**********************/
+@media screen and (max-width: 720px) {
+    /* les vignettes promo */
+    #vignettes-promos {
+        width: 85%;
+    }
+}
+
+
+
+/***************************/
+/** version mobile 655px ***/
+/***************************/
+@media screen and (max-width: 655px) {
+    .separateur_section img {
+        /*margin-top: 46px;*/
+        width: 0px;
+        opacity: 0;
+    }
+
+    .separateur_section {
+        margin-top: -1px;
+        margin-bottom: -2px;
+    }
+}

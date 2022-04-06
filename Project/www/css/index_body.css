@@ -16,4 +16,16 @@ body {
     overflow: auto;
     scroll-behavior: auto;
     font-family: "Inter-Regular";
+    transition-property: background-image;
+    transition-duration: 0.5s;
 }
+
+/**********************/
+/** version < 950px ***/
+/**********************/
+@media screen and (max-width: 920px) {
+    body {
+        background: unset;
+    }
+}
+

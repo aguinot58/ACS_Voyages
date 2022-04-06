@@ -31,9 +31,11 @@ header, section, footer {
     margin-left: -5px;
     padding-left: 11px;
     position: fixed;
-    width: 950px;
-    z-index: 4;
+    width: 100%;
+    z-index: 5;
 }
+
+
 
 /* dans le header */
 #logo-header, #logo-footer img {
@@ -57,7 +59,14 @@ nav {
     margin-top: auto;
     margin-bottom: auto;
 }
-  
+
+/* menu pour mobile */
+#menu_mobile {
+    display: none;
+    padding-top: 5px;
+}
+
+/* menu a afficher */
 header ul {
     float: right;
     margin-left: 0;
@@ -73,7 +82,10 @@ header ul li {
 }
 
 header ul li:hover {
-    transform: scale(1.2);
+    background-color: #d3d2d2;
+    transform: scale(1.1);
+    border: #8F8F8F 1px solid;
+    box-shadow: 5px 5px 10px RGBa(0, 0, 0, 0.5);
 }
   
 header #head_logo_01 {
@@ -97,10 +109,11 @@ header a:link {
     margin-left: 82px;
     width: 150px;
     border: #8F8F8F 1px solid;
-    box-shadow: 5px 5px 10px RGBa(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 10px RGBa(0, 0, 0, 0.5);  
 }
 
 .submenu li {
+    width: 100%;
     display: inline-block;
     float: none;
     text-align: left;
@@ -109,7 +122,10 @@ header a:link {
 }
 
 .submenu li:hover {
-    transform: scale(1.2);
+    background-color: #d3d2d2;
+    transform: scale(1.1);
+    border: #8F8F8F 1px solid;
+    box-shadow: 5px 5px 10px RGBa(0, 0, 0, 0.5);
 }
 
 header ul #submenu_categories:hover #submenu_categorie, header ul #submenu_categories #submenu_categorie:hover {
@@ -184,12 +200,15 @@ footer .img-logo {
 footer figure {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     width: 100%;
     padding: 0px 20px;
 }
 
 footer .block_footer {
+    min-width: 150px;
     text-align: left;
+    padding-bottom: 25px;
 }
 
 footer #logos {
@@ -206,4 +225,56 @@ footer #logos {
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 15px;
+}
+
+/***************************/
+/** version mobile 655px ***/
+/***************************/
+@media screen and (max-width: 655px) {
+/* menu pour mobile */
+    #menu_mobile {
+        display: unset;
+    }
+
+    /* menu a afficher */
+    header ul {
+        background-color: #EFEFEF;
+        display: none;
+        position: absolute;
+        margin-top: 5px;
+        margin-left: 82px;
+        width: 150px;
+        height: 100%;
+        border: #8F8F8F 1px solid;
+        box-shadow: 5px 5px 10px RGBa(0, 0, 0, 0.5);  
+    }
+    
+    header ul li {
+        width: 100%;
+        display: inline-block;
+        float: none;
+        text-align: left;
+        line-height: 25px;
+        padding: 1px 10px;
+    }
+
+    header ul li:hover {
+        background-color: #d3d2d2;
+        transform: scale(1.1);
+        border: #8F8F8F 1px solid;
+        box-shadow: 5px 5px 10px RGBa(0, 0, 0, 0.5);
+    }
+
+    .submenu {
+        display: unset;
+        position: unset;
+        margin-top: unset;
+        margin-left: unset;
+        width: unset;
+        box-shadow: none;  
+    }
+
+    #menu-all:hover ul {
+        display: block;
+    }
 }
