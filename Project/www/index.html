@@ -15,7 +15,7 @@
         <header>
             <div id="fix-menu">
                 <div class="logo-name" id="logo-header">
-                    <img title="logo" src="img/logo site voyage_final.png" alt="logo" />
+                    <img title="logo" class="logo" src="img/logo site voyage_final.png" alt="logo" />
                     <p>ACS Voyage</p>
                 </div>
                 <nav id="menu-all">
@@ -25,7 +25,7 @@
                         <a href="./index.html">Accueil</a>
                     </li>
                     <li id="submenu_categories">
-                        Catégorie
+                        <a href="#">Catégorie</a>
                         <ul class="submenu" id="submenu_categorie">
                             <li>
                                 <a href="./pages/vol.html">Vol+hôtel</a>
@@ -54,7 +54,7 @@
                     <figure class="vignette-promo">
                         <p class="titre_voyage_promo">Marseille</p>
                         <div class="prix-promo"><p>750€</p></div>
-                        <img title="voyage-1" src="./img/Kiel_Grand.jpg" alt="Kiel_Grand" />
+                        <img title="voyage-1" src="./data/thumb/Kiel_Grand.jpg" alt="Kiel_Grand" />
                     </figure>
                 </article>
                 <article id="voyage-1">
@@ -63,7 +63,7 @@
                     <figure class="vignette-promo">
                         <p class="titre_voyage_promo">Marseille</p>
                         <p class="prix-promo">750€</p>
-                        <img title="voyage-1" src="./img/Kiel_Grand.jpg" alt="Kiel_Grand" />
+                        <img title="voyage-1" src="./data/thumb/Kiel_Grand.jpg" alt="Kiel_Grand" />
                     </figure>
                 </article>
                 <article id="voyage-1">
@@ -72,7 +72,7 @@
                     <figure class="vignette-promo">
                         <p class="titre_voyage_promo">Marseille</p>
                         <p class="prix-promo">750€</p>
-                        <img title="voyage-1" src="./img/Kiel_Grand.jpg" alt="Kiel_Grand" />
+                        <img title="voyage-1" src="./data/thumb/Kiel_Grand.jpg" alt="Kiel_Grand" />
                     </figure>
                 </article>
             </div>
@@ -96,9 +96,28 @@
                     Croisière
                   </li>
                 </ul>
-              
                 <form class="form_active">
-                  mon texte 1
+                  <label id="label_depart_voyage">Départ</label>
+                    <input type="text" 
+                    id="depart_voyage"
+                    name="depart_voyage"
+                    placeholder="Paris" required />
+                    <label id="label_destination_voyage">destination</label>
+                    <input type="text" 
+                    id="destination_voyage"
+                    name="destination_voyage"
+                    placeholder="Destination" required />
+                    <label id="label_date_depart_voyage">Date de départ</label>
+                    <input type="date" 
+                    id="date_depart_voyage"
+                    name="date_depart_voyage"
+                    value="2022-04-06" required />
+                    <label id="label_date_arrivee_voyage">Date d'arrivée</label>
+                    <input type="date" 
+                    id="date_arrivee_voyage"
+                    name="date_arrivee_voyage"
+                    value="2022-04-06" required />
+                    <a id="buttom_find" type="sumit" href="#">Rechercher</a>
                 </form>
               
               </figure>
@@ -115,12 +134,12 @@
                 <figure class="vignette_voyage">
                     <p class="titre_voyage">Marseille</p>
                     <p class="prix-voyage">750€</p>
-                    <img title="voyage" alt="voyage" src="./img/Kiel_Grand.jpg" />
+                    <img title="voyage" alt="voyage" src="./data/thumb/Kiel_Grand.jpg" />
                 </figure>
                 <figure class="vignette_voyage">
                     <p class="titre_voyage">Marseille</p>
                     <p class="prix-voyage">750€</p>
-                    <img title="voyage" alt="voyage" src="./img/Kiel_Grand.jpg" />
+                    <img title="voyage" alt="voyage" src="./data/thumb/Kiel_Grand.jpg" />
                 </figure>
             </div>
             <div class="categorie" id="categorie2">
@@ -128,12 +147,12 @@
                 <figure class="vignette_voyage">
                     <p class="titre_voyage">Marseille</p>
                     <p class="prix-voyage">750€</p>
-                    <img title="voyage" alt="voyage" src="./img/Kiel_Grand.jpg" />
+                    <img title="voyage" alt="voyage" src="./data/thumb/Kiel_Grand.jpg" />
                 </figure>
                 <figure class="vignette_voyage">
                     <p class="titre_voyage">Marseille</p>
                     <p class="prix-voyage">750€</p>
-                    <img title="voyage" alt="voyage" src="./img/Kiel_Grand.jpg" />
+                    <img title="voyage" alt="voyage" src="./data/thumb/Kiel_Grand.jpg" />
                 </figure>
             </div>
             
@@ -142,22 +161,22 @@
                 <figure class="vignette_voyage">
                     <p class="titre_voyage">Marseille</p>
                     <p class="prix-voyage">750€</p>
-                    <img title="voyage" alt="voyage" src="./img/Kiel_Grand.jpg" />
+                    <img title="voyage" alt="voyage" src="./data/thumb/Kiel_Grand.jpg" />
                 </figure>
                 <figure class="vignette_voyage">
                     <p class="titre_voyage">Marseille</p>
                     <p class="prix-voyage">750€</p>
-                    <img title="voyage" alt="voyage" src="./img/Kiel_Grand.jpg" />
+                    <img title="voyage" alt="voyage" src="./data/thumb/Kiel_Grand.jpg" />
                 </figure>
             </div>
         </section>
         <footer>
             <figure>
                 <div class="block_footer logo-name" id="logo-footer">
-                    <img title="logo" src="img/logo site voyage_final.png" alt="logo" />
+                    <img title="logo" class="logo" src="img/logo site voyage_final.png" alt="logo" />
                     <p>ACS Voyage</p>
                 </div>
-                <div class="block_footer">
+                <div class="block_footer" id="block-footer-center">
                     <ul>
                       <li class="title">Entreprise</li>
                       <li><a href="#">A propos</a></li>

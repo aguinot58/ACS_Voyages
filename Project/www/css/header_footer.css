@@ -6,6 +6,10 @@ header, section, footer {
     padding: 5px;
 }
 
+.logo {
+    border: #0091C6 1px solid;
+}
+
 .logo-name {
     font-family: "Inter-Bold";
     color: #0091C6;
@@ -83,7 +87,7 @@ header ul li {
 
 header ul li:hover {
     background-color: #d3d2d2;
-    transform: scale(1.1);
+    transform: scale(1.03);
     border: #8F8F8F 1px solid;
     box-shadow: 5px 5px 10px RGBa(0, 0, 0, 0.5);
 }
@@ -123,7 +127,7 @@ header a:link {
 
 .submenu li:hover {
     background-color: #d3d2d2;
-    transform: scale(1.1);
+    transform: scale(1.03);
     border: #8F8F8F 1px solid;
     box-shadow: 5px 5px 10px RGBa(0, 0, 0, 0.5);
 }
@@ -135,6 +139,7 @@ header ul #submenu_categories:hover #submenu_categorie, header ul #submenu_categ
 /* le footer de la page */
 footer {
     text-align: center;
+    overflow: hidden;
     padding: 15px;
     padding-top: 20px;
 }
@@ -169,12 +174,12 @@ footer ul li {
 
 footer ul li a,
 footer ul li a:link {
-  color: black;
-  text-decoration: none;
+    color: black;
+    text-decoration: none;
 }
 
 footer ul li a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 footer ul li.title {
@@ -208,6 +213,7 @@ footer figure {
 footer .block_footer {
     min-width: 150px;
     text-align: left;
+    padding: 0px 15px;
     padding-bottom: 25px;
 }
 
@@ -224,7 +230,23 @@ footer #logos {
     max-height: 70px;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 15px;
+}
+
+#logo-footer p {
+    padding-top: 15px;
+}
+
+.img-logo:hover, .img-logo-carte:hover {
+    transform: scale(1.1);
+}
+
+/***************************/
+/** version mobile 846px ***/
+/***************************/
+@media screen and (max-width: 846px) {
+    footer figure {
+        justify-content: space-around;
+    }
 }
 
 /***************************/
@@ -276,5 +298,24 @@ footer #logos {
 
     #menu-all:hover ul {
         display: block;
+    }
+}
+
+/***************************/
+/** version mobile 568px ***/
+/***************************/
+@media screen and (max-width: 568px) {
+    footer .block_footer {
+        text-align: center;
+    }
+
+    footer ul {
+        margin-left: 40px;
+        margin-right: 35px;
+    }
+
+    footer ul#footer_title_right {
+        margin-left: 0px;
+        margin-top: 15px;
     }
 }

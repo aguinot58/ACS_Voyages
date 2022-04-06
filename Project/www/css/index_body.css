@@ -5,10 +5,68 @@
     margin :0 ;
 }
 
+/** animation de l'icone **/
+@keyframes modifier_background {
+    0% {
+        background: url("./../data/images/fonds-d-ecran-plage-ile-tahiti.jpg") no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+    }
+    12% {
+        background: url("./../data/images/GettyImages-528213556.jpg") no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+    }
+    25% {
+        background: url("./../data/images/GettyImages-528213556.jpg") no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+    }
+    37% {
+        background: url("./../data/images/336-3362291_fond-d-cran-montagne-hiver.jpg") no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+    }
+    50% {
+        background: url("./../data/images/336-3362291_fond-d-cran-montagne-hiver.jpg") no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+    }
+    62% {
+        background: url("./../data/images/4697cbd4cead6afc1faa60a91e664b297dd88c0433a2ff9d6a2216a7344c4e79.jpg") no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+    }
+    75% {
+        background: url("./../data/images/4697cbd4cead6afc1faa60a91e664b297dd88c0433a2ff9d6a2216a7344c4e79.jpg") no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+    }
+    87% {
+        background: url("./../data/images/fonds-d-ecran-plage-ile-tahiti.jpg") no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+    }
+    100% {
+        background: url("./../data/images/fonds-d-ecran-plage-ile-tahiti.jpg") no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+    }
+  }
+
 body {
     width: 100%;
     min-height: 100vh;
-    background: url("../img/fonds-d-ecran-plage-ile-tahiti.jpg") no-repeat;
+    background: url("./../data/images/fonds-d-ecran-plage-ile-tahiti.jpg") no-repeat;
     box-sizing: border-box;
     background-attachment: fixed;
     background-size: cover;
@@ -16,6 +74,7 @@ body {
     overflow: auto;
     scroll-behavior: auto;
     font-family: "Inter-Regular";
+    animation: modifier_background 100s infinite;
     transition-property: background-image;
     transition-duration: 0.5s;
 }
@@ -26,6 +85,7 @@ body {
 @media screen and (max-width: 920px) {
     body {
         background: unset;
+        animation: unset;
     }
 }
 
