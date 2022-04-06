@@ -1,0 +1,667 @@
+/* RAZ de la page */
+* {
+
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+/* Image de fond */
+.fond{
+
+    background-image: url(../img/ciel.jpg);
+    background-size: cover;
+
+}
+
+
+body{
+
+    text-align: center;
+
+}
+
+
+/* CSS général pour toutes les sections */
+section{
+
+    max-width: 950px;
+    background-image: url(../img/wood-6653691_960_720.svg);
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 25px 0 25px 0;
+    border-radius: 30px;
+    border: 1px solid rgba(50, 50, 50,0.5);
+    text-align: center;
+    margin-bottom: 15px;
+    position: relative;
+
+}
+
+
+/* CSS pour les sections de séparations avec les clous */
+.clous{
+
+    background: none;
+    border: none;
+    height: 20px;
+    position: relative;
+    z-index: 3;
+    margin-top: -60px;
+    max-width: 950px;
+    display: block;
+
+}
+
+.clous img{
+
+    height: 60px;
+    width: auto;
+    margin: 0 13% 0 13%;
+
+}
+
+.clous img:nth-child(1){
+
+    margin-left: 2.5%;
+
+}
+
+.clous img:nth-child(4){
+
+    margin-right: 2.5%;
+
+}
+
+
+/*CSS titre */
+h1{
+
+    font-size: 50px;
+    position: relative;
+    top: 10px;
+    z-index: 3;
+    color:rgb(226, 43, 202);
+
+}
+
+
+/* CSS 1ere section : photos-presentation */
+#photos-presentation{
+
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding-top: 70px;
+    position: relative;
+    margin-top: -65px;
+
+}
+
+.photos-pres{
+
+    width: 80%;
+    margin-left: auto; margin-right: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: space-evenly;
+
+}
+
+.photos-pres img:hover{
+
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+
+}
+
+#gde-photo{
+
+    position: relative;
+    margin-bottom: 20px;
+
+}
+
+#gde-photo img{
+
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid black;
+
+}
+
+#pte-photos{
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5%;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+#pte-photos img{
+
+    width : 150px;
+    height: 115px;
+    border-radius: 10px;
+    border: 1px solid black;
+
+}
+
+
+/* CSS 2eme section : barre de navigation de la page */
+#barre-nav-voyage{
+
+    height: 100px;
+    
+}
+
+#barre-nav-voyage article{
+
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+#barre-nav-voyage a{
+
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    
+}
+
+#barre-nav-voyage a:visited{
+
+    color: black;
+
+}
+
+#barre-nav-voyage a:hover{
+
+    text-decoration: underline;
+    color:rgb(226, 43, 202);
+
+}
+
+
+/* CSS 3eme section : informations générales */
+#infos-generales{
+
+    padding: 40px 90px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    
+}
+
+#infos-generales h3{
+
+    font-size: 25px;
+    margin-bottom: 15px;
+    
+}
+
+#infos-generales #info-gener-grand{
+
+    display: none;
+
+}
+
+#infos-generales #info-gener-petit, #infos-generales #info-gener-grand{
+
+    background-color: rgba(245, 245, 245, 0.85);
+
+}
+
+#infos-generales #afficher-bloc, #infos-generales #masquer-bloc{
+
+    text-decoration: underline;
+    font-size: 18px;
+    color: black;
+    margin-top: 10px;
+
+}
+
+#infos-generales #afficher-bloc:hover, #infos-generales #masquer-bloc:hover{
+
+    cursor: pointer;
+    color:rgb(226, 43, 202);
+
+}
+
+#infos-generales .titre-paragraphe{
+
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 5px;
+
+}
+
+#infos-generales .contenu, #infos-generales .contenu-add{
+
+    color:rgb(90, 90, 90);
+    margin-bottom: 10px;
+
+}
+
+
+/* CSS 4eme section : vols */
+#vols article{
+
+    display: flex;
+    align-items: flex-start;
+    padding-left: 10%;
+    margin-top: 20px;
+
+}
+
+#vols .texte{
+
+    flex-direction: column;
+    
+}
+
+#vols .texte h3{
+
+    font-size: 25px;
+    margin-bottom: 15px;
+
+}
+
+#vols .texte p{
+
+    font-size: 18px;
+    margin-bottom: 30px;
+    color:rgb(100, 100, 100);
+
+}
+
+#vols svg{
+
+    margin-right: 15px;
+
+}
+
+#vols .depart, #vols .retour{
+
+    margin: -10px 0 0 0;
+    align-items: center;
+    
+}
+
+#vols .retour{
+
+    margin-top: 10px;
+
+}
+
+#vols .depart p, #vols .retour p{
+
+    font-size: 18px;
+    line-height: 35px;
+    margin-right: 10%;
+    margin-top: 2px;
+    
+}
+
+#vols .compagnie p{
+
+    text-align: left;
+
+}
+
+#vols .compagnie p:nth-child(1){
+
+    line-height: 15px;
+    margin-top: 10px;
+
+}
+
+#vols .compagnie p:nth-child(2){
+
+    font-size: 12px;
+    color:rgb(100, 100, 100);
+    margin-top: -3px;
+
+}
+
+#vols .detail-vol{
+
+    margin-top: 0px;
+
+}
+
+#vols article .separateur{
+
+    margin-right: 15px;
+    margin-top: -7px;
+
+}
+
+#vols .dte-dep, #vols .heure-dep, #vols .heure-arr{
+
+    display: flex;
+    flex-direction: column;
+    width: 55px;
+    text-align: left;
+
+}
+
+#vols .info-vol{
+
+    display: flex;
+    flex-direction: column;
+    width: 85px;
+    text-align: left;
+
+}
+
+#vols .dte-dep p:nth-child(1), #vols .heure-dep p:nth-child(1), #vols .heure-arr p:nth-child(1), #vols .info-vol p:nth-child(1){
+
+    margin-top: -5px;
+
+}
+
+
+#vols .dte-dep p:nth-child(2), #vols .heure-dep p:nth-child(2), #vols .heure-arr p:nth-child(2), #vols .info-vol p:nth-child(2){
+
+    font-size: 16px;
+    color:rgb(100, 100, 100);
+    margin-top: -10px;
+
+}
+
+#vols .detail{
+
+    justify-content: space-evenly;
+    padding: 0;
+    
+}
+
+#vols .detail p{
+
+    font-size: 20px;
+    color:rgb(226, 43, 202);
+    font-weight: bold;
+
+}
+
+#vols .detail p:hover{
+
+    cursor: pointer;
+    text-decoration: underline;
+
+}
+
+#vols .aeroport{
+    
+    margin-top: 30px;
+    flex-direction: column;
+
+}
+
+#vols .aeroport p:nth-child(1){
+
+    Font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    margin-top: -5px;
+
+}
+
+#vols .aeroport p:nth-child(2){
+
+    font-size: 16px;
+    color:rgb(100, 100, 100);
+    margin-bottom: 15px;
+
+}
+
+
+
+
+
+
+
+/* CSS 6eme section : Services */
+#services{
+
+    text-align: left;
+    
+}
+
+#services h3{
+
+    font-size: 25px;
+    margin-bottom: 15px;
+    margin-left: 10%;
+    
+}
+
+#services .conteneur-service{
+
+    display: flex;
+    background-color: rgba(245, 245, 245, 0.65);
+    padding-right: 50px;
+
+}
+
+#services .titre-section-service{
+
+    display: flex;
+    width: 40%;
+    margin-left: 50px;
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+    border-right: 1px solid rgba(0,0,0,0.5);
+    padding: 10px
+    
+}
+
+#services .titre-section-service svg{
+
+    margin-right: 15px;
+    
+}
+
+#services .titre-section-service p{
+
+    font-size: 18px;
+    width: 165px;
+    
+}
+
+#services .contenu-section-services{
+
+    width:100%;
+    padding: 10px 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+
+}
+
+#services #arrow_up_svg__stroke-cov, #services #arrow_up_svg__stroke-gen, 
+#services #arrow_up_svg__stroke-act, #services #arrow_up_svg__stroke-net,
+#services #arrow_up_svg__stroke-rest{
+
+    transform: rotate(180deg);
+    transition: all 0.3s ease-in-out;
+
+}
+
+#services #arrow_up_svg__stroke-cov:hover, #services #arrow_up_svg__stroke-gen:hover, 
+#services #arrow_up_svg__stroke-act:hover, #services #arrow_up_svg__stroke-net:hover,
+#services #arrow_up_svg__stroke-rest:hover{
+
+    cursor: pointer;
+
+}
+
+#services .invisible{
+
+    opacity: 0;
+
+}
+
+#services .covid{
+
+    max-height: 160px;
+    overflow: hidden;
+
+}
+
+#services .resto, #services .activite{
+
+    max-height: 60px;
+    overflow: hidden;
+
+}
+
+#services .internet, #services .general{
+
+    max-height: 45px;
+    overflow: hidden;
+
+}
+
+
+/* CSS 7eme section : Avis */
+#avis{
+
+    padding: 40px 40px;
+    text-align: left;
+
+}
+
+#avis h3{
+
+    font-size: 25px;
+    margin-left: 6.5%;
+    margin-bottom: 40px;
+}
+
+#avis .conteneur-general-avis{
+
+    background-color: rgba(245, 245, 245, 0.55);
+
+}
+
+#avis .conteneur-note .note{
+
+    background-image: url(../img/etoiles.png);
+    background-size: cover;
+    width: 50%;
+    height: 15px;
+    margin: 10px 0;
+
+}
+
+#avis .conteneur-note .note p{
+
+    text-align: right;
+    margin-left: 50px;
+
+}
+
+#avis .section-avis{
+
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+
+}
+
+#avis .conteneur-note{
+
+    min-width: 20%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+
+}
+
+#avis .conteneur-note .note{
+
+    width: 80px;
+    height: 15px;
+
+} 
+
+#avis .section-avis .nbr-avis{
+
+    margin-top: 25px;
+    width: 7%;
+    
+}
+
+#avis .section-avis .nbr-avis p{
+
+    font-size: 15px;
+    color:rgb(100, 100, 100);
+    
+}
+
+#avis .section-avis .nbr-avis p:hover{
+
+    color:rgb(226, 43, 202);
+    cursor: pointer;
+    
+}
+
+#avis .section-avis .conteneur-commentaires{
+
+    width: 70%;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#avis .section-avis .conteneur-commentaires p[class="gras"]{
+
+    margin-bottom: 8px;
+
+}
+
+#avis .section-avis .conteneur-commentaires p{
+
+    font-style: italic;
+
+}
+
+#avis .conteneur-note #note-plage, #avis .conteneur-note #note-site{
+
+    background-position: 0% 0%;
+
+}
+
+#avis .conteneur-note #note-service, #avis .conteneur-note #note-installations,
+#avis .conteneur-note #note-proprete, #avis .conteneur-note #note-repas{
+
+    background-position: 0% 50%;
+    
+}
+
+#avis .conteneur-note #note-chambre, #avis .conteneur-note #note-bar{
+
+    background-position: 0% 75%;
+    
+}
+
+#avis .conteneur-note #note-confort{
+
+    background-position: 0% 100%;
+    
+}
