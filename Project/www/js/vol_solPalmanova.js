@@ -14,8 +14,54 @@ function masquer(){
 }
 
 
-/* Système pour afficher et masquer les sections des services avec plus d'une ligne */
 
+/* système pour afficher / masquer les détails de la chambre 1 */
+let afficheDetailsCh1 = false;
+
+document.getElementById('parag-aff-masq-details').addEventListener('click', afficherDetCh1);
+
+function afficherDetCh1(){
+
+    if (afficheDetailsCh1 == false){
+
+        document.getElementById('lstDetCh1').style.display = "flex";
+        document.getElementById('parag-aff-masq-details').innerText = "Masquer les détails"
+        afficheDetailsCh1 = true;
+
+    } else {
+
+        document.getElementById('lstDetCh1').style.display = "none";
+        document.getElementById('parag-aff-masq-details').innerText = "Voir plus de détails"
+        afficheDetailsCh1 = false;
+
+    }
+}
+
+/* système pour afficher / masquer les détails de la chambre 1 */
+let afficheDetailsCh2 = false;
+
+document.getElementById('parag-aff-masq-details2').addEventListener('click', afficherDetCh2);
+
+function afficherDetCh2(){
+
+    if (afficheDetailsCh2 == false){
+
+        document.getElementById('lstDetCh2').style.display = "flex";
+        document.getElementById('parag-aff-masq-details2').innerText = "Masquer les détails"
+        afficheDetailsCh2 = true;
+
+    } else {
+
+        document.getElementById('lstDetCh2').style.display = "none";
+        document.getElementById('parag-aff-masq-details2').innerText = "Voir plus de détails"
+        afficheDetailsCh2 = false;
+
+    }
+}
+
+
+
+/* Système pour afficher et masquer les sections des services avec plus d'une ligne */
 /* Services mesures Covid-19 */
 let flecheUpCovid = true;
 

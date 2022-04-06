@@ -199,7 +199,8 @@ h1{
     display: flex;
     flex-direction: column;
     text-align: left;
-    
+    transition: all 0.2s ease-in-out;
+
 }
 
 #infos-generales h3{
@@ -407,6 +408,7 @@ h1{
     margin-top: 30px;
     flex-direction: column;
 
+
 }
 
 #vols .aeroport p:nth-child(1){
@@ -427,6 +429,286 @@ h1{
 }
 
 
+/* CSS 5eme section : chambres */
+#chambres{
+
+    padding: 30px 0px;
+    text-align: left;
+
+}
+
+#chambres h3{
+
+    font-size: 25px;
+    margin-bottom: 15px;
+    margin-left: 10%;
+    margin-top: 20px;
+}
+
+#chambres .conteneur-general-chambre{
+
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.2);
+
+}
+
+#chambres .chambre2{
+
+    margin-top: 50px;
+
+}
+
+#chambres .conteneur-photos-chambre{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+
+}
+
+#chambres .conteneur-photos-chambre .photos-cotes{
+
+    width: 250px;
+    height: auto;
+
+}
+
+#chambres .conteneur-photos-chambre .photos-milieu{
+
+    width: 325px;
+    height: auto;
+
+}
+
+#chambres .conteneur-photos-chambre img{
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+
+#chambres .conteneur-photos-chambre img:hover{
+
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+
+}
+
+#chambres .conteneur-infos-chambre{
+
+    width: 98%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(245, 245, 245, 0.85);
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: white;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 10px;
+
+}
+
+#chambres .conteneur-infos-chambre h5{
+
+    font-size: 20px;
+    margin-left: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+}
+
+#chambres .details-chambre{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+}
+
+#chambres .details-generaux{
+
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    flex-wrap: wrap;
+    margin-left: 5px;
+
+}
+
+#chambres .details-generaux p{
+
+    margin-right: 15%;
+    font-size: 18px;
+
+}
+
+#chambres .afficher-details{
+
+    font-size: 18px;
+    text-decoration: underline;
+    margin: 10px 0 20px 5px;
+    line-height: 25px;
+
+}
+
+#chambres .afficher-details:hover{
+
+    color:rgb(226, 43, 202);
+    cursor: pointer;
+
+}
+
+#chambres .liste-details{
+
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    transition: all 0.2s ease-in-out;
+
+}
+
+#chambres .liste-details ul:nth-child(1){
+
+    margin-left: 25px;
+    
+}
+
+#chambres .liste-details ul:nth-child(2){
+
+    margin-left: 125px;
+    
+}
+
+#chambres .liste-details ul li{
+
+    margin-bottom: 5px;
+
+}
+
+#chambres .demi-pension, #chambres .tout-compris{
+
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+    align-content: center;
+    background-color: white;
+    margin-left: 15px;
+    margin-right: 15px;
+    height: 85px;
+    border-radius: 5px;
+    box-shadow: 2px 5px 8px 0px rgba(0, 0, 0, 0.3);
+
+}
+
+#chambres .demi-pension{
+
+    margin-top: 15px;
+    
+}
+
+#chambres .bouton-continuer button{
+
+    background-color: white;
+    color:rgb(226, 43, 202);
+    border: 1px solid rgb(226, 43, 202);
+    font-weight: 600;
+    font-size: 15px;
+    width: 110px;
+    height: 40px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.3);
+
+}
+
+#chambres .bouton-continuer button:hover{
+
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+
+}
+
+#chambres .titre-chambre{
+
+    width: 20%;
+    text-align: center;
+    padding-top: 5px;
+
+}
+
+#chambres .bouton-continuer{
+
+    width: 20%;
+    text-align: center;
+
+}
+
+#chambres .titre-chambre p{
+
+    font-size: 18px;
+    font-weight: 600;
+
+}
+
+#chambres .infos-annul{
+
+    display: flex;
+    flex-wrap: wrap;
+    width: 30%;
+    text-align:center;
+    margin-left: 15px;
+
+}
+
+#chambres .conteneur-prix{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: right;
+
+}
+
+#chambres .conteneur-infos-prix{
+
+    width: 25%;
+    text-align: right;
+
+}
+
+#chambres .conteneur-prix .promotion{
+
+    margin-right: 10px;
+    color: rgb(0, 199, 50);
+    font-weight: 600;
+    font-size: 18px;
+
+}
+
+#chambres .conteneur-prix .prix{
+
+    font-weight: 600;
+    color: rgb(226, 43, 202);
+    font-size: 18px;
+
+}
+
+#chambres .conteneur-infos-prix .infos-offre{
+
+    font-size: 14px;
+
+}
 
 
 
@@ -436,6 +718,7 @@ h1{
 #services{
 
     text-align: left;
+    padding: 20px 20px;
     
 }
 
@@ -443,7 +726,8 @@ h1{
 
     font-size: 25px;
     margin-bottom: 15px;
-    margin-left: 10%;
+    margin-left: 8%;
+    margin-top: 20px;
     
 }
 
@@ -547,12 +831,14 @@ h1{
 
     font-size: 25px;
     margin-left: 6.5%;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
 }
 
 #avis .conteneur-general-avis{
 
     background-color: rgba(245, 245, 245, 0.55);
+    box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.3);
+    padding-top: 10px;
 
 }
 
