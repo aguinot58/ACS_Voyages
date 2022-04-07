@@ -152,6 +152,7 @@
 .vignette-promo .titre_voyage_promo {
   margin-top: 5px;
   margin-left: 5px;
+  min-width: 124px;
   position: absolute;
   background-color: rgba(255, 255, 255, 0.8);
   padding: 10px 30px;
@@ -255,6 +256,7 @@
 form,
 form input {
   text-align: center;
+  font-size: 17px;
 }
 form label {
   padding: 15px;
@@ -280,6 +282,14 @@ form input {
   border-radius: 20px;
 }
 
+form input:focus {
+    /*color: #0737b5;
+    border-color: #0737b5;*/
+    color: RGB(226, 43, 202);
+    border-color: RGB(226, 43, 202);
+    outline: none;
+}
+
 form #depart_voyage {
   border-top-right-radius: unset;
   border-bottom-right-radius: unset;
@@ -288,6 +298,10 @@ form #depart_voyage {
 form #destination_voyage {
   border-top-left-radius: unset;
   border-bottom-left-radius: unset;
+}
+
+form input:hover {
+    transform: scale(1.08);
 }
 
 #buttom_find {
@@ -300,10 +314,15 @@ form #destination_voyage {
   width: 200px;
   padding: 12px;
   border-radius: 25px;
-  background-color: #0737b5;
+  /*background-color: #0737b5;*/
+  /*color: RGB(226, 43, 202);*/
+  background-color: RGB(226, 43, 202);
   border: #8a8a8a 1px solid;
   justify-self: center;
+  /*box-shadow: 0px 10px 14px 6px rgba(00, 122, 255, 0.11);*/
+  box-shadow: 0px 10px 14px 6px RGBa(226, 43, 202, 0.11);
 }
+
 
 #label_depart_voyage {
   grid-column-start: 1;
