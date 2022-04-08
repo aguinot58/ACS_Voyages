@@ -159,9 +159,13 @@
     grid-row-end: 7;
 }
 
-#list_page img {
+#list_page img, #voyage form img {
     vertical-align: middle;
     width: 25px;
+}
+
+#voyage form img {
+    display: none;
 }
 
 #list_page a,
@@ -247,7 +251,7 @@
 /** version < 866px ***/
 /**********************/
 @media screen and (max-width: 655px) {
-    .vignette, #voyage .vignette {
+    .vignette, #voyage .vignette, #voyage form {
         width: 300px;
         display: flex;
         flex-wrap: wrap;
@@ -287,5 +291,29 @@
     
     #voyage {
         display: block;
+    }
+
+    #voyage form {
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+
+    #voyage form .title-option {
+        margin-top: unset;
+    }
+
+    .block_option {
+        text-align: left;
+        width: 220px;
+        margin-top: unset;
+        padding-top: unset;
+        padding: 5px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    #voyage form img {
+        display: block;
+        margin-top: 12px;
     }
 }

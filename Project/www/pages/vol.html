@@ -61,7 +61,7 @@
     <section id="promo">
       <figure class="pourcentage"><p>-20%</p></figure>
       <figure class="vignette">
-        <image src="../data/thumb/sol_palmanova_Grand.jpg" alt="" />
+        <img src="../data/thumb/sol_palmanova_Grand.jpg" alt="" />
         <p class="titre">sol_palmanova</p>
         <p class="information">
           En choisissant Sol Palmanova Mallorca à Calvià, vous profiterez d'un
@@ -83,7 +83,13 @@
 
     <section id="voyage">
       <form>
-        <div class="block_option">
+        <img
+            alt="gauche"
+            id="option_previous"
+            src="./../img/direction_control_undo_back_backward_left_previous_icon_219294.svg"
+          />
+        </a>
+        <div id="option_0" class="block_option">
             <label class="title-option">Formules</label>
             <figure>
                 <input type="checkbox" id="scales" name="scales"/><label>All inclusive</label>
@@ -101,7 +107,7 @@
                 <input type="checkbox" id="scales" name="scales"/><label>Aucun repas</label>
             </figure>
         </div>
-        <div class="block_option"></div>
+        <div id="option_1" class="block_option">
             <label class="title-option">Accès plage</label>
             <figure>
                 <input type="checkbox" id="scales" name="scales"/><label>A proximité</label>
@@ -110,7 +116,7 @@
                 <input type="checkbox" id="scales" name="scales"/><label>Pieds dans l'eau</label>
             </figure>
         </div>
-        <div class="block_option">
+        <div id="option_2" class="block_option">
             <label class="title-option">Loisirs / Animations</label>
             <figure>
                 <input type="checkbox" id="scales" name="scales"/><label>Piscine extérieure</label>
@@ -119,7 +125,7 @@
                 <input type="checkbox" id="scales" name="scales"/><label>Animation</label>
             </figure>
         </div>
-        <div class="block_option"></div>
+        <div id="option_3" class="block_option">
             <label class="title-option">Equipements</label>
             <figure>
                 <input type="checkbox" id="scales" name="scales"/><label>Chambres climatisées</label>
@@ -128,9 +134,14 @@
                 <input type="checkbox" id="scales" name="scales"/><label>Mobilité réduite</label>
             </figure>
         </div>
+        <img
+            alt="droite"
+            id="option_next"
+            src="./../img/arrow_control_forward_direction_step_right_next_icon_219289.svg"
+        />
       </form>
       <figure class="vignette" id="voyage_1">
-        <image src="../data/thumb/sol_palmanova_Grand.jpg" alt="" />
+        <img src="../data/thumb/sol_palmanova_Grand.jpg" alt="" />
         <p class="titre">sol_palmanova</p>
         <p class="information">
           En choisissant Sol Palmanova Mallorca à Calvià, vous profiterez d'un
@@ -142,7 +153,7 @@
         <a href="">Tarifs</a>
       </figure>
       <figure class="vignette" id="voyage_2">
-        <image src="../data/thumb/sol_palmanova_Grand.jpg" alt="" />
+        <img src="../data/thumb/sol_palmanova_Grand.jpg" alt="" />
         <p class="titre">sol_palmanova</p>
         <p class="information">
           En choisissant Sol Palmanova Mallorca à Calvià, vous profiterez d'un
@@ -157,7 +168,6 @@
         <a href="#">
           <img
             alt="gauche"
-            id="tab_previous"
             src="./../img/direction_control_undo_back_backward_left_previous_icon_219294.svg"
           />
         </a>
@@ -168,7 +178,6 @@
         <a href="#">
           <img
             alt="droite"
-            id="tab_next"
             src="./../img/arrow_control_forward_direction_step_right_next_icon_219289.svg"
           />
         </a>
@@ -257,5 +266,7 @@
       </figure>
       <p id="droits_reserves">Tous droits réservés 2022</p>
     </footer>
+
+    <script src="./../js/categorie.js"></script>
   </body>
 </html>

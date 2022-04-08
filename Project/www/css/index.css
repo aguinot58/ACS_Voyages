@@ -96,6 +96,7 @@
   box-sizing: border-box;
   overflow: hidden;
   border: black 1px solid;
+  box-shadow: 7px 8px 20px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
 }
 
@@ -257,6 +258,7 @@ form,
 form input {
   text-align: center;
   font-size: 17px;
+  box-shadow: 7px 8px 20px rgba(0, 0, 0, 0.25);
 }
 form label {
   padding: 15px;
