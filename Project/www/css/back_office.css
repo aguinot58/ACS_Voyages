@@ -1,0 +1,202 @@
+
+
+
+
+#modification .tabbled img {
+    width: 25px;
+}
+
+/* tabbled */
+.tabbled {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+
+.tabbled ul {
+    padding: 0px;
+    margin-left: 18px;
+    margin-bottom: 5px;
+    list-style: none;
+}
+
+.tabbled ul li {
+    display: inline;
+}
+
+.tabbled [type="radio"] {
+    display: none;
+}
+
+.tabbled ul li .onglet_default {
+    background-color: #e2e2e2;
+    padding: 10px;
+    border: #8a8a8a 1px solid;
+    color: #8b8b8b;
+    border-bottom: unset;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 0px;
+}
+
+.tabbled form, #find_voyage form {
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: #ebebeb;
+    padding: 20px;
+    border: #8a8a8a 1px solid;
+    border-radius: 10px;
+}
+
+#find_voyage form {
+    display: block;
+    width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#find_voyage form input {
+    text-align: center;
+    font-size: 17px;
+    box-shadow: 7px 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+#find_voyage form input {
+    text-align: center;
+    padding: 8px;
+    border: none;
+    border: #8a8a8a 1px solid;
+    border-radius: 20px;
+}
+  
+#find_voyage form input:focus {
+      /*color: #0737b5;
+      border-color: #0737b5;*/
+      color: RGB(226, 43, 202);
+      border-color: RGB(226, 43, 202);
+      outline: none;
+}
+
+#find_voyage form a {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    margin-top: 25px;
+    color: white;
+    width: 200px;
+    padding: 12px;
+    border-radius: 25px;
+    /*background-color: #0737b5;*/
+    /*color: RGB(226, 43, 202);*/
+    background-color: RGB(226, 43, 202);
+    border: #8a8a8a 1px solid;
+    justify-self: center;
+    text-decoration: none;
+    /*box-shadow: 0px 10px 14px 6px rgba(00, 122, 255, 0.11);*/
+    box-shadow: 0px 10px 14px 6px RGBa(226, 43, 202, 0.11);
+}
+
+#find_voyage form a:hover, #find_voyage form input:hover {
+    transform: scale(1.03);
+}
+
+#form_1, #form_2, #form_3, #form_4 {
+    display: none;
+}
+
+.tabbled #tab0:checked ~ ul #onglet_1 .onglet_default {
+    background-color: #ebebeb;
+    color: black;
+    padding-bottom: 6px;
+}
+
+.tabbled #tab0:checked ~ #form_1 {
+    display: block;
+}
+
+.tabbled #tab1:checked ~ ul #onglet_2 .onglet_default {
+    background-color: #ebebeb;
+    color: black;
+    padding-bottom: 6px;
+}
+
+.tabbled #tab1:checked ~ #form_2 {
+    display: block;
+}
+
+.tabbled #tab2:checked ~ ul #onglet_3 .onglet_default {
+    background-color: #ebebeb;
+    color: black;
+    padding-bottom: 6px;
+}
+
+.tabbled #tab2:checked ~ #form_3 {
+    display: block;
+}
+
+.tabbled #tab3:checked ~ ul #onglet_4 .onglet_default {
+    background-color: #ebebeb;
+    color: black;
+    padding-bottom: 6px;
+}
+
+.tabbled #tab3:checked ~ #form_4 {
+    display: block;
+}
+
+#modification #form_modification {
+    width: 95%;
+}
+
+#all_img {
+    display: flex;
+    box-sizing: border-box;
+    overflow: auto;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#modification #form_modification #all_img img {
+    width: 300px;
+    padding: 5px;
+}
+
+table, th, td {
+    border: 1px solid;
+    padding: 15px;
+}
+
+table img {
+    width: 25px;
+}
+
+th {
+    color: white;
+    font-weight: normal;
+    background-color: RGB(226, 43, 202);
+}
+
+td {
+    background-color: #ebebeb;
+}
+
+table {
+    width: 95%;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#delete, #edit {
+    width: 70px;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+}

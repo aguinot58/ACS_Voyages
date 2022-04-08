@@ -163,6 +163,13 @@ footer {
     padding-top: 20px;
 }
 
+#block-footer-center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
 footer #droits_reserves {
     font-size: 14px;
     width: 100%;
@@ -374,8 +381,12 @@ footer #logos {
         margin-right: 35px;
     }
 
+    footer ul li {
+        text-align: center;
+    }
+
     footer ul#footer_title_right {
-        margin-left: 0px;
+        /*margin-left: 0px;*/
         margin-top: 15px;
     }
 }

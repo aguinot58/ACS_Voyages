@@ -260,6 +260,7 @@ form input {
   font-size: 17px;
   box-shadow: 7px 8px 20px rgba(0, 0, 0, 0.25);
 }
+
 form label {
   padding: 15px;
 }
@@ -483,12 +484,6 @@ form input:hover {
     padding: unset;
   }
 
-  #block-footer-center {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
   #voyages .vertical-texte {
     margin: unset;
     margin: 10px 0px;
@@ -540,6 +535,11 @@ form input:hover {
     margin-left: -240px;
     opacity: 0;
     animation: animation_promo_3 17s linear infinite;
+  }
+
+  #recherche #form_find {
+    width: 100%;
+    margin: unset;
   }
 
   #form_find_mobile {

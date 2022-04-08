@@ -65,6 +65,7 @@
 
 body {
     width: 100%;
+    min-width: 290px;
     min-height: 100vh;
     background: url("./../data/images/fonds-d-ecran-plage-ile-tahiti.jpg") no-repeat;
     box-sizing: border-box;

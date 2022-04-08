@@ -150,6 +150,7 @@
 }
 
 #voyage #list_page {
+    opacity: 0.6;
     padding-top: 15px;
     font-size: 25px;
     justify-self: center;
@@ -268,6 +269,12 @@
         margin-top: 5px;
     }
 
+    .vignette .information {
+        text-align: left;
+        height: 116px;
+        max-height: 116px;
+    }
+
     .vignette a {
         margin-top: 10px;
     }
@@ -315,5 +322,27 @@
     #voyage form img {
         display: block;
         margin-top: 12px;
+    }
+
+    #option_1 {
+        display:none;
+    }
+
+    #option_2 {
+        display:none;
+    }
+
+    #option_3 {
+        display:none;
+    }
+
+}
+
+/**********************/
+/** version < 866px ***/
+/**********************/
+@media screen and (max-width: 302px) {
+    .vignette, #voyage .vignette, #voyage form {
+        width: 100%;
     }
 }

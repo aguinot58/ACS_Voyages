@@ -29,14 +29,18 @@ function option_previous() {
 }
 
 function resize_window() {
+    let width_voyage = document.getElementById('voyage').offsetWidth;
+
+    console.log(width_voyage);
+    console.log(option_mobile);
     let items = document.querySelectorAll('.block_option');
-    if(window.innerWidth >= 655 && option_mobile) {
+    if(width_voyage >= 655 && option_mobile) {
         option_mobile = false;
         items.forEach(function(item) {
             item.style.display = "block";
         });
-    } else if(window.innerWidth < 655 && !option_mobile) {
-        option_mobile = false;
+    } else if(width_voyage < 655 && !option_mobile) {
+        option_mobile = true;
         option_selected();
     }
 }
