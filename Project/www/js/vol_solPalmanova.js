@@ -60,28 +60,29 @@ function afficherDetCh2(){
 }
 
 
-
 /* Système pour afficher et masquer les sections des services avec plus d'une ligne */
 /* Services mesures Covid-19 */
-let flecheUpCovid = true;
+let flecheUpCovid = false;
 
 document.getElementById('arrow_up_svg__stroke-cov').addEventListener('click', afficherCovidUp); 
 
 function afficherCovidUp(){
 
-    if (flecheUpCovid == true){
+    if (flecheUpCovid == false){
 
         document.getElementById('arrow_up_svg__stroke-cov').style.transform = 'rotate(360deg)';
         document.getElementById('service-covid').style.maxHeight = '850px';
         document.getElementById('service-covid').style.overflow = 'visible';
-        flecheUpCovid = false;
+        flecheUpCovid = true;
 
     } else {
 
+        let hauteur = document.getElementById('hauteur-covid').offsetHeight
+
         document.getElementById('arrow_up_svg__stroke-cov').style.transform = 'rotate(180deg)';
-        document.getElementById('service-covid').style.maxHeight = '160px';
+        document.getElementById('service-covid').style.maxHeight = (hauteur+15)+'px';
         document.getElementById('service-covid').style.overflow = 'hidden';
-        flecheUpCovid = true;
+        flecheUpCovid = false;
 
     }
 }
@@ -102,8 +103,10 @@ function afficherNetUp(){
 
     } else {
 
+        let hauteur = document.getElementById('hauteur-internet').offsetHeight
+
         document.getElementById('arrow_up_svg__stroke-net').style.transform = 'rotate(180deg)';
-        document.getElementById('service-internet').style.maxHeight = '45px';
+        document.getElementById('service-internet').style.maxHeight = (hauteur+15)+'px';
         document.getElementById('service-internet').style.overflow = 'hidden';
         flecheUpNet = true;
 
@@ -126,8 +129,17 @@ function afficherRestoUp(){
 
     } else {
 
+        let hauteur = document.getElementById('hauteur-resto').offsetHeight
+        /*let largeurSection = screen.width;
+
+        if (largeurSection <= 732) {
+
+            hauteur = 50;
+
+        }*/
+
         document.getElementById('arrow_up_svg__stroke-rest').style.transform = 'rotate(180deg)';
-        document.getElementById('service-resto').style.maxHeight = '60px';
+        document.getElementById('service-resto').style.maxHeight = (hauteur+15)+'px';
         document.getElementById('service-resto').style.overflow = 'hidden';
         flecheUpResto = true;
 
@@ -150,8 +162,18 @@ function afficherActivUp(){
 
     } else {
 
+        let hauteur = document.getElementById('hauteur-activite').offsetHeight
+
+        let largeurSection = screen.width;
+
+        if (largeurSection <= 612) {
+
+            hauteur = 20;
+
+        }
+
         document.getElementById('arrow_up_svg__stroke-act').style.transform = 'rotate(180deg)';
-        document.getElementById('service-activite').style.maxHeight = '60px';
+        document.getElementById('service-activite').style.maxHeight = (hauteur+15)+'px';
         document.getElementById('service-activite').style.overflow = 'hidden';
         flecheUpActiv = true;
 
@@ -174,10 +196,148 @@ function afficherGenUp(){
 
     } else {
 
+        let hauteur = document.getElementById('hauteur-general').offsetHeight;
+        let largeurSection = screen.width;
+
+        if (largeurSection <= 612) {
+
+            hauteur = 35;
+
+        } else if (largeurSection <= 732){
+
+            hauteur = 50;
+
+        }
+
         document.getElementById('arrow_up_svg__stroke-gen').style.transform = 'rotate(180deg)';
-        document.getElementById('service-general').style.maxHeight = '45px';
+        document.getElementById('service-general').style.maxHeight = (hauteur+15)+'px';
         document.getElementById('service-general').style.overflow = 'hidden';
         flecheGenNet = true;
 
     }
 }
+
+
+
+/* Slider petites photos section présentation */
+let numero = 0;
+const elements = document.querySelectorAll(".img-slide-presentation");
+
+function ChangeSlide(sens) {
+
+    numero = numero + sens;
+    if (numero < 0)
+        numero = elements.length - 1;
+    if (numero > elements.length - 1)
+        numero = 0;
+    
+    elements.forEach((item, index) => {
+
+        let imgId = item.id;
+
+        if (index == numero){
+
+            document.getElementById(imgId).style.opacity = 1;
+
+        } else {
+
+            document.getElementById(imgId).style.opacity = 0;
+
+        }
+    });
+}
+
+
+
+/* Slider photos chambre 1 */
+let numeroChambre1 = 0;
+const elementsChambre1 = document.querySelectorAll(".img-slide-chambre1");
+
+function ChangeSlideChambre1(sens) {
+
+    numeroChambre1 = numeroChambre1 + sens;
+    if (numeroChambre1 < 0)
+        numeroChambre1 = elementsChambre1.length - 1;
+    if (numeroChambre1 > elementsChambre1.length - 1)
+        numeroChambre1 = 0;
+    
+        elementsChambre1.forEach((item, index) => {
+
+        let imgIdChambre1 = item.id;
+
+        if (index == numeroChambre1){
+
+            document.getElementById(imgIdChambre1).style.opacity = 1;
+
+        } else {
+
+            document.getElementById(imgIdChambre1).style.opacity = 0;
+
+        }
+    });
+}
+
+
+
+/* Slider photos chambre 2 */
+let numeroChambre2 = 0;
+const elementsChambre2 = document.querySelectorAll(".img-slide-chambre2");
+
+function ChangeSlideChambre2(sens) {
+
+    numeroChambre2 = numeroChambre2 + sens;
+    if (numeroChambre2 < 0)
+        numeroChambre2 = elementsChambre2.length - 1;
+    if (numeroChambre2 > elementsChambre2.length - 1)
+        numeroChambre2 = 0;
+    
+        elementsChambre2.forEach((item, index) => {
+
+        let imgIdChambre2 = item.id;
+
+        if (index == numeroChambre2){
+
+            document.getElementById(imgIdChambre2).style.opacity = 1;
+
+        } else {
+
+            document.getElementById(imgIdChambre2).style.opacity = 0;
+
+        }
+    });
+}
+
+
+/* Remise de l'opacité à 1 sur les photos des chambres si taille écran >= 657px */
+function resize_window() {
+
+    let tailleEcran = screen.width;
+    const elements = document.querySelectorAll(".img-slide-presentation");
+    const elementsChambre1 = document.querySelectorAll(".img-slide-chambre1");
+    const elementsChambre2 = document.querySelectorAll(".img-slide-chambre2");
+
+    if (tailleEcran >= 657) {
+
+        elements.forEach(item => {
+
+            document.getElementById(item.id).style.opacity = 1;
+    
+        });
+
+        elementsChambre1.forEach(item => {
+
+            document.getElementById(item.id).style.opacity = 1;
+    
+        });
+    
+        elementsChambre2.forEach(item => {
+    
+            document.getElementById(item.id).style.opacity = 1;
+    
+        });
+
+    }
+
+}
+
+window.addEventListener('resize', resize_window);

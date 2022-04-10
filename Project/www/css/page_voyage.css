@@ -3,6 +3,13 @@
 
     margin: 0; padding: 0;
     box-sizing: border-box;
+    font-family: Inter-Regular;
+
+}
+
+html, body{
+
+    height:100%;
 
 }
 
@@ -35,43 +42,25 @@ section{
     border-radius: 30px;
     border: 1px solid rgba(50, 50, 50,0.5);
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 0px;
     position: relative;
 
+}
+
+
+/* le menu header */
+#fix-menu{
+    display: block;
+    max-width: 950px;
+    margin-left: -5px;
+    margin-right: unset;
 }
 
 
 /* CSS pour les sections de séparations avec les clous */
-.clous{
+.separateur_section {
 
-    background: none;
-    border: none;
-    height: 20px;
-    position: relative;
-    z-index: 3;
-    margin-top: -60px;
-    max-width: 950px;
-    display: block;
-
-}
-
-.clous img{
-
-    height: 60px;
-    width: auto;
-    margin: 0 13% 0 13%;
-
-}
-
-.clous img:nth-child(1){
-
-    margin-left: 2.5%;
-
-}
-
-.clous img:nth-child(4){
-
-    margin-right: 2.5%;
+    z-index: 2;
 
 }
 
@@ -81,7 +70,7 @@ h1{
 
     font-size: 50px;
     position: relative;
-    top: 10px;
+    top: 45px;
     z-index: 3;
     color:rgb(226, 43, 202);
 
@@ -96,7 +85,8 @@ h1{
     display: flex;
     padding-top: 70px;
     position: relative;
-    margin-top: -65px;
+    margin-top: -31px;
+    border-radius: 0 0 30px 30px; 
 
 }
 
@@ -142,6 +132,7 @@ h1{
     grid-gap: 5%;
     position: relative;
     margin-bottom: 10px;
+    
 }
 
 #pte-photos img{
@@ -153,18 +144,24 @@ h1{
 
 }
 
+#pte-photos .precedent, #pte-photos .suivant{
+
+    display: none;
+
+}
+
 
 /* CSS 2eme section : barre de navigation de la page */
 #barre-nav-voyage{
 
-    height: 100px;
+    height: 125px;
     
 }
 
 #barre-nav-voyage article{
 
     width: 100%;
-    margin-top: 15px;
+    margin-top: 20px;
     display: flex;
     justify-content: space-evenly;
     
@@ -175,6 +172,9 @@ h1{
     text-decoration: none;
     font-size: 20px;
     color: black;
+    text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff,
+    2px 2px 0 #fff;
+    font-weight: 600;
     
 }
 
@@ -195,7 +195,7 @@ h1{
 /* CSS 3eme section : informations générales */
 #infos-generales{
 
-    padding: 40px 90px;
+    padding: 40px 65px;
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -218,7 +218,13 @@ h1{
 
 #infos-generales #info-gener-petit, #infos-generales #info-gener-grand{
 
-    background-color: rgba(245, 245, 245, 0.85);
+    background-color: #EFEFEF;
+    width: 100%;
+    padding: 10px 10px 20px 10px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.3);
+    margin: 10px 0;
+    transition: all 0.2s ease-in-out;
 
 }
 
@@ -243,7 +249,16 @@ h1{
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 10px;
-    margin-top: 5px;
+    margin-top: 30px;
+
+}
+
+#infos-generales .titre-paragraphe:nth-child(1){
+
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 10px;
 
 }
 
@@ -256,12 +271,18 @@ h1{
 
 
 /* CSS 4eme section : vols */
+#vols{
+
+    padding: 40px 65px;
+    text-align: left;
+
+}
+
+
 #vols article{
 
     display: flex;
     align-items: flex-start;
-    padding-left: 10%;
-    margin-top: 20px;
 
 }
 
@@ -271,7 +292,7 @@ h1{
     
 }
 
-#vols .texte h3{
+#vols h3{
 
     font-size: 25px;
     margin-bottom: 15px;
@@ -280,54 +301,91 @@ h1{
 
 #vols .texte p{
 
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 30px;
     color:rgb(100, 100, 100);
+
+}
+
+#vols .conteneur-vol{
+
+    background-color: #EFEFEF;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
 
 }
 
 #vols svg{
 
     margin-right: 15px;
+    width: 35px;
 
 }
 
 #vols .depart, #vols .retour{
 
-    margin: -10px 0 0 0;
+    margin: 20px 0 20px 0;
     align-items: center;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 50px;
+    justify-content: center;
+    position: relative;
     
 }
 
-#vols .retour{
+#vols .trajet-vol{
 
-    margin-top: 10px;
+    width: 40%;
+    height: 100%;
 
 }
 
-#vols .depart p, #vols .retour p{
+#vols .compagnie-vol{
 
-    font-size: 18px;
+        min-width: 20%;
+        height: 100%;
+
+}
+
+#vols .trajet-vol p, #vols .retour p{
+
+    font-size: 16px;
     line-height: 35px;
-    margin-right: 10%;
+    margin-right: 0%;
     margin-top: 2px;
+    width: 80%;
     
 }
 
 #vols .compagnie p{
 
     text-align: left;
+    margin-right: 35px;
 
 }
 
-#vols .compagnie p:nth-child(1){
+#vols .depart .compagnie p:nth-child(1), #vols .retour .compagnie p:nth-child(1){
 
     line-height: 15px;
-    margin-top: 10px;
+    margin-top: 0px;
 
 }
 
-#vols .compagnie p:nth-child(2){
+#vols .depart .compagnie p:nth-child(2){
+
+    font-size: 12px;
+    color:rgb(100, 100, 100);
+    margin-top: 7px;
+
+}
+
+#vols .retour .compagnie p:nth-child(2){
 
     font-size: 12px;
     color:rgb(100, 100, 100);
@@ -335,16 +393,27 @@ h1{
 
 }
 
-#vols .detail-vol{
+#vols .depart .detail-vol{
 
     margin-top: 0px;
+    width: 40%;
+    height: 100%;
+
+}
+
+#vols .retour .detail-vol{
+
+    margin-top: -17px;
+    width: 40%;
+    height: 100%;
 
 }
 
 #vols article .separateur{
 
-    margin-right: 15px;
-    margin-top: -7px;
+    margin-right: 10px;
+    margin-top: -3px;
+    width: 10%;
 
 }
 
@@ -352,32 +421,56 @@ h1{
 
     display: flex;
     flex-direction: column;
-    width: 55px;
+    width: 30%;
     text-align: left;
+    height: 100%;
 
+}
+
+#vols .dte-dep p{
+
+    width: 100%;
+    
 }
 
 #vols .info-vol{
 
     display: flex;
     flex-direction: column;
-    width: 85px;
+    width: 40%;
     text-align: left;
+    height: 100%;
+    align-content: center;
 
 }
 
-#vols .dte-dep p:nth-child(1), #vols .heure-dep p:nth-child(1), #vols .heure-arr p:nth-child(1), #vols .info-vol p:nth-child(1){
+#vols .info-vol p{
 
-    margin-top: -5px;
+    width: 100%;
+
+}
+
+#vols .depart .dte-dep p:nth-child(1), #vols .depart .heure-dep p:nth-child(1), #vols .depart .heure-arr p:nth-child(1), #vols .depart .info-vol p:nth-child(1),
+#vols .retour .dte-dep p:nth-child(1), #vols .retour .heure-dep p:nth-child(1), #vols .retour .heure-arr p:nth-child(1), #vols .retour .info-vol p:nth-child(1){
+
+    margin-top: -2px;
 
 }
 
 
-#vols .dte-dep p:nth-child(2), #vols .heure-dep p:nth-child(2), #vols .heure-arr p:nth-child(2), #vols .info-vol p:nth-child(2){
+#vols .depart .dte-dep p:nth-child(2), #vols .depart .heure-dep p:nth-child(2), #vols .depart .heure-arr p:nth-child(2), #vols .depart .info-vol p:nth-child(2){
 
-    font-size: 16px;
+    font-size: 14px;
     color:rgb(100, 100, 100);
-    margin-top: -10px;
+    margin-top: 2px;
+
+}
+
+#vols .retour .dte-dep p:nth-child(2), #vols .retour .heure-dep p:nth-child(2), #vols .retour .heure-arr p:nth-child(2), #vols .retour .info-vol p:nth-child(2){
+
+    font-size: 14px;
+    color:rgb(100, 100, 100);
+    margin-top: -14px;
 
 }
 
@@ -385,6 +478,9 @@ h1{
 
     justify-content: space-evenly;
     padding: 0;
+    margin: 30px 0 20px 0;
+    width: 100%;
+    position: relative;
     
 }
 
@@ -415,7 +511,7 @@ h1{
 
     Font-size: 18px;
     font-weight: 600;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     margin-top: -5px;
 
 }
@@ -441,8 +537,8 @@ h1{
 
     font-size: 25px;
     margin-bottom: 15px;
-    margin-left: 10%;
     margin-top: 20px;
+    margin-left: 5%;
 }
 
 #chambres .conteneur-general-chambre{
@@ -454,12 +550,16 @@ h1{
     margin-right: auto;
     margin-top: 25px;
     box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.2);
+    background-color: #EFEFEF;
+    border-radius: 10px;
+    padding-top: 10px;
 
 }
 
 #chambres .chambre2{
 
     margin-top: 50px;
+    margin-bottom: 20px;;
 
 }
 
@@ -470,6 +570,18 @@ h1{
     justify-content: space-evenly;
     flex-wrap: wrap;
     width: 100%;
+
+}
+
+#chambres .conteneur-photos-chambre .img-slide-chambre1, #chambres .conteneur-photos-chambre .img-slide-chambre2{
+
+    opacity: 1;
+
+}
+
+#chambres .conteneur-photos-chambre .precedent, #chambres .conteneur-photos-chambre .suivant{
+
+    display: none;
 
 }
 
@@ -491,6 +603,7 @@ h1{
 
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    float: left;
 
 }
 
@@ -511,10 +624,11 @@ h1{
     margin-right: auto;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    background-color: white;
+    background-color: #EFEFEF;
     padding-left: 5px;
     padding-right: 5px;
     margin-bottom: 10px;
+    clear: left;
 
 }
 
@@ -658,6 +772,7 @@ h1{
 
     font-size: 18px;
     font-weight: 600;
+    margin-top: 5px;
 
 }
 
@@ -668,6 +783,8 @@ h1{
     width: 30%;
     text-align:center;
     margin-left: 15px;
+    margin-top: 3px;
+    font-size: 14px;
 
 }
 
@@ -711,14 +828,11 @@ h1{
 }
 
 
-
-
-
 /* CSS 6eme section : Services */
 #services{
 
     text-align: left;
-    padding: 20px 20px;
+    padding: 40px 30px;
     
 }
 
@@ -726,16 +840,25 @@ h1{
 
     font-size: 25px;
     margin-bottom: 15px;
-    margin-left: 8%;
+    margin-left: 2%;
     margin-top: 20px;
     
+}
+
+#services .conteneur-general-services{
+
+    box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.2);
+    background-color: #EFEFEF;
+    border-radius: 10px;
+    padding: 20px 50px 20px 50px;
+
 }
 
 #services .conteneur-service{
 
     display: flex;
-    background-color: rgba(245, 245, 245, 0.65);
-    padding-right: 50px;
+    background-color: #EFEFEF;
+    width: 100%;
 
 }
 
@@ -743,7 +866,6 @@ h1{
 
     display: flex;
     width: 40%;
-    margin-left: 50px;
     border-bottom: 1px solid rgba(0,0,0,0.5);
     border-right: 1px solid rgba(0,0,0,0.5);
     padding: 10px
@@ -770,7 +892,7 @@ h1{
     border-bottom: 1px solid rgba(0,0,0,0.5);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 15px;
+    grid-gap: 0.5rem;
 
 }
 
@@ -797,33 +919,27 @@ h1{
 
 }
 
-#services .covid{
-
-    max-height: 160px;
-    overflow: hidden;
-
-}
-
-#services .resto, #services .activite{
+#services .covid, #services .internet, #services .resto, #services .general{
 
     max-height: 60px;
     overflow: hidden;
 
 }
 
-#services .internet, #services .general{
+#services .activite{
 
-    max-height: 45px;
+    max-height: 42px;
     overflow: hidden;
 
 }
-
 
 /* CSS 7eme section : Avis */
 #avis{
 
     padding: 40px 40px;
     text-align: left;
+    margin-bottom: -3px;
+    border-radius: 30px 30px 0 0;
 
 }
 
@@ -836,9 +952,10 @@ h1{
 
 #avis .conteneur-general-avis{
 
-    background-color: rgba(245, 245, 245, 0.55);
+    background-color: #EFEFEF;
     box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.3);
-    padding-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
 
 }
 
@@ -863,7 +980,7 @@ h1{
 
     display: flex;
     flex-direction: row;
-    margin-top: 20px;
+    margin-top: 30px;
 
 }
 
@@ -887,7 +1004,7 @@ h1{
 
 #avis .section-avis .nbr-avis{
 
-    margin-top: 25px;
+    margin-top: 27px;
     width: 7%;
     
 }
