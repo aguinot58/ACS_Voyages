@@ -250,6 +250,17 @@
 
     }
 
+    /* CSS pastille pourcentage réduction */
+    .pourcentage{
+
+        margin-top: 10px;
+        margin-left: 100px;
+        width: 45px;
+        height: 45px;
+        font-size: 14px;
+
+    }
+
     section h3{
 
         text-align: center;
