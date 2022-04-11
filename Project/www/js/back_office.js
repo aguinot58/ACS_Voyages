@@ -52,11 +52,11 @@ function loadInfoGener(doc) {
             if(value != "") {
                 add_title_contenu("general", name, value);
             }
-            name = element.innerHTML.reduceWhiteSpace();
+            name = element.innerHTML.reduceWhiteSpace().trim();
         } else if(element.classList.contains('contenu')) {
-            value = element.innerHTML.reduceWhiteSpace();
+            value = element.innerHTML.reduceWhiteSpace().trim();
         } else if(element.classList.contains('contenu-add')) {
-            value += "\n"+element.innerHTML.reduceWhiteSpace();
+            value += "\n"+element.innerHTML.reduceWhiteSpace().trim();
             
         }
     });
@@ -77,7 +77,7 @@ function services(doc) {
                 let services = element.querySelectorAll("p");
                 services.forEach(element1 => {
                     name = "titre";
-                    value = element1.innerHTML.reduceWhiteSpace();
+                    value = element1.innerHTML.reduceWhiteSpace().trim();
                     document.getElementById("services").innerHTML += '<label>'+name+'</label><input type="text" value="'+value+'" />';
                     value = "";
                 });
@@ -85,7 +85,7 @@ function services(doc) {
                 let services = element.querySelectorAll("p");
                 services.forEach(element1 => {
                     name = "contenu";
-                    value += "\n"+element1.innerHTML.reduceWhiteSpace();
+                    value += "\n"+element1.innerHTML.reduceWhiteSpace().trim();
                 });
             }
         });
