@@ -231,7 +231,7 @@
   font-family: "YatraOne-Regular";
   color: #ff6b00;
   font-size: 65px;
-  margin-bottom: -48px;
+  margin-bottom: 0px;
 }
 
 /* section recherche */
@@ -394,6 +394,7 @@ form input:hover {
 
 #vignettes-promos article {
   padding: 15px;
+  padding-top: 20px;
 }
 
 .categorie .vignette_voyage {

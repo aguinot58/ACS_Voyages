@@ -2,6 +2,11 @@
     width: 25px;
 }
 
+.add_contenu {
+    margin-top: 25px;
+    width: 25px;
+}
+
 /* tabbled */
 .tabbled {
     width: 85%;
@@ -48,7 +53,9 @@
 }
 
 #find_voyage form {
-    display: block;
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr;
     width: 92%;
     margin-left: auto;
     margin-right: auto;
@@ -107,6 +114,25 @@
     text-align: center;
 }
 
+.form_active input, .form_active textarea {
+    padding: 8px;
+    border: none;
+    border: #8a8a8a 1px solid;
+    border-radius: 20px;
+}
+  
+.form_active input:focus, .form_active textarea:focus {
+      /*color: #0737b5;
+      border-color: #0737b5;*/
+      color: RGB(226, 43, 202);
+      border-color: RGB(226, 43, 202);
+      outline: none;
+}
+
+.form_active input:hover, .form_active textarea:hover {
+    transform: scale(1.03);
+}
+
 .tabbled #tab0:checked ~ ul #onglet_1 .onglet_default {
     background-color: #ebebeb;
     color: black;
@@ -114,7 +140,8 @@
 }
 
 .tabbled #tab0:checked ~ #form_1 {
-    display: block;
+    display: inline-block;
+    width: 100%;
 }
 
 .tabbled #tab1:checked ~ ul #onglet_2 .onglet_default {
@@ -124,7 +151,8 @@
 }
 
 .tabbled #tab1:checked ~ #form_2 {
-    display: block;
+    display: inline-block;
+    width: 100%;
 }
 
 .tabbled #tab2:checked ~ ul #onglet_3 .onglet_default {
@@ -134,7 +162,8 @@
 }
 
 .tabbled #tab2:checked ~ #form_3 {
-    display: block;
+    display: inline-block;
+    width: 100%;
 }
 
 .tabbled #tab3:checked ~ ul #onglet_4 .onglet_default {
@@ -144,7 +173,8 @@
 }
 
 .tabbled #tab3:checked ~ #form_4 {
-    display: block;
+    display: inline-block;
+    width: 100%;
 }
 
 #modification #form_modification {
@@ -165,18 +195,42 @@
 
 #modification #form_modification #all_img img {
     width: 300px;
+    height: 155px;
     padding: 5px;
 }
 
 .title_contenu {
+    margin-top: 15px;
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: auto auto 1fr auto;
     width: 95%;
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
     border: #8a8a8a 1px solid;
     border-radius: 10px;
+}
+
+.title_contenu * {
+    margin: 3px;
+}
+
+.label_contenu {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.text_contenu {
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+
+.img_up ~ .label_contenu, .img_up ~ .text_contenu {
+    display: unset;
+}
+
+.img_down ~ .label_contenu, .img_down ~ .text_contenu {
+    display: none;
 }
 
 table, th, td {
@@ -229,11 +283,52 @@ table {
     /*grid-template-columns: auto 1fr;*/
 }
 
-#services {
+label {
+    text-align: right;
+    padding-right: 15px;
+}
+
+#pour-titre-page {
+    padding: 15px;
     display: grid;
     grid-template-columns: auto 1fr;
 }
 
+#services {
+    display: grid;
+    grid-template-columns: auto;
+}
+
 #form_1 input[type="file"] {
     display: none;
+}
+
+.delete_image {
+    position: relative;
+    margin-top: 0px;
+    margin-left: -42px;
+    max-width: 45px;
+    max-height: 45px;
+}
+
+.two_column {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    justify-content: center;
+    text-align: center;
+}
+
+#choix {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#choix label {
+    padding-left: 5px;
+}
+
+#name_find {
+    width: 100%;
 }

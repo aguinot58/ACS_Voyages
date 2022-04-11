@@ -1,5 +1,52 @@
 let tabpage = [["./vol_solPalmanova_test.html", "vol solPalmanova"]];
 
+let nb_contenu_gener = 0;
+let nb_contenu_serv = 0;
+let nb_photo_gener = 0;
+
+function delete_image(e) {
+    e.target.previousSibling.remove();
+    e.target.remove();
+}
+
+function delete_contenu(e) {
+    let contenu_del = e.target.id.split("_");
+    document.getElementById("title_contenu_"+contenu_del[2]+"_"+contenu_del[3]).remove();
+}
+
+function form_delete_click_img() {
+    let deleteImg = document.querySelectorAll('.delete_image');
+    deleteImg.forEach(function(item) {
+        item.addEventListener('click', delete_image);
+    });
+}
+
+function form_delete_click_contenu() {
+    let deleteContenu = document.querySelectorAll('.delete_contenu');
+    deleteContenu.forEach(function(item) {
+        item.addEventListener('click', delete_contenu);
+    });
+}
+
+function form_down_up_contenu_click() {
+    let down_up = document.querySelectorAll('.afficher_masquer_contenu');
+    down_up.forEach(function(item) {
+        item.addEventListener('click', down_up_contenu);
+    });
+}
+
+function down_up_contenu(e) {//img_down
+    let down_up = e.target.id.split("_");
+    if(e.target.classList.contains("img_down")) {
+        document.getElementById(e.target.id).outerHTML = '<img id="afficher_masquer_'+down_up[2]+"_"+down_up[3]+'" class="afficher_masquer_contenu img_up" alt="afficher le contenu" title="suprimer le voyage" src="./../img/bullet_arrow_down.svg" />';
+        document.getElementById(e.target.id).style.transform = "rotate(180deg)";
+    } else if(e.target.classList.contains("img_up")) {
+        document.getElementById(e.target.id).outerHTML = '<img id="afficher_masquer_'+down_up[2]+"_"+down_up[3]+'" class="afficher_masquer_contenu img_down" alt="afficher le contenu" title="suprimer le voyage" src="./../img/bullet_arrow_down.svg" />';
+        document.getElementById(e.target.id).style.transform = "rotate(0deg)";
+    }
+    form_down_up_contenu_click();
+}
+
 function addRowVoyage(pos, elmt, lien, title){
     var tr = document.createElement('tr');
     elmt.appendChild(tr);
@@ -18,10 +65,29 @@ function addRowVoyage(pos, elmt, lien, title){
 }
 
 function add_title_contenu(id, title, contenu) {
-    document.getElementById(id).innerHTML += '<figure class="title_contenu"><label>Titre</label><input type="text" value="'+title+'" /><label>Contenu</label><textarea rows="10">'+contenu+'</textarea></figure>'; 
+    let nm_contenu = nb_contenu_gener;
+    if(id == "services") {
+        nm_contenu = nb_contenu_serv;
+    }
+    document.getElementById(id).innerHTML += '<figure id="title_contenu_'+id+'_'+nm_contenu+'" class="title_contenu">'+
+    '<img id="delete_contenu_'+id+'_'+nm_contenu+'" class="delete_contenu" alt="suprimer le contenu" title="suprimer le contenu" src="./../img/icons8-supprimer-pour-toujours-90.svg" />'+
+    '<label>Titre</label>'+
+    '<input type="text" value="'+title+'" />'+
+    '<img id="afficher_masquer_'+id+'_'+nm_contenu+'" class="afficher_masquer_contenu img_down" alt="afficher le contenu" title="suprimer le voyage" src="./../img/bullet_arrow_down.svg" />'+
+    '<label id="label_contenu_120" class="label_contenu contenu_clos">Contenu</label><textarea id="text_contenu_120" class="text_contenu contenu_clos" rows="10">'+contenu+'</textarea>'+
+    '</figure>'; 
+    form_delete_click_contenu();
+    form_down_up_contenu_click();
+    if(nm_contenu == 0) {
+        document.getElementById('afficher_masquer_'+id+'_'+nm_contenu).click();
+    }
 }
 
 function resetPage() {
+    nb_contenu_gener = 0;
+    nb_contenu_serv = 0;
+    nb_photo_gener = 0;
+    document.getElementById("titre-page").innerHTML = "";
     document.getElementById("add_img").innerHTML = "";
     document.getElementById("general").innerHTML = '';
     document.getElementById("services").innerHTML = '';
@@ -40,6 +106,16 @@ function loadImgGener(doc) {
     //all_img
     list_photo.forEach(element => {
         document.getElementById("add_img").innerHTML += element.outerHTML;
+        document.getElementById("add_img").innerHTML += "<img class=\"delete_image\" id=\"delete_img_"+nb_photo_gener+"\" alt=\"suprimer le voyage\" title=\"suprimer le voyage\" src=\"./../img/icons8-supprimer-pour-toujours-90.svg\" />";
+        nb_photo_gener++;
+    });
+    form_delete_click_img();
+}
+
+function recup_title(doc) {
+    let h1_list = doc.querySelectorAll("h1");
+    h1_list.forEach(element => {
+        document.getElementById("titre-page").value = element.innerHTML;
     });
 }
 
@@ -51,6 +127,7 @@ function loadInfoGener(doc) {
         if(element.classList.contains('titre-paragraphe')) {
             if(value != "") {
                 add_title_contenu("general", name, value);
+                nb_contenu_gener++;
             }
             name = element.innerHTML.reduceWhiteSpace().trim();
         } else if(element.classList.contains('contenu')) {
@@ -62,6 +139,7 @@ function loadInfoGener(doc) {
     });
     if(value != "") {
         add_title_contenu("general", name, value);
+        nb_contenu_gener++;
     }
 }
 
@@ -78,7 +156,8 @@ function services(doc) {
                 services.forEach(element1 => {
                     name = "titre";
                     value = element1.innerHTML.reduceWhiteSpace().trim();
-                    document.getElementById("services").innerHTML += '<label>'+name+'</label><input type="text" value="'+value+'" />';
+                    add_title_contenu("services", name, value);
+                    nb_contenu_serv++;
                     value = "";
                 });
             } else if(element.classList.contains('contenu-section-services')) {
@@ -89,7 +168,8 @@ function services(doc) {
                 });
             }
         });
-        document.getElementById("services").innerHTML += '<label>'+name+'</label><textarea rows="10">'+value+'</textarea>';
+        add_title_contenu("services", name, value);
+        nb_contenu_serv++;
     });
     
 }
@@ -101,6 +181,7 @@ function loadHTMLPage(e) {
 
 function loadHtmlDoc(doc) {
     resetPage();
+    recup_title(doc);
     loadImgGener(doc);
     loadInfoGener(doc);
     services(doc);
@@ -119,13 +200,28 @@ function loadFiles(event) {
   
       var img = document.createElement("img");
       img.classList.add("obj");
+      img.classList.add("img-slide-presentation");
       img.file = file;
       preview.appendChild(img); // En admettant que "preview" est l'élément div qui contiendra le contenu affiché.
-  
+
+      var imgDelete = document.createElement("img");
+      imgDelete.classList.add("delete_image");
+      imgDelete.src = "./../img/icons8-supprimer-pour-toujours-90.svg";
+      imgDelete.setAttribute("alt","suprimer le voyage");
+      imgDelete.id = "delete_img_"+nb_photo_gener;
+      preview.appendChild(imgDelete);
+
+      nb_photo_gener++;
+
       var reader = new FileReader();
-      reader.onload = (function(aImg) { return function(e) { aImg.src = e.target.result; }; })(img);
+      reader.onload = (function(aImg) {
+          return function(e) { 
+              aImg.src = e.target.result;
+            };
+        })(img);
       reader.readAsDataURL(file);
     }
+    form_delete_click_img();
 }
 
 function img_add() {
@@ -144,12 +240,20 @@ function createTabPage() {
 
 function add_gener_contenu() {
     add_title_contenu("general", "", "");
+    nb_contenu_gener++;
+}
+
+function add_service_contenu() {
+    add_title_contenu("services", "", "");
+    nb_contenu_serv++;
 }
 
 createTabPage();
 document.getElementById('fileToUpload').addEventListener('change', loadFiles);
 document.getElementById('img-add').addEventListener('click', img_add);
 document.getElementById('add-gener-contenu').addEventListener('click', add_gener_contenu);
+document.getElementById('add-service-contenu').addEventListener('click', add_service_contenu);
+document.getElementById('add-service-contenu').addEventListener('click', add_service_contenu);
 
 let itemsAnnuler = document.querySelectorAll('.annuler');
 itemsAnnuler.forEach(function(item) {

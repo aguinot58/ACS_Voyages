@@ -83,11 +83,8 @@
         <form id="form_1" class="form_active">
           <input type="File" name="fileToUpload" id="fileToUpload" accept="image/png, image/jpeg" />
           <figure id="all_img"><img id="img-add" alt="ajouter une image" title="ajouter une image" src="./../img/icons8-ajouter-80_1.svg" /><figure id="add_img"></figure></figure>
+          <figure id="pour-titre-page"><label>Titre</label><input id="titre-page" type="text"></input></figure>
           <figure id="general">
-            <figure class="title_contenu">
-              <label>Titre</label><input type="text" value="test" />
-              <label>Contenu</label><textarea rows="10">test</textarea>
-            </figure>
           </figure>
           <img id="add-gener-contenu" alt="ajouter un contnu" title="ajouter un contnu" class="add_contenu" src="./../img/icons8-ajouter-80.svg" />
           <figure class="buttons"><a href="#" class="button_pink valider">Valider</a><a href="#" class="button_pink annuler">Annuler</a></figure>
@@ -102,10 +99,9 @@
         </form>
         <form id="form_4" class="form_active">
           <figure id="services"></figure>
+          <img id="add-service-contenu" alt="ajouter un contnu" title="ajouter un contnu" class="add_contenu" src="./../img/icons8-ajouter-80.svg" />
           <figure class="buttons"><a href="#" class="button_pink valider">Valider</a><a href="#" class="button_pink annuler">Annuler</a></figure>
         </form>
-        
-      
       </figure>
 
     </section>
@@ -121,11 +117,13 @@
     <section id="find_voyage">
       <h6>find voyage</h6>
       <form>
-        <label>Le nom du voyage</label><input type="text" name="name_find" placeholder="Sol palmanova" />
-        <input type="checkbox" id="vol_hotel" name="animation"/><label>Vol+hôtel</label>
-        <input type="checkbox" id="train_hotel" name="animation"/><label>Train+hôtel</label>
-        <input type="checkbox" id="croisiere" name="animation"/><label>Croisière</label>
-        <a href="#" class="button_pink">Rachercher</a>
+        <label>Le nom du voyage</label><input type="text" name="name_find" id="name_find" placeholder="Sol palmanova" />
+        <figure id="choix" class="two_column">
+          <input type="checkbox" id="vol_hotel" name="animation"/><label>Vol+hôtel</label>
+          <input type="checkbox" id="train_hotel" name="animation"/><label>Train+hôtel</label>
+          <input type="checkbox" id="croisiere" name="animation"/><label>Croisière</label>
+        </figure>
+        <a href="#" class="button_pink two_column">Rachercher</a>
       </form>
     </section>
 
@@ -167,8 +165,8 @@
           <ul>
             <li class="title">Entreprise</li>
             <li><a href="#">A propos</a></li>
-            <li><a href="#">Mentions Légales</a></li>
-            <li><a href="#">CGV</a></li>
+            <li><a href="./mentions_legales.html">Mentions Légales</a></li>
+            <li><a href="./politique_confidentialite.html">Politique de <br />confidentialité</a></li>
           </ul>
 
           <ul id="footer_title_right">
