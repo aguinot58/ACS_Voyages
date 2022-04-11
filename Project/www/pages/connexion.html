@@ -8,15 +8,15 @@
     <link rel="stylesheet" href="../css/index_body.css" />
     <link rel="stylesheet" href="../css/header_footer.css" />
     <link rel="stylesheet" href="../css/index_sections_pourcentage.css" />
-    <link rel="stylesheet" href="../css/back_office.css" />
+    <link rel="stylesheet" href="../css/connexion.css" />
     <link rel="shortcut icon" type="image/icon" href="../favicon.ico" />
-    <title>ACS Voyages : back office</title>
+    <script src="./../js/connexion.js"></script>
+    <title>ACS Voyages : Connexion</title>
   </head>
 
   <body>
     <header>
       <div id="fix-menu">
-        <a id="bt_recherche" href="#recherche"><img id="find-categorie" src="../img/loupe.svg" alt="rechercher une catégorie" /></a>
         <div class="logo-name" id="logo-header">
           <img
             title="logo"
@@ -59,55 +59,8 @@
       </div>
     </header>
 
-    <section id="modification">
-      <h6>modification</h6>
-      <figure id="form_modification" class="tabbled">
-        <input type="radio" name="group1" value="0" id="tab0" checked>
-        <input type="radio" name="group1" value="1" id="tab1">
-        <input type="radio" name="group1" value="2" id="tab2">
-        <input type="radio" name="group1" value="3" id="tab3">
-        <ul>
-          <li id="onglet_1">
-            <label for="tab0" class="onglet_default">Informations générales</label>
-          </li>
-          <li id="onglet_2">
-            <label for="tab1" class="onglet_default">Transport</label>
-          </li>
-          <li id="onglet_3">
-            <label for="tab2" class="onglet_default">Chambres</label>
-          </li>
-          <li id="onglet_4">
-            <label for="tab3" class="onglet_default">Services</label>
-          </li>
-        </ul>
-        <form id="form_1" class="form_active">
-          <input type="File" name="fileToUpload" id="fileToUpload" accept="image/png, image/jpeg" />
-          <figure id="all_img"><img id="img-add" alt="ajouter une image" title="ajouter une image" src="./../img/icons8-ajouter-80_1.svg" /><figure id="add_img"></figure></figure>
-          <figure id="general">
-            <figure class="title_contenu">
-              <label>Titre</label><input type="text" value="test" />
-              <label>Contenu</label><textarea rows="10">test</textarea>
-            </figure>
-          </figure>
-          <img id="add-gener-contenu" alt="ajouter un contnu" title="ajouter un contnu" class="add_contenu" src="./../img/icons8-ajouter-80.svg" />
-          <figure class="buttons"><a href="#" class="button_pink valider">Valider</a><a href="#" class="button_pink annuler">Annuler</a></figure>
-        </form>
-        <form id="form_2" class="form_active">
-          test02
-          <figure class="buttons"><a href="#" class="button_pink valider">Valider</a><a href="#" class="button_pink annuler">Annuler</a></figure>
-        </form>
-        <form id="form_3" class="form_active">
-          test03
-          <figure class="buttons"><a href="#" class="button_pink valider">Valider</a><a href="#" class="button_pink annuler">Annuler</a></figure>
-        </form>
-        <form id="form_4" class="form_active">
-          <figure id="services"></figure>
-          <figure class="buttons"><a href="#" class="button_pink valider">Valider</a><a href="#" class="button_pink annuler">Annuler</a></figure>
-        </form>
-        
-      
-      </figure>
-
+    <section id="section_header">
+      <h6>section header</h6>
     </section>
 
     <section class="separateur_section">
@@ -118,15 +71,15 @@
       <img title="clous" alt="clous" src="./../img/clous.svg" />
     </section>
 
-    <section id="find_voyage">
-      <h6>find voyage</h6>
-      <form>
-        <label>Le nom du voyage</label><input type="text" name="name_find" placeholder="Sol palmanova" />
-        <input type="checkbox" id="vol_hotel" name="animation"/><label>Vol+hôtel</label>
-        <input type="checkbox" id="train_hotel" name="animation"/><label>Train+hôtel</label>
-        <input type="checkbox" id="croisiere" name="animation"/><label>Croisière</label>
-        <a href="#" class="button_pink">Rachercher</a>
-      </form>
+    <section id="section_connexion">
+      <h6>section connexion</h6>
+        <form>
+            <label>Login</label>
+            <input type="text" id="login" />
+            <label>Password</label>
+            <input type="password" id="password" />
+            <a href="#" onclick="connexion()">Valider</a>
+        </form>
     </section>
 
     <section class="separateur_section">
@@ -137,19 +90,8 @@
       <img title="clous" alt="clous" src="./../img/clous.svg" />
     </section>
 
-    <section id="resultats">
-      <h6>resultats</h6>
-      <table>
-        <thead>
-          <tr>
-            <th class="delete"><img alt="suprimer le voyage" title="suprimer le voyage" src="./../img/icons8-supprimer-pour-toujours-90.svg" /></th>
-            <th class="edit"><img alt="modifier le voyage" src="./../img/icons8-modifier.svg" /></th>
-            <th>titre</th>
-          </tr>
-        </thead>
-        <tbody id="tab_find">
-        </tbody>
-      </table>
+    <section id="section_footer">
+      <h6>section footer</h6>
     </section>
 
     <footer>
@@ -234,9 +176,6 @@
       </figure>
       <p id="droits_reserves">Tous droits réservés 2022</p>
     </footer>
-
-    <script src="./../js/back_office.js"></script>
-    <script src="./../js/loadHtmlPage.js"></script>
     
   </body>
 </html>

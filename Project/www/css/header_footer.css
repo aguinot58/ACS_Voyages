@@ -19,6 +19,10 @@ header, footer {
     color: #0091C6;
 }
 
+h6 {
+    display: none;
+}
+
 /* le menu et le footer */
 #fix-menu, footer {
     background-color: #EFEFEF;
@@ -211,7 +215,6 @@ footer ul li a:hover {
 footer ul li.title {
     font-family: "Inter-Bold";
     padding-bottom: 15px;
-    transform: rotate();
 }
 
 footer ul {

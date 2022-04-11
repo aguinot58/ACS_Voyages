@@ -30,9 +30,6 @@ function option_previous() {
 
 function resize_window() {
     let width_voyage = document.getElementById('voyage').offsetWidth;
-
-    console.log(width_voyage);
-    console.log(option_mobile);
     let items = document.querySelectorAll('.block_option');
     if(width_voyage >= 655 && option_mobile) {
         option_mobile = false;
