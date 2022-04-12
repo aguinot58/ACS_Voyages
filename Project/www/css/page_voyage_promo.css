@@ -13,16 +13,6 @@ html, body{
 
 }
 
-
-/* Image de fond */
-.fond{
-
-    background-image: url(../img/ciel.jpg);
-    background-size: cover;
-
-}
-
-
 body{
 
     text-align: center;
@@ -73,7 +63,6 @@ section{
     width: 60px;
     height: 60px;
     font-size: 18px;
-
 
 }
 
