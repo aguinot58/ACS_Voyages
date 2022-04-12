@@ -5,10 +5,11 @@ section {
   margin-left: auto;
   margin-right: auto;
   padding: 5px;
-  background: url("../img/wood-6653691_960_720.svg") no-repeat;
-  box-sizing: border-box;
+  /*background: url("../img/wood-6653691_960_720.svg") no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center;*/
+  background: url("../img/wood-6653691_960_720_2.svg") repeat;
+  box-sizing: border-box;
   border-radius: 20px;
   border: #000000 1px solid;
   padding: 40px 0px;

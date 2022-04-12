@@ -62,8 +62,8 @@
     <section id="modification">
       <h6>modification</h6>
       <figure id="form_modification" class="tabbled">
-        <input type="radio" name="group1" value="0" id="tab0" checked>
-        <input type="radio" name="group1" value="1" id="tab1">
+        <input type="radio" name="group1" value="0" id="tab0">
+        <input type="radio" name="group1" value="1" id="tab1" checked>
         <input type="radio" name="group1" value="2" id="tab2">
         <input type="radio" name="group1" value="3" id="tab3">
         <ul>
@@ -83,14 +83,38 @@
         <form id="form_1" class="form_active">
           <input type="File" name="fileToUpload" id="fileToUpload" accept="image/png, image/jpeg" />
           <figure id="all_img"><img id="img-add" alt="ajouter une image" title="ajouter une image" src="./../img/icons8-ajouter-80_1.svg" /><figure id="add_img"></figure></figure>
-          <figure id="pour-titre-page"><label>Titre</label><input id="titre-page" type="text"></input></figure>
+          <figure id="pour-titre-page">
+            <label>Titre</label><input id="titre-page" type="text" />
+            <label>Pourcentage</label><input type="number" id="pourcentage-page" name="pourcentage" min="-100" max="0" value="0">
+          </figure>
           <figure id="general">
           </figure>
           <img id="add-gener-contenu" alt="ajouter un contnu" title="ajouter un contnu" class="add_contenu" src="./../img/icons8-ajouter-80.svg" />
           <figure class="buttons"><a href="#" class="button_pink valider">Valider</a><a href="#" class="button_pink annuler">Annuler</a></figure>
         </form>
         <form id="form_2" class="form_active">
-          test02
+          <figure id="all-all">
+            <figure id="title_contenu_vol_0" class="title_contenu">
+              <img id="delete_contenu_vol_0" class="delete_contenu" alt="suprimer le contenu" title="suprimer le contenu" src="./../img/icons8-supprimer-pour-toujours-90.svg" />
+              <label>Titre du vol</label>
+              <input id="title-vol" type="text" value="Vol 0" />
+              <img id="afficher_masquer_vol_0" class="afficher_masquer_contenu img_up" alt="afficher le contenu" title="afficher le contenu" src="./../img/bullet_arrow_down.svg" />
+              <label class="title-main contenu_clos">depart</label>
+              <label class="label_contenu contenu_clos">Titre</label>
+              <input id="title-depart" class="text_contenu contenu_clos" type="text" value="Vol 0" />
+              <label class="label_contenu contenu_clos">Compagnie</label><textarea rows="3" id="compagnie_depart_vol_0" class="text_contenu contenu_clos" rows="10">contenu</textarea>
+              <label class="label_contenu contenu_clos">Jour</label><input class="text_contenu contenu_clos" id="jour-depart-vol" type="datetime-local" value="2018-06-12T19:30" />
+              <label class="label_contenu contenu_clos">Arrivée</label><input class="text_contenu contenu_clos" id="arrivee-depart-vol" type="datetime-local" value="2018-06-12T19:30" />
+              <label class="title-main contenu_clos">retour</label>
+              <label class="label_contenu contenu_clos">Titre</label>
+              <input id="title-retour" class="text_contenu contenu_clos" type="text" value="Vol 0" />
+              <label class="label_contenu contenu_clos">Compagnie</label><textarea rows="3" id="compagnie_retour_vol_0" class="text_contenu contenu_clos" rows="10">contenu</textarea>
+              <label class="label_contenu contenu_clos">Jour</label><input class="text_contenu contenu_clos" id="jour-retour-vol" type="datetime-local" value="2018-06-12T19:30" />
+              <label class="label_contenu contenu_clos">Arrivée</label><input class="text_contenu contenu_clos" id="arrivee-retour-vol" type="datetime-local" value="2018-06-12T19:30" />
+              <label class="label_contenu contenu_clos">detail</label><textarea rows="3" id="text_contenu_120" class="text_contenu contenu_clos" rows="10">contenu</textarea>
+              <label class="label_contenu contenu_clos">aeroport</label><textarea rows="3" id="text_contenu_120" class="text_contenu contenu_clos" rows="10">contenu</textarea>
+            </figure>
+          </figure>
           <figure class="buttons"><a href="#" class="button_pink valider">Valider</a><a href="#" class="button_pink annuler">Annuler</a></figure>
         </form>
         <form id="form_3" class="form_active">
@@ -140,8 +164,8 @@
       <table>
         <thead>
           <tr>
-            <th class="delete"><img alt="suprimer le voyage" title="suprimer le voyage" src="./../img/icons8-supprimer-pour-toujours-90.svg" /></th>
-            <th class="edit"><img alt="modifier le voyage" src="./../img/icons8-modifier.svg" /></th>
+            <th class="delete"><img alt="suprimer le voyage" title="suprimer le voyage" src="./../img/icons8-supprimer-pour-toujours-90_white.svg" /></th>
+            <th class="edit"><img alt="modifier le voyage" src="./../img/icons8-modifier_white.svg" /></th>
             <th>titre</th>
           </tr>
         </thead>
