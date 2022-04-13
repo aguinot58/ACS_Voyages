@@ -1,0 +1,1067 @@
+/* RAZ de la page */
+* {
+
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: Inter-Regular;
+
+}
+
+html, body{
+
+    height:100%;
+
+}
+
+body{
+
+    text-align: center;
+
+}
+
+
+/* CSS général pour toutes les sections */
+section{
+
+    max-width: 950px;
+    background-image: url(../img/wood-6653691_960_720.svg);
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 25px 0 25px 0;
+    border-radius: 30px;
+    border: 1px solid rgba(50, 50, 50,0.5);
+    text-align: center;
+    margin-bottom: 0px;
+    position: relative;
+
+}
+
+
+/* le menu header */
+#fix-menu{
+    display: block;
+    max-width: 950px;
+    margin-left: -5px;
+    margin-right: unset;
+}
+
+
+/* CSS pour les sections de séparations avec les clous */
+.separateur_section {
+
+    z-index: 2;
+
+}
+
+
+/* CSS titre */
+h1{
+
+    font-size: 50px;
+    position: relative;
+    top: 45px;
+    z-index: 3;
+    color:rgb(226, 43, 202);
+
+}
+
+
+/* CSS 1ere section : photos-presentation */
+#photos-presentation{
+
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding-top: 70px;
+    position: relative;
+    margin-top: -31px;
+    border-radius: 0 0 30px 30px; 
+
+}
+
+.photos-pres{
+
+    width: 80%;
+    margin-left: auto; margin-right: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: space-evenly;
+
+}
+
+.photos-pres img:hover{
+
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+
+}
+
+#gde-photo{
+
+    position: relative;
+    margin-bottom: 20px;
+
+}
+
+#gde-photo img{
+
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid black;
+
+}
+
+#pte-photos{
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5%;
+    position: relative;
+    margin-bottom: 10px;
+    
+}
+
+#pte-photos img{
+
+    width : 150px;
+    height: 115px;
+    border-radius: 10px;
+    border: 1px solid black;
+
+}
+
+#pte-photos .precedent, #pte-photos .suivant{
+
+    display: none;
+
+}
+
+
+/* CSS 2eme section : barre de navigation de la page */
+#barre-nav-voyage{
+
+    height: 125px;
+    
+}
+
+#barre-nav-voyage article{
+
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+#barre-nav-voyage a{
+
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff,
+    2px 2px 0 #fff;
+    font-weight: 600;
+    
+}
+
+#barre-nav-voyage a:visited{
+
+    color: black;
+
+}
+
+#barre-nav-voyage a:hover{
+
+    text-decoration: underline;
+    color:rgb(226, 43, 202);
+
+}
+
+
+/* CSS 3eme section : informations générales */
+#infos-generales{
+
+    padding: 40px 65px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    transition: all 0.2s ease-in-out;
+
+}
+
+#infos-generales h3{
+
+    font-size: 25px;
+    margin-bottom: 15px;
+    
+}
+
+#infos-generales #info-gener-grand{
+
+    display: none;
+
+}
+
+#infos-generales #info-gener-petit, #infos-generales #info-gener-grand{
+
+    background-color: #EFEFEF;
+    width: 100%;
+    padding: 10px 10px 20px 10px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.3);
+    margin: 10px 0;
+    transition: all 0.2s ease-in-out;
+
+}
+
+#infos-generales #afficher-bloc, #infos-generales #masquer-bloc{
+
+    text-decoration: underline;
+    font-size: 18px;
+    color: black;
+    margin-top: 10px;
+
+}
+
+#infos-generales #afficher-bloc:hover, #infos-generales #masquer-bloc:hover{
+
+    cursor: pointer;
+    color:rgb(226, 43, 202);
+
+}
+
+#infos-generales .titre-paragraphe{
+
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 30px;
+
+}
+
+#infos-generales .titre-paragraphe:nth-child(1){
+
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+}
+
+#infos-generales .contenu, #infos-generales .contenu-add{
+
+    color:rgb(90, 90, 90);
+    margin-bottom: 10px;
+
+}
+
+
+/* CSS 4eme section : vols */
+#vols{
+
+    padding: 40px 65px;
+    text-align: left;
+
+}
+
+
+#vols article{
+
+    display: flex;
+    align-items: flex-start;
+
+}
+
+#vols .texte{
+
+    flex-direction: column;
+    
+}
+
+#vols h3{
+
+    font-size: 25px;
+    margin-bottom: 15px;
+
+}
+
+#vols .texte p{
+
+    font-size: 16px;
+    margin-bottom: 30px;
+    color:rgb(100, 100, 100);
+
+}
+
+#vols .conteneur-vol{
+
+    background-color: #EFEFEF;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+
+}
+
+#vols svg{
+
+    margin-right: 15px;
+    width: 35px;
+    height: 35px;
+
+}
+
+#vols img{
+
+    margin-right: 15px;
+    width: 35px;
+    height: 35px;
+
+}
+
+#vols .depart, #vols .retour{
+
+    margin: 20px 0 20px 0;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 50px;
+    justify-content: center;
+    position: relative;
+    
+}
+
+#vols .trajet-vol{
+
+    width: 35%;
+    height: 100%;
+
+}
+
+#vols .compagnie-vol{
+
+        min-width: 20%;
+        height: 100%;
+
+}
+
+#vols .trajet-vol p, #vols .retour p{
+
+    font-size: 16px;
+    line-height: 35px;
+    margin-right: 0%;
+    margin-top: 2px;
+    width: 80%;
+    
+}
+
+#vols .compagnie p{
+
+    text-align: left;
+    margin-right: 35px;
+
+}
+
+#vols .depart .compagnie p:nth-child(1), #vols .retour .compagnie p:nth-child(1){
+
+    line-height: 15px;
+    margin-top: 0px;
+
+}
+
+#vols .depart .compagnie p:nth-child(2){
+
+    font-size: 12px;
+    color:rgb(100, 100, 100);
+    margin-top: 7px;
+
+}
+
+#vols .retour .compagnie p:nth-child(2){
+
+    font-size: 12px;
+    color:rgb(100, 100, 100);
+    margin-top: -3px;
+
+}
+
+#vols .depart .detail-vol{
+
+    margin-top: 0px;
+    width: 40%;
+    height: 100%;
+
+}
+
+#vols .retour .detail-vol{
+
+    margin-top: -17px;
+    width: 40%;
+    height: 100%;
+
+}
+
+#vols article .separateur{
+
+    margin-right: 10px;
+    margin-top: -3px;
+    width: 10%;
+
+}
+
+#vols .dte-dep, #vols .heure-dep, #vols .heure-arr{
+
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    text-align: left;
+    height: 100%;
+
+}
+
+#vols .dte-dep p{
+
+    width: 100%;
+    
+}
+
+#vols .info-vol{
+
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    text-align: left;
+    height: 100%;
+    align-content: center;
+
+}
+
+#vols .info-vol p{
+
+    width: 100%;
+
+}
+
+#vols .depart .dte-dep p:nth-child(1), #vols .depart .heure-dep p:nth-child(1), #vols .depart .heure-arr p:nth-child(1), #vols .depart .info-vol p:nth-child(1),
+#vols .retour .dte-dep p:nth-child(1), #vols .retour .heure-dep p:nth-child(1), #vols .retour .heure-arr p:nth-child(1), #vols .retour .info-vol p:nth-child(1){
+
+    margin-top: -2px;
+
+}
+
+
+#vols .depart .dte-dep p:nth-child(2), #vols .depart .heure-dep p:nth-child(2), #vols .depart .heure-arr p:nth-child(2), #vols .depart .info-vol p:nth-child(2){
+
+    font-size: 14px;
+    color:rgb(100, 100, 100);
+    margin-top: 2px;
+
+}
+
+#vols .retour .dte-dep p:nth-child(2), #vols .retour .heure-dep p:nth-child(2), #vols .retour .heure-arr p:nth-child(2), #vols .retour .info-vol p:nth-child(2){
+
+    font-size: 14px;
+    color:rgb(100, 100, 100);
+    margin-top: -14px;
+
+}
+
+#vols .detail{
+
+    justify-content: space-evenly;
+    padding: 0;
+    margin: 30px 0 20px 0;
+    width: 100%;
+    position: relative;
+    
+}
+
+#vols .detail p{
+
+    font-size: 20px;
+    color:rgb(226, 43, 202);
+    font-weight: bold;
+
+}
+
+#vols .detail p:hover{
+
+    cursor: pointer;
+    text-decoration: underline;
+
+}
+
+#vols .aeroport{
+    
+    margin-top: 30px;
+    flex-direction: column;
+
+
+}
+
+#vols .aeroport p:nth-child(1){
+
+    Font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    margin-top: -5px;
+
+}
+
+#vols .aeroport p:nth-child(2){
+
+    font-size: 16px;
+    color:rgb(100, 100, 100);
+    margin-bottom: 15px;
+
+}
+
+
+/* CSS 5eme section : chambres */
+#chambres{
+
+    padding: 30px 0px;
+    text-align: left;
+
+}
+
+#chambres h3{
+
+    font-size: 25px;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    margin-left: 5%;
+}
+
+#chambres .conteneur-general-chambre{
+
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.2);
+    background-color: #EFEFEF;
+    border-radius: 10px;
+    padding-top: 10px;
+
+}
+
+#chambres .chambre2{
+
+    margin-top: 50px;
+    margin-bottom: 20px;;
+
+}
+
+#chambres .conteneur-photos-chambre{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+
+}
+
+#chambres .conteneur-photos-chambre .img-slide-chambre1, #chambres .conteneur-photos-chambre .img-slide-chambre2{
+
+    opacity: 1;
+
+}
+
+#chambres .conteneur-photos-chambre .precedent, #chambres .conteneur-photos-chambre .suivant{
+
+    display: none;
+
+}
+
+#chambres .conteneur-photos-chambre .photos-cotes{
+
+    width: 250px;
+    height: auto;
+
+}
+
+#chambres .conteneur-photos-chambre .photos-milieu{
+
+    width: 325px;
+    height: auto;
+
+}
+
+#chambres .conteneur-photos-chambre img{
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    float: left;
+
+}
+
+#chambres .conteneur-photos-chambre img:hover{
+
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+
+}
+
+#chambres .conteneur-infos-chambre{
+
+    width: 98%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(245, 245, 245, 0.85);
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #EFEFEF;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 10px;
+    clear: left;
+
+}
+
+#chambres .conteneur-infos-chambre h5{
+
+    font-size: 20px;
+    margin-left: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+}
+
+#chambres .details-chambre{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+}
+
+#chambres .details-generaux{
+
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    flex-wrap: wrap;
+    margin-left: 5px;
+
+}
+
+#chambres .details-generaux p{
+
+    margin-right: 15%;
+    font-size: 18px;
+
+}
+
+#chambres .afficher-details{
+
+    font-size: 18px;
+    text-decoration: underline;
+    margin: 10px 0 20px 5px;
+    line-height: 25px;
+
+}
+
+#chambres .afficher-details:hover{
+
+    color:rgb(226, 43, 202);
+    cursor: pointer;
+
+}
+
+#chambres .liste-details{
+
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    transition: all 0.2s ease-in-out;
+
+}
+
+#chambres .liste-details ul:nth-child(1){
+
+    margin-left: 25px;
+    
+}
+
+#chambres .liste-details ul:nth-child(2){
+
+    margin-left: 125px;
+    
+}
+
+#chambres .liste-details ul li{
+
+    margin-bottom: 5px;
+
+}
+
+#chambres .demi-pension, #chambres .tout-compris{
+
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+    align-content: center;
+    background-color: white;
+    margin-left: 15px;
+    margin-right: 15px;
+    height: 85px;
+    border-radius: 5px;
+    box-shadow: 2px 5px 8px 0px rgba(0, 0, 0, 0.3);
+
+}
+
+#chambres .demi-pension{
+
+    margin-top: 15px;
+    
+}
+
+#chambres .bouton-continuer button{
+
+    background-color: white;
+    color:rgb(226, 43, 202);
+    border: 1px solid rgb(226, 43, 202);
+    font-weight: 600;
+    font-size: 15px;
+    width: 110px;
+    height: 40px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.3);
+
+}
+
+#chambres .bouton-continuer button:hover{
+
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+
+}
+
+#chambres .titre-chambre{
+
+    width: 20%;
+    text-align: center;
+    padding-top: 5px;
+
+}
+
+#chambres .bouton-continuer{
+
+    width: 20%;
+    text-align: center;
+
+}
+
+#chambres .titre-chambre p{
+
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 5px;
+
+}
+
+#chambres .infos-annul{
+
+    display: flex;
+    flex-wrap: wrap;
+    width: 30%;
+    text-align:center;
+    margin-left: 15px;
+    margin-top: 3px;
+    font-size: 14px;
+
+}
+
+#chambres .conteneur-prix{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: right;
+
+}
+
+#chambres .conteneur-infos-prix{
+
+    width: 25%;
+    text-align: right;
+
+}
+
+#chambres .conteneur-prix .prix{
+
+    font-weight: 600;
+    color: rgb(226, 43, 202);
+    font-size: 18px;
+
+}
+
+#chambres .conteneur-infos-prix .infos-offre{
+
+    font-size: 14px;
+
+}
+
+
+/* CSS 6eme section : Services */
+#services{
+
+    text-align: left;
+    padding: 40px 30px;
+    
+}
+
+#services h3{
+
+    font-size: 25px;
+    margin-bottom: 15px;
+    margin-left: 2%;
+    margin-top: 20px;
+    
+}
+
+#services .conteneur-general-services{
+
+    box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.2);
+    background-color: #EFEFEF;
+    border-radius: 10px;
+    padding: 20px 50px 20px 50px;
+
+}
+
+#services .conteneur-service{
+
+    display: flex;
+    background-color: #EFEFEF;
+    width: 100%;
+
+}
+
+#services .titre-section-service{
+
+    display: flex;
+    width: 40%;
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+    border-right: 1px solid rgba(0,0,0,0.5);
+    padding: 10px
+    
+}
+
+#services .titre-section-service svg{
+
+    margin-right: 15px;
+    
+}
+
+#services .titre-section-service p{
+
+    font-size: 18px;
+    width: 165px;
+    
+}
+
+#services .contenu-section-services{
+
+    width:100%;
+    padding: 10px 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.5rem;
+
+}
+
+#services #arrow_up_svg__stroke-cov, #services #arrow_up_svg__stroke-gen, 
+#services #arrow_up_svg__stroke-act, #services #arrow_up_svg__stroke-net,
+#services #arrow_up_svg__stroke-rest{
+
+    transform: rotate(180deg);
+    transition: all 0.3s ease-in-out;
+
+}
+
+#services #arrow_up_svg__stroke-cov:hover, #services #arrow_up_svg__stroke-gen:hover, 
+#services #arrow_up_svg__stroke-act:hover, #services #arrow_up_svg__stroke-net:hover,
+#services #arrow_up_svg__stroke-rest:hover{
+
+    cursor: pointer;
+
+}
+
+#services .invisible{
+
+    opacity: 0;
+
+}
+
+#services .covid{
+
+    max-height: 75px;
+    overflow: hidden;
+
+}
+
+#services .internet, #services .resto, #services .general{
+
+    max-height: 60px;
+    overflow: hidden;
+
+}
+
+#services .activite{
+
+    max-height: 42px;
+    overflow: hidden;
+
+}
+
+/* CSS 7eme section : Avis */
+#avis{
+
+    padding: 40px 40px;
+    text-align: left;
+    margin-bottom: -3px;
+    border-radius: 30px 30px 0 0;
+
+}
+
+#avis h3{
+
+    font-size: 25px;
+    margin-left: 6.5%;
+    margin-bottom: 25px;
+}
+
+#avis .conteneur-general-avis{
+
+    background-color: #EFEFEF;
+    box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+#avis .conteneur-note .note{
+
+    background-image: url(../img/etoiles.png);
+    background-size: cover;
+    width: 50%;
+    height: 15px;
+    margin: 10px 0;
+
+}
+
+#avis .conteneur-note .note p{
+
+    text-align: right;
+    margin-left: 50px;
+
+}
+
+#avis .section-avis{
+
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+
+}
+
+#avis .conteneur-note{
+
+    min-width: 20%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+
+}
+
+#avis .conteneur-note .note{
+
+    width: 80px;
+    height: 15px;
+
+} 
+
+#avis .section-avis .nbr-avis{
+
+    margin-top: 27px;
+    width: 7%;
+    
+}
+
+#avis .section-avis .nbr-avis p{
+
+    font-size: 15px;
+    color:rgb(100, 100, 100);
+    
+}
+
+#avis .section-avis .nbr-avis p:hover{
+
+    color:rgb(226, 43, 202);
+    cursor: pointer;
+    
+}
+
+#avis .section-avis .conteneur-commentaires{
+
+    width: 70%;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#avis .section-avis .conteneur-commentaires p[class="gras"]{
+
+    margin-bottom: 8px;
+
+}
+
+#avis .section-avis .conteneur-commentaires p{
+
+    font-style: italic;
+
+}
+
+#avis .conteneur-note #note-plage, #avis .conteneur-note #note-site{
+
+    background-position: 0% 0%;
+
+}
+
+#avis .conteneur-note #note-service, #avis .conteneur-note #note-installations,
+#avis .conteneur-note #note-proprete, #avis .conteneur-note #note-repas{
+
+    background-position: 0% 50%;
+    
+}
+
+#avis .conteneur-note #note-chambre, #avis .conteneur-note #note-bar{
+
+    background-position: 0% 75%;
+    
+}
+
+#avis .conteneur-note #note-confort{
+
+    background-position: 0% 100%;
+    
+}
