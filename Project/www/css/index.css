@@ -55,8 +55,9 @@
   position: absolute;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
-  margin-left: 5px;
-  margin-top: 178px;
+  width: 200px;
+  margin-left: 4px;
+  margin-top: 223px;
   text-align: center;
   text-shadow: 0px 0px 10px rgb(230 230 120);
   padding: 0px 20px;
@@ -66,7 +67,7 @@
   text-decoration: none;
   font-family: "Inter-Bold";
   color: #ff6b00;
-  font-size: 60px;
+  font-size: 45px;
 }
 
 .vignette-promo .prix-promo .old-price {
@@ -103,6 +104,7 @@
 .vignette_voyage img {
   margin: auto;
   width: 100%;
+  margin-top: -45px;
 }
 
 .vignette_voyage img {
@@ -414,6 +416,15 @@ form input:hover {
 }
 
 /***************************/
+/** version mobile 728px ***/
+/***************************/
+@media screen and (max-width: 728px) {
+  .vignette_voyage img {
+    margin-top: -16px;
+  }
+}
+
+/***************************/
 /** version mobile 655px ***/
 /***************************/
 @media screen and (max-width: 655px) {
@@ -505,6 +516,10 @@ form input:hover {
     border: black 1px solid;
     border-radius: 20px;
     margin-top: auto;
+  }
+
+  .vignette_voyage img {
+    margin-top: -120px;
   }
 
   .vertical-texte {
@@ -628,5 +643,14 @@ form input:hover {
     grid-column-end: 2;
     grid-row-start: 8;
     grid-row-end: 9;
+  }
+}
+
+/***************************/
+/** version mobile 474px ***/
+/***************************/
+@media screen and (max-width: 474px) {
+  .vignette_voyage img {
+    margin-top: -16px;
   }
 }

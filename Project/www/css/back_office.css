@@ -111,15 +111,21 @@
     text-align: center;
 }
 
-.form_active input, .form_active textarea {
+.form_active input, .form_active textarea, .form_active select {
     font-size: 17px;
     padding: 8px;
     border: none;
     border: #8a8a8a 1px solid;
     border-radius: 20px;
 }
+
+.form_active select {
+    background-color: white;
+    text-align: center;
+    margin-top: 10px;
+}
   
-.form_active input:focus, .form_active textarea:focus {
+.form_active input:focus, .form_active textarea:focus, .form_active select:focus {
       /*color: #0737b5;
       border-color: #0737b5;*/
       color: RGB(226, 43, 202);
@@ -127,7 +133,7 @@
       outline: none;
 }
 
-.form_active input:hover, .form_active textarea:hover {
+.form_active input:hover, .form_active textarea:hover, .form_active select:hover {
     transform: scale(1.03);
 }
 
@@ -179,7 +185,13 @@
     width: 95%;
 }
 
-#all_img, #add_img {
+#modification #form_modification #all_img img {
+    width: 300px;
+    height: 155px;
+    padding: 5px;
+}
+
+#all_img, #add_img, .all_img_chambre, .img-add_chambre {
     display: flex;
     box-sizing: border-box;
     width: 95%;
@@ -187,14 +199,28 @@
     margin-right: auto;
 }
 
-#all_img {
+#all_img, .all_img_chambre, .img-add_chambre {
     overflow: auto;
 }
 
-#modification #form_modification #all_img img {
+#modification #form_modification #all_img img, #modification #form_modification .all_img_chambre img, 
+#modification #form_modification .all_chambres_img img {
+    width: 300px;
     width: 300px;
     height: 155px;
     padding: 5px;
+}
+
+.all_img_chambre, .add_formule, .formules_chambre, .all_chambres_img {
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+#all_chambre .add_formule {
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .title_contenu {
@@ -214,9 +240,15 @@
     margin: 3px;
 }
 
-.label_contenu {
+.label_contenu, #checked_up_page {
     grid-column-start: 1;
     grid-column-end: 3;
+}
+
+#checked_up_page {
+    text-align: left;
+    Margin-top: 15px;
+    width: 100%;
 }
 
 .text_contenu {
@@ -227,8 +259,10 @@
 .title-main {
     grid-column-start: 1;
     grid-column-end: 5;
-    text-align: right;
-    width: 100%;
+    font-family: "Inter-Bold";
+    text-align: center;
+    /*justify-items: center;
+    justify-content: center;*/
 }
 
 .img_up ~ .contenu_clos {
@@ -279,7 +313,7 @@ table {
     margin-bottom: -20px;
 }
 
-#img-add {
+#img-add, .img-add_chambre {
     border: #8a8a8a 1px solid;
     border-radius: 10px;
 }
@@ -314,7 +348,7 @@ label {
     grid-template-columns: auto;
 }
 
-#form_1 input[type="file"] {
+input[type="file"] {
     display: none;
 }
 
@@ -346,4 +380,66 @@ label {
 
 #name_find {
     width: 100%;
+}
+
+.img_up ~ .all_img_chambre {
+    display: flex;
+}
+
+.all_chambres_img {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.img-add_chambre {
+    max-width: 150px;
+    min-width: 150px;
+}
+
+#all_chambre .formules_chambre .title_contenu {
+    display: flex;
+    width: 100%;
+    /* flex-wrap: nowrap; */
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+#all_chambre .formules_chambre img {
+    vertical-align: middle;
+}
+
+/*.title_contenu label {
+    text-align: right;
+}*/
+
+.prix_chambre {
+    text-align: center;
+}
+
+#form_find_mobile {
+    display: none;
+    width: 100%;
+    text-align: center;
+}
+  
+#form_find_mobile img {
+    margin: 0px 10px;
+}
+  
+#form_find_mobile p {
+    font-size: 22px;
+}
+
+/***************************/
+/** version mobile 655px ***/
+/***************************/
+@media screen and (max-width: 655px) {
+    #form_find_mobile {
+        display: block;
+    }
+
+    #form_modification ul {
+        display: none;
+    }
 }

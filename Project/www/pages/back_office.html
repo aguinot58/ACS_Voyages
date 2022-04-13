@@ -61,23 +61,28 @@
 
     <section id="modification">
       <h6>modification</h6>
+      <figure id="form_find_mobile" class="tabbled">
+        <img alt="gauche" id="tab_previous" src="./../img/direction_control_undo_back_backward_left_previous_icon_219294.svg">
+        <img alt="droite" id="tab_next" src="./../img/arrow_control_forward_direction_step_right_next_icon_219289.svg">
+        <p id="choix_information">Informations générales</p>
+      </figure>
       <figure id="form_modification" class="tabbled">
-        <input type="radio" name="group1" value="0" id="tab0">
-        <input type="radio" name="group1" value="1" id="tab1" checked>
+        <input type="radio" name="group1" value="0" id="tab0" checked>
+        <input type="radio" name="group1" value="1" id="tab1">
         <input type="radio" name="group1" value="2" id="tab2">
         <input type="radio" name="group1" value="3" id="tab3">
         <ul>
           <li id="onglet_1">
-            <label for="tab0" class="onglet_default">Informations générales</label>
+            <label id="onglet_label_0" for="tab0" class="onglet_default">Informations générales</label>
           </li>
           <li id="onglet_2">
-            <label for="tab1" class="onglet_default">Transport</label>
+            <label id="onglet_label_1" for="tab1" class="onglet_default">Transport</label>
           </li>
           <li id="onglet_3">
-            <label for="tab2" class="onglet_default">Chambres</label>
+            <label id="onglet_label_2" for="tab2" class="onglet_default">Chambres</label>
           </li>
           <li id="onglet_4">
-            <label for="tab3" class="onglet_default">Services</label>
+            <label id="onglet_label_3" for="tab3" class="onglet_default">Services</label>
           </li>
         </ul>
         <form id="form_1" class="form_active">
@@ -86,39 +91,29 @@
           <figure id="pour-titre-page">
             <label>Titre</label><input id="titre-page" type="text" />
             <label>Pourcentage</label><input type="number" id="pourcentage-page" name="pourcentage" min="-100" max="0" value="0">
+            <label>Catégorie</label><select name="type-transport" id="type-transport">
+              <option value=""></option>
+              <option value="vol">Vol+hôtel</option>
+              <option value="train">Train+hôtel</option>
+              <option value="croisiere">Croisière</option>
+            </select>
+            <figure id="checked_up_page"><input type="checkbox" id="up_page" name="up_page"/><label>Placer en haut de la page.</label></figure>
           </figure>
-          <figure id="general">
-          </figure>
+          <figure id="general"></figure>
           <img id="add-gener-contenu" alt="ajouter un contnu" title="ajouter un contnu" class="add_contenu" src="./../img/icons8-ajouter-80.svg" />
           <figure class="buttons"><a href="#" class="button_pink valider">Valider</a><a href="#" class="button_pink annuler">Annuler</a></figure>
         </form>
         <form id="form_2" class="form_active">
-          <figure id="all-all">
-            <figure id="title_contenu_vol_0" class="title_contenu">
-              <img id="delete_contenu_vol_0" class="delete_contenu" alt="suprimer le contenu" title="suprimer le contenu" src="./../img/icons8-supprimer-pour-toujours-90.svg" />
-              <label>Titre du vol</label>
-              <input id="title-vol" type="text" value="Vol 0" />
-              <img id="afficher_masquer_vol_0" class="afficher_masquer_contenu img_up" alt="afficher le contenu" title="afficher le contenu" src="./../img/bullet_arrow_down.svg" />
-              <label class="title-main contenu_clos">depart</label>
-              <label class="label_contenu contenu_clos">Titre</label>
-              <input id="title-depart" class="text_contenu contenu_clos" type="text" value="Vol 0" />
-              <label class="label_contenu contenu_clos">Compagnie</label><textarea rows="3" id="compagnie_depart_vol_0" class="text_contenu contenu_clos" rows="10">contenu</textarea>
-              <label class="label_contenu contenu_clos">Jour</label><input class="text_contenu contenu_clos" id="jour-depart-vol" type="datetime-local" value="2018-06-12T19:30" />
-              <label class="label_contenu contenu_clos">Arrivée</label><input class="text_contenu contenu_clos" id="arrivee-depart-vol" type="datetime-local" value="2018-06-12T19:30" />
-              <label class="title-main contenu_clos">retour</label>
-              <label class="label_contenu contenu_clos">Titre</label>
-              <input id="title-retour" class="text_contenu contenu_clos" type="text" value="Vol 0" />
-              <label class="label_contenu contenu_clos">Compagnie</label><textarea rows="3" id="compagnie_retour_vol_0" class="text_contenu contenu_clos" rows="10">contenu</textarea>
-              <label class="label_contenu contenu_clos">Jour</label><input class="text_contenu contenu_clos" id="jour-retour-vol" type="datetime-local" value="2018-06-12T19:30" />
-              <label class="label_contenu contenu_clos">Arrivée</label><input class="text_contenu contenu_clos" id="arrivee-retour-vol" type="datetime-local" value="2018-06-12T19:30" />
-              <label class="label_contenu contenu_clos">detail</label><textarea rows="3" id="text_contenu_120" class="text_contenu contenu_clos" rows="10">contenu</textarea>
-              <label class="label_contenu contenu_clos">aeroport</label><textarea rows="3" id="text_contenu_120" class="text_contenu contenu_clos" rows="10">contenu</textarea>
-            </figure>
+          <figure id="transport">
+            
           </figure>
+          <img id="add-transport-contenu" alt="ajouter un transport" title="ajouter un transport" class="add_contenu" src="./../img/icons8-ajouter-80.svg" />
           <figure class="buttons"><a href="#" class="button_pink valider">Valider</a><a href="#" class="button_pink annuler">Annuler</a></figure>
         </form>
-        <form id="form_3" class="form_active">
-          test03
+        <form id="form_3" class="form_active form_chambres">
+          <figure id="all_chambre">
+          </figure>
+          <img id="add-chambre-contenu" alt="ajouter un contnu" title="ajouter un contnu" class="add_contenu" src="./../img/icons8-ajouter-80.svg" />
           <figure class="buttons"><a href="#" class="button_pink valider">Valider</a><a href="#" class="button_pink annuler">Annuler</a></figure>
         </form>
         <form id="form_4" class="form_active">
@@ -147,7 +142,7 @@
           <input type="checkbox" id="train_hotel" name="animation"/><label>Train+hôtel</label>
           <input type="checkbox" id="croisiere" name="animation"/><label>Croisière</label>
         </figure>
-        <a href="#" class="button_pink two_column">Rachercher</a>
+        <a href="#" class="button_pink two_column">Rechercher</a>
       </form>
     </section>
 
@@ -259,6 +254,7 @@
 
     <script src="./../js/back_office.js"></script>
     <script src="./../js/loadHtmlPage.js"></script>
-    
+    <script src="./../js/tabbled_back_office.js"></script>
+
   </body>
 </html>
