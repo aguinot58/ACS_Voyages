@@ -4,13 +4,8 @@ label, input {
     width: 100%;
 }
 
-#section_footer {
-    margin-bottom: -25px;
-}
-
 #section_connexion {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 70px 20px;
 }
 
 form {
@@ -22,6 +17,7 @@ form {
     padding: 20px;
     border: #8a8a8a 1px solid;
     border-radius: 10px;
+    box-shadow: 7px 8px 20px rgb(0 0 0 / 25%);
 }
 
 form a {
@@ -66,3 +62,27 @@ form input:focus {
     border-color: RGB(226, 43, 202);
     outline: none;
 }
+
+#section_footer {
+    border-bottom-left-radius: unset;
+    border-bottom-right-radius: unset;
+}
+
+#section_header {
+    border-top-left-radius: unset;
+    border-top-right-radius: unset;
+    margin-top: 27px;
+}
+
+/**********************/
+/** version < 950px ***/
+/**********************/
+@media screen and (max-width: 650px) {
+    #section_footer {
+        display: none;
+    }
+    
+    #section_header {
+        display: none;
+    }
+  }

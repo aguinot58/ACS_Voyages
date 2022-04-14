@@ -1,3 +1,9 @@
+#modification {
+    margin-top: 29px;
+    border-top-left-radius: unset;
+    border-top-right-radius: unset;
+}
+
 #modification .tabbled img {
     width: 25px;
 }
@@ -109,6 +115,7 @@
 #form_1, #form_2, #form_3, #form_4 {
     display: none;
     text-align: center;
+    box-shadow: 7px 8px 20px rgb(0 0 0 / 25%);
 }
 
 .form_active input, .form_active textarea, .form_active select {
@@ -117,6 +124,7 @@
     border: none;
     border: #8a8a8a 1px solid;
     border-radius: 20px;
+    box-shadow: 7px 8px 20px rgba(0, 0, 0, 0.25);
 }
 
 .form_active select {
@@ -234,6 +242,7 @@
     border: #8a8a8a 1px solid;
     border-radius: 10px;
     align-items: center;
+    box-shadow: 7px 8px 20px rgb(0 0 0 / 25%);
 }
 
 .title_contenu * {
@@ -261,8 +270,6 @@
     grid-column-end: 5;
     font-family: "Inter-Bold";
     text-align: center;
-    /*justify-items: center;
-    justify-content: center;*/
 }
 
 .img_up ~ .contenu_clos {
@@ -309,8 +316,10 @@ table {
 }
 
 #resultats {
-    padding-bottom: 70px;
-    margin-bottom: -20px;
+    padding-bottom: 46px;
+    margin-bottom: 0px;
+    border-bottom-left-radius: unset;
+    border-bottom-right-radius: unset;
 }
 
 #img-add, .img-add_chambre {
@@ -435,13 +444,18 @@ input[type="file"] {
     border: 3px dotted #666;
 }
 
+#pour-titre-page #up_page {
+    margin-right: 10px;
+}
+
 /***************************/
-/** version mobile 747px ***/
+/** version mobile 780px ***/
 /***************************/
-@media screen and (max-width: 747px) {
+@media screen and (max-width: 780px) {
     .une_formule {
         display: grid;
         grid-template-columns: auto auto 1fr;
+        align-items: center;
     }
 
     .une_formule img {
@@ -546,14 +560,70 @@ input[type="file"] {
         grid-column-start: 1;
         grid-column-end: 3;
     }
+
+    .title_contenu {
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
+    .title_contenu .text_contenu {
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
     
     .label_contenu, #checked_up_page {
         grid-column-start: 1;
         grid-column-end: 3;
     }
-    
-    .text_contenu {
+
+    .text_contenu .contenu_clos {
         grid-column-start: 1;
         grid-column-end: 4;
+    }
+    
+    .text_contenu, .text_contenu .contenu_clos {
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
+    #pour-titre-page {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #pour-titre-page label, #pour-titre-page input, #pour-titre-page select {
+        width: 100%;
+        text-align: center;
+    }
+
+    #pour-titre-page label {
+        margin-top: 15px;
+    }
+
+    #pour-titre-page #up_page {
+        width: unset;
+    }
+
+    #choix {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        width: 120px;
+        justify-items: start;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+    }
+
+    #find_voyage form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #find_voyage #label_name_voyage {
+        margin-bottom: 10px;
+    }
+
+    #title_voyage {
+        margin-bottom: 10px;
     }
 }

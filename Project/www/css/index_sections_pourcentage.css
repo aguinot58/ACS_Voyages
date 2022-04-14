@@ -41,6 +41,11 @@ section {
   transition-duration: 0.5s;
 }
 
+textarea
+{
+ resize : none;
+}
+
 /**********************/
 /** version < 950px ***/
 /**********************/

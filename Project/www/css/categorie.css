@@ -74,6 +74,13 @@
     padding-right: 25px;
 }
 
+#promo {
+    /*padding-top: 25px;*/
+    margin-top: 28px;
+    border-top-left-radius: unset;
+    border-top-right-radius: unset;
+}
+
 #promo .pourcentage {
     margin-left: 341px;
     margin-top: 18px;
@@ -81,8 +88,8 @@
 
 #voyage {
     display: grid;
-    padding-bottom: 70px;
-    margin-bottom: -25px;
+    padding-bottom: 37px;
+    margin-bottom: 0px;
     grid-template-columns: auto auto;
     border-bottom-left-radius: unset;
     border-bottom-right-radius: unset;

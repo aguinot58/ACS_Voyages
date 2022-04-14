@@ -224,8 +224,10 @@
 /* section promo */
 #section-promo {
   text-align: center;
-  margin-top: 6px;
-  padding-top: 30px;
+  margin-top: 28px;
+  padding-top: 26px;
+  border-top-left-radius: unset;
+  border-top-right-radius: unset;
 }
 
 /* titre promo */
@@ -383,8 +385,10 @@ form input:hover {
 
 /* section voyages */
 #voyages {
-  padding-bottom: 103px;
-  margin-bottom: -60px;
+  padding-bottom: 48px;
+  margin-bottom: 0px;
+  border-bottom-left-radius: unset;
+  border-bottom-right-radius: unset;
 }
 
 #voyages .vertical-texte {

@@ -687,6 +687,7 @@ function loadFiles(event) {
     let preview = document.getElementById("add_img");
     for (var i = 0; i < files.length; i++) {
       var file = files[i];
+      console.log(file);
       var imageType = /^image\//;
   
       if (!imageType.test(file.type)) {
@@ -758,9 +759,9 @@ function add_the_formule(num, titre, prix) {
     document.getElementById('add_formules_'+num).innerHTML += '<figure id="formule_chambre_'+num+'_'+chambre_formule[num]+'" class="une_formule">'+
     '<img id="delete_contenu_chambre_'+num+'_'+chambre_formule[num]+'" class="delete_formule" alt="suprimer le contenu" title="suprimer le contenu" src="./../img/icons8-supprimer-pour-toujours-90.svg" />'+
     '<label class="une_formule_titre">Titre</label>'+
-    '<input class="une_formule_titre_value" id="title_chambre_'+num+'_'+chambre_formule[num]+'" type="text" value="'+titre+'" />'+
+    '<input class="une_formule_titre_value text_contenu" id="title_chambre_'+num+'_'+chambre_formule[num]+'" type="text" value="'+titre+'" />'+
     '<label class="une_formule_prix">Prix</label>'+
-    '<input class="une_formule_prix_value" id="prix_chambre_'+num+'_'+chambre_formule[num]+'" class="prix_chambre" type="number" value="'+prix+'" />'+
+    '<input class="une_formule_prix_value text_contenu" id="prix_chambre_'+num+'_'+chambre_formule[num]+'" class="prix_chambre" type="number" value="'+prix+'" />'+
     '</figure>';
     chambre_formule[num]++;
     from_del_formule();
