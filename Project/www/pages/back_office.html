@@ -87,37 +87,35 @@
         </ul>
         <form id="form_1" class="form_active">
           <input type="File" name="fileToUpload" id="fileToUpload" accept="image/png, image/jpeg" />
-          <figure id="all_img"><img id="img-add" alt="ajouter une image" title="ajouter une image" src="./../img/icons8-ajouter-80_1.svg" /><figure id="add_img"></figure></figure>
+          <figure id="all_img"><img id="img-add" alt="ajouter une image" title="ajouter une image" src="./../img/icons8-ajouter-80_1.svg" />
+            <figure id="add_img" class="drop_img"></figure></figure>
           <figure id="pour-titre-page">
             <label>Titre</label><input id="titre-page" type="text" />
             <label>Pourcentage</label><input type="number" id="pourcentage-page" name="pourcentage" min="-100" max="0" value="0">
             <label>Catégorie</label><select name="type-transport" id="type-transport">
-              <option value=""></option>
+              <option value="">-</option>
               <option value="vol">Vol+hôtel</option>
               <option value="train">Train+hôtel</option>
               <option value="croisiere">Croisière</option>
             </select>
             <figure id="checked_up_page"><input type="checkbox" id="up_page" name="up_page"/><label>Placer en haut de la page.</label></figure>
           </figure>
-          <figure id="general"></figure>
+          <figure id="general" class="drop_contenu"></figure>
           <img id="add-gener-contenu" alt="ajouter un contnu" title="ajouter un contnu" class="add_contenu" src="./../img/icons8-ajouter-80.svg" />
           <figure class="buttons"><a href="#" class="button_pink valider">Valider</a><a href="#" class="button_pink annuler">Annuler</a></figure>
         </form>
         <form id="form_2" class="form_active">
-          <figure id="transport">
-            
-          </figure>
+          <figure id="transport" class="drop_contenu"></figure>
           <img id="add-transport-contenu" alt="ajouter un transport" title="ajouter un transport" class="add_contenu" src="./../img/icons8-ajouter-80.svg" />
           <figure class="buttons"><a href="#" class="button_pink valider">Valider</a><a href="#" class="button_pink annuler">Annuler</a></figure>
         </form>
         <form id="form_3" class="form_active form_chambres">
-          <figure id="all_chambre">
-          </figure>
+          <figure id="all_chambre" class="drop_contenu"></figure>
           <img id="add-chambre-contenu" alt="ajouter un contnu" title="ajouter un contnu" class="add_contenu" src="./../img/icons8-ajouter-80.svg" />
           <figure class="buttons"><a href="#" class="button_pink valider">Valider</a><a href="#" class="button_pink annuler">Annuler</a></figure>
         </form>
         <form id="form_4" class="form_active">
-          <figure id="services"></figure>
+          <figure id="services" class="drop_contenu"></figure>
           <img id="add-service-contenu" alt="ajouter un contnu" title="ajouter un contnu" class="add_contenu" src="./../img/icons8-ajouter-80.svg" />
           <figure class="buttons"><a href="#" class="button_pink valider">Valider</a><a href="#" class="button_pink annuler">Annuler</a></figure>
         </form>

@@ -1,3 +1,135 @@
+/* start drag drop pour le contenue */
+var dragSrcEl = null;
+    
+    function handleDragStart(e) {
+      this.style.opacity = '0.4';
+      
+      dragSrcEl = this;
+  
+      e.dataTransfer.effectAllowed = 'move';
+      e.dataTransfer.setData('text/html', this.innerHTML);
+    }
+  
+    function handleDragOver(e) {
+      if (e.preventDefault) {
+        e.preventDefault();
+      }
+  
+      e.dataTransfer.dropEffect = 'move';
+      
+      return false;
+    }
+  
+    function handleDragEnter(e) {
+      this.classList.add('over');
+    }
+  
+    function handleDragLeave(e) {
+      this.classList.remove('over');
+    }
+  
+    function handleDrop(e) {
+      if (e.stopPropagation) {
+        e.stopPropagation();
+      }
+      if (dragSrcEl != this) {
+        dragSrcEl.innerHTML = this.innerHTML;
+        this.innerHTML = e.dataTransfer.getData('text/html');
+      }
+
+      form_down_up_contenu_click();
+      
+      return false;
+    }
+  
+    function handleDragEnd(e) {
+      this.style.opacity = '1';
+      
+      let items = document.querySelectorAll('.drag_contenu');
+      items.forEach(function (item) {
+        item.classList.remove('over');
+      });
+    }
+/* end drag drop pour le contenue */
+
+/* start drag drop pour l'image' */
+var dragSrcElImg = null;
+    
+    function handleDragImgStart(e) {
+      this.style.opacity = '0.4';
+      
+      dragSrcElImg = e.target;
+  
+      e.dataTransfer.effectAllowed = 'move';
+      e.dataTransfer.setData('text', e.target.src);
+    }
+  
+    function handleDragImgOver(e) {
+      if (e.preventDefault) {
+        e.preventDefault();
+      }
+  
+      e.dataTransfer.dropEffect = 'move';
+      
+      return false;
+    }
+  
+    function handleDragImgEnter(e) {
+      this.classList.add('over');
+    }
+  
+    function handleDragImgLeave(e) {
+      this.classList.remove('over');
+    }
+  
+    function handleDropImg(e) {
+      if (e.stopPropagation) {
+        e.stopPropagation();
+      }
+      if (dragSrcElImg != this) {
+          dragSrcElImg.src = e.target.src;
+        e.target.src = e.dataTransfer.getData('text');
+      }
+      
+      return false;
+    }
+  
+    function handleDragImgEnd(e) {
+      this.style.opacity = '1';
+      
+      let items = document.querySelectorAll('.drag_contenu');
+      items.forEach(function (item) {
+        item.classList.remove('over');
+      });
+    }
+/* end drag drop pour l'image */
+
+/* activation du drag drop pour le contenus */
+function allDragDropContenu() {
+    let items = document.querySelectorAll('.drop_contenu .drag_contenu');
+    items.forEach(function(item) {
+      item.addEventListener('dragstart', handleDragStart, false);
+      item.addEventListener('dragenter', handleDragEnter, false);
+      item.addEventListener('dragover', handleDragOver, false);
+      item.addEventListener('dragleave', handleDragLeave, false);
+      item.addEventListener('drop', handleDrop, false);
+      item.addEventListener('dragend', handleDragEnd, false);
+    });
+}
+
+/* activation du drag drop pour les images */
+function allDragDropImg() {
+    let items = document.querySelectorAll('.drop_img .drag_img');
+    items.forEach(function(item) {
+      item.addEventListener('dragstart', handleDragImgStart, false);
+      item.addEventListener('dragenter', handleDragImgEnter, false);
+      item.addEventListener('dragover', handleDragImgOver, false);
+      item.addEventListener('dragleave', handleDragImgLeave, false);
+      item.addEventListener('drop', handleDropImg, false);
+      item.addEventListener('dragend', handleDragImgEnd, false);
+    });
+}
+
 /* La table des pages web de voyage a lire */
 let tabpage = [
     ["./vol_solPalmanova_test.html", "Sol palmanova test", true],
@@ -106,6 +238,20 @@ function addRowVoyage(pos, elmt, lien, title){
     tr.appendChild(td2);
 }
 
+/*
+La creation de tous les contenus de la page (general, transport, chambres, services).
+id_conteneur (string) : id du contenur de celui-ci
+id_contenu (string) : id du contenu
+class_contenu (string) : la ou les classe du contenu
+contenu (string) le contenu du bloc
+*/
+function create_contenu_all(id_conteneur, id_contenu, class_contenu, contenu) {
+    document.getElementById(id_conteneur).innerHTML += '<figure id="'+id_contenu+'" class="'+class_contenu+' drag_contenu" draggable="true">'+
+    contenu+
+    '</figure>'; 
+    allDragDropContenu();
+}
+
 /* Ajouter un contenu a la page 
 id (string) : ou ajouter le contenu (general ou service)
 title (string) : le titre
@@ -116,13 +262,12 @@ function add_title_contenu(id, title, contenu) {
     if(id == "services") {
         nm_contenu = nb_contenu_serv;
     }
-    document.getElementById(id).innerHTML += '<figure id="title_contenu_'+id+'_'+nm_contenu+'" class="title_contenu">'+
-    '<img id="delete_contenu_'+id+'_'+nm_contenu+'" class="delete_contenu" alt="suprimer le contenu" title="suprimer le contenu" src="./../img/icons8-supprimer-pour-toujours-90.svg" />'+
+    let all_contenu = '<img id="delete_contenu_'+id+'_'+nm_contenu+'" class="delete_contenu" alt="suprimer le contenu" title="suprimer le contenu" src="./../img/icons8-supprimer-pour-toujours-90.svg" />'+
     '<label>Titre</label>'+
     '<input id="title_'+id+'_'+nm_contenu+'" type="text" value="'+title+'" />'+
     '<img id="afficher_masquer_'+id+'_'+nm_contenu+'" class="afficher_masquer_contenu img_down" alt="afficher le contenu" title="afficher le contenu" src="./../img/bullet_arrow_down.svg" style="transform: rotate(180deg);" />'+
-    '<label class="label_contenu contenu_clos">Contenu</label><textarea id="contenu_'+id+'_'+nm_contenu+'" class="text_contenu contenu_clos" rows="10">'+contenu+'</textarea>'+
-    '</figure>'; 
+    '<label class="label_contenu contenu_clos">Contenu</label><textarea id="contenu_'+id+'_'+nm_contenu+'" class="text_contenu contenu_clos" rows="10">'+contenu+'</textarea>';
+    create_contenu_all(id, 'title_contenu_'+id+'_'+nm_contenu, "title_contenu", all_contenu);
     form_delete_click_contenu();
     form_down_up_contenu_click();
     if(nm_contenu == 0) {
@@ -268,8 +413,7 @@ detail (string) : detail du trajet
 aeroport (string) : detail sur le transport
 */
 function add_vol_page(depart, retour, detail, aeroport) {
-    document.getElementById('transport').innerHTML += '<figure id="title_contenu_transport_'+nb_vol+'" class="title_contenu">'+
-    '<img id="delete_contenu_transport_'+nb_vol+'" class="delete_contenu" alt="suprimer le contenu" title="suprimer le contenu" src="./../img/icons8-supprimer-pour-toujours-90.svg" />'+
+    let all_contenu = '<img id="delete_contenu_transport_'+nb_vol+'" class="delete_contenu" alt="suprimer le contenu" title="suprimer le contenu" src="./../img/icons8-supprimer-pour-toujours-90.svg" />'+
     '<label>Titre du vol</label>'+
     '<input id="title_transport_'+nb_vol+'" type="text" value="Transport '+nb_vol+'" />'+
     '<img id="afficher_masquer_transport_'+nb_vol+'" class="afficher_masquer_contenu img_down" alt="afficher le contenu" title="afficher le contenu" src="./../img/bullet_arrow_down.svg" style="transform: rotate(180deg);" />'+
@@ -287,8 +431,8 @@ function add_vol_page(depart, retour, detail, aeroport) {
     '<label class="label_contenu contenu_clos">Arrivée</label><input class="text_contenu contenu_clos" id="arrivee-retou_transport_'+nb_vol+'" type="datetime-local" value="'+retour[3]+'" />'+
     '<label class="title-main contenu_clos">Détails</label>'+
     /*'<label class="label_contenu contenu_clos">Détail</label><textarea rows="3" id="text_detail_transport_'+nb_vol+'" class="text_contenu contenu_clos" rows="10">'+detail+'</textarea>'+*/
-    '<label class="label_contenu contenu_clos text_aeroport_transport">Aéroport</label><textarea rows="3" id="text_aeroport_transport_'+nb_vol+'" class="text_contenu contenu_clos" rows="10">'+aeroport+'</textarea>'+
-     '</figure>'; 
+    '<label class="label_contenu contenu_clos text_aeroport_transport">Aéroport</label><textarea rows="3" id="text_aeroport_transport_'+nb_vol+'" class="text_contenu contenu_clos" rows="10">'+aeroport+'</textarea>';
+    create_contenu_all('transport', 'title_contenu_transport_'+nb_vol, "title_contenu", all_contenu);
     form_delete_click_contenu();
     form_down_up_contenu_click();
     if(nb_vol == 0) {
@@ -320,7 +464,7 @@ function resetPage() {
     up_page = false;
     type_transport_value = "vol";
     chambre_formule = [];
-    document.getElementById("titre-page").innerHTML = "";
+    document.getElementById("titre-page").value = "";
     document.getElementById("add_img").innerHTML = "";
     document.getElementById("general").innerHTML = '';
     document.getElementById("services").innerHTML = '';
@@ -338,12 +482,18 @@ doc (DOM) : l'endroit ou récupérer les images
 function loadImgGener(doc) {
     let list_photo = doc.getElementById("photos-presentation").querySelectorAll("img");
     list_photo.forEach(element => {
+        element.classList.add("drag_img");
+        if(element.id == "") {
+            element.id = "img_"+nb_photo_gener;
+        }
+        element.setAttribute('draggable', true);
         document.getElementById("add_img").innerHTML += element.outerHTML;
         /* bouton pour supprimer l'image*/
         document.getElementById("add_img").innerHTML += "<img class=\"delete_image\" id=\"delete_img_"+nb_photo_gener+"\" alt=\"suprimer la photo\" title=\"suprimer la photo\" src=\"./../img/icons8-supprimer-pour-toujours-90.svg\" />";
         nb_photo_gener++;
     });
     form_delete_click_img();
+    allDragDropImg();
 }
 
 /*
@@ -500,6 +650,9 @@ function loadFilesChambre(event) {
       var img = document.createElement("img");
       img.classList.add("obj");
       img.classList.add("img-slide-presentation");
+      //img.classList.add("drag_img");
+      img.id = "img_"+nb_photo_gener;
+      //img.setAttribute('draggable', true);
       img.file = file;
       preview.appendChild(img);
 
@@ -522,6 +675,7 @@ function loadFilesChambre(event) {
       reader.readAsDataURL(file);
     }
     form_delete_click_img();
+    //allDragDropImg();
 }
 
 /*
@@ -542,6 +696,9 @@ function loadFiles(event) {
       var img = document.createElement("img");
       img.classList.add("obj");
       img.classList.add("img-slide-presentation");
+      img.classList.add("drag_img");
+      img.id = "img_"+nb_photo_gener;
+      img.setAttribute('draggable', true);
       img.file = file;
       preview.appendChild(img);
 
@@ -564,6 +721,7 @@ function loadFiles(event) {
       reader.readAsDataURL(file);
     }
     form_delete_click_img();
+    allDragDropImg();
 }
 
 /*
@@ -597,12 +755,12 @@ function from_del_formule() {
 }
 
 function add_the_formule(num, titre, prix) {
-    document.getElementById('add_formules_'+num).innerHTML += '<figure id="formule_chambre_'+num+'_'+chambre_formule[num]+'">'+
+    document.getElementById('add_formules_'+num).innerHTML += '<figure id="formule_chambre_'+num+'_'+chambre_formule[num]+'" class="une_formule">'+
     '<img id="delete_contenu_chambre_'+num+'_'+chambre_formule[num]+'" class="delete_formule" alt="suprimer le contenu" title="suprimer le contenu" src="./../img/icons8-supprimer-pour-toujours-90.svg" />'+
-    '<label>Titre</label>'+
-    '<input id="title_chambre_'+num+'_'+chambre_formule[num]+'" type="text" value="'+titre+'" />'+
-    '<label>Prix</label>'+
-    '<input id="prix_chambre_'+num+'_'+chambre_formule[num]+'" class="prix_chambre" type="number" value="'+prix+'" />'+
+    '<label class="une_formule_titre">Titre</label>'+
+    '<input class="une_formule_titre_value" id="title_chambre_'+num+'_'+chambre_formule[num]+'" type="text" value="'+titre+'" />'+
+    '<label class="une_formule_prix">Prix</label>'+
+    '<input class="une_formule_prix_value" id="prix_chambre_'+num+'_'+chambre_formule[num]+'" class="prix_chambre" type="number" value="'+prix+'" />'+
     '</figure>';
     chambre_formule[num]++;
     from_del_formule();
@@ -650,12 +808,18 @@ function loadImgChambre(doc, numchambre) {
     all_photos.forEach(element0 => {
         let list_photo = element0.querySelectorAll("img");
         list_photo.forEach(element => {
+            //element.classList.add("drag_img");
+            //element.setAttribute('draggable', true);
+            if(element.id == "") {
+                element.id = "img_"+nb_photo_gener;
+            }
             document.getElementById('add_img_chambre_'+numchambre).innerHTML += element.outerHTML;
             document.getElementById('add_img_chambre_'+numchambre).innerHTML += "<img class=\"delete_image\" id=\"delete_img_"+nb_photo_gener+"\" alt=\"suprimer la photo\" title=\"suprimer la photo\" src=\"./../img/icons8-supprimer-pour-toujours-90.svg\" />";
             nb_photo_gener++;
         });
     });
     form_delete_click_img();
+    //allDragDropImg();
 }
 
 /*
@@ -689,8 +853,7 @@ title (string) : le titre de la chambre
 contenu (string) : le contenu pour la chambre
 */
 function add_chambre_def(title, contenu) {
-    document.getElementById("all_chambre").innerHTML += '<figure id="title_contenu_chambre_'+nb_chambre+'" class="title_contenu">'+
-    '<img id="delete_contenu_chambre_'+nb_chambre+'" class="delete_contenu" alt="suprimer le contenu" title="suprimer le contenu" src="./../img/icons8-supprimer-pour-toujours-90.svg" />'+
+    let all_contenu = '<img id="delete_contenu_chambre_'+nb_chambre+'" class="delete_contenu" alt="suprimer le contenu" title="suprimer le contenu" src="./../img/icons8-supprimer-pour-toujours-90.svg" />'+
     '<label>Titre</label>'+
     '<input id="title_chambre_'+nb_chambre+'" type="text" value="'+title+'" />'+
     '<img id="afficher_masquer_chambre_'+nb_chambre+'" class="afficher_masquer_contenu img_down" alt="afficher le contenu" title="afficher le contenu" src="./../img/bullet_arrow_down.svg" style="transform: rotate(180deg);" />'+
@@ -704,8 +867,8 @@ function add_chambre_def(title, contenu) {
 
     '<figure id="add_formules_'+nb_chambre+'" class="formules_chambre contenu_clos">'+
     '</figure>'+
-    '<img id="add-formule_chambre_'+nb_chambre+'" alt="ajouter une formule" title="ajouter une formule" class="add_formule add_formule contenu_clos" src="./../img/icons8-ajouter-80.svg" />'+
-    '</figure>'; 
+    '<img id="add-formule_chambre_'+nb_chambre+'" alt="ajouter une formule" title="ajouter une formule" class="add_formule add_formule contenu_clos" src="./../img/icons8-ajouter-80.svg" />';
+    create_contenu_all('all_chambre', 'title_contenu_chambre_'+nb_chambre, "title_contenu", all_contenu);
     chambre_formule.push(0);
     form_delete_click_contenu();
     form_down_up_contenu_click();
@@ -835,7 +998,7 @@ itemsAnnuler.forEach(function(item) {
 });
 
 /* Activer le bouton pour modifier un voyage */
-let items = document.querySelectorAll('.modif_row');
-items.forEach(function(item) {
+let modif_row = document.querySelectorAll('.modif_row');
+modif_row.forEach(function(item) {
     item.addEventListener('click', loadHTMLPage);
 });

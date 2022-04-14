@@ -431,6 +431,49 @@ input[type="file"] {
     font-size: 22px;
 }
 
+.drag_contenu.over {
+    border: 3px dotted #666;
+}
+
+/***************************/
+/** version mobile 747px ***/
+/***************************/
+@media screen and (max-width: 747px) {
+    .une_formule {
+        display: grid;
+        grid-template-columns: auto auto 1fr;
+    }
+
+    .une_formule img {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        /*grid-row-start: 1;
+        grid-row-end: 2;*/
+    }
+
+    .une_formule_titre {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+    .une_formule_titre_value {
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+
+    .une_formule_prix {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .une_formule_prix_value {
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+
+
+}
+
 /***************************/
 /** version mobile 655px ***/
 /***************************/
@@ -441,5 +484,76 @@ input[type="file"] {
 
     #form_modification ul {
         display: none;
+    }
+}
+
+/***************************/
+/** version mobile 493px ***/
+/***************************/
+@media screen and (max-width: 493px) {
+    section {
+        padding-left: unset;
+        padding-right: unset;
+    }
+
+    #modification #form_modification, #find_voyage form {
+        width: 100%;
+    }
+
+    #modification #form_modification {
+        padding: unset;
+    }
+
+    #form_1, #form_2, #form_3, #form_4 {
+        width: 100%
+    }
+
+    .title_contenu {
+        padding-left : 2px;
+        padding-right: 2px;
+        width: 100%;
+    }
+}
+
+/***************************/
+/** version mobile 445px ***/
+/***************************/
+@media screen and (max-width: 445px) {
+    .title_contenu {
+        margin-top: 15px;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 3px;
+        border: #8a8a8a 1px solid;
+        border-radius: 10px;
+        align-items: center;
+    }
+    
+    .title_contenu * {
+        margin: 3px;
+    }
+
+    .title_contenu label {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        text-align: center;
+    }
+
+    .title_contenu input {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    
+    .label_contenu, #checked_up_page {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    
+    .text_contenu {
+        grid-column-start: 1;
+        grid-column-end: 4;
     }
 }

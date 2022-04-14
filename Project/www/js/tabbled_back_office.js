@@ -1,4 +1,4 @@
-let valueTabbledFind1 = 0;
+let valueTabbledFind = 0;
 
 function tab_selected() {
     let items = document.getElementsByName('group1');
@@ -13,7 +13,7 @@ function tab_selected() {
                 document.getElementById("choix_information").innerText = document.getElementById("onglet_label_3").innerText;
             } else {
                 document.getElementById("tab0").checked = true;
-                document.getElementById("choix_information") = document.getElementById("onglet_label_0").innerText;
+                document.getElementById("choix_information").innerText = document.getElementById("onglet_label_0").innerText;
             }
         }
     });
@@ -40,8 +40,8 @@ function tab_previous() {
     tab_selected();
 }
 
-let items = document.getElementsByName('group1');
-items.forEach(function(item) {
+let groupTab = document.getElementsByName('group1');
+groupTab.forEach(function(item) {
     item.addEventListener('change', tab_select);
 });
 document.getElementById('tab_next').addEventListener('click', tab_next);
