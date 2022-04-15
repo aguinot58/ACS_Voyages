@@ -1,0 +1,355 @@
+.vignette {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 15px;
+    background-color: #EFEFEF;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px 5px RGBa(0,0,0,0.2);
+}
+
+.vignette img:hover {
+    transform: scale(1.05);
+}
+
+/* vignette grid */
+.vignette img {
+    border-radius: 10px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+
+.vignette p {
+    padding: 15px;
+}
+
+.vignette .titre {
+    font-family: "Inter-Bold";
+    align-self: start;
+    font-size: 27px;
+    margin-top: -19px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.vignette .information {
+    align-self: start;
+    /*border: black 1px solid;*/
+    height: 187px;
+    max-height: 187px;
+    margin-top: -10px;
+    box-sizing: border-box;
+    overflow: auto;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.vignette a {
+    justify-self: right;
+    align-self: end;
+    color: RGB(226, 43, 202);
+    padding: 5px 15px;
+    border: RGB(226, 43, 202) 1px solid;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.vignette a,
+.vignette a:link {
+    color: RGB(226, 43, 202);
+    text-decoration: none;
+}
+
+/* conception de la page */
+/* section promo */
+#promo, #voyage {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+#promo {
+    /*padding-top: 25px;*/
+    margin-top: 28px;
+    border-top-left-radius: unset;
+    border-top-right-radius: unset;
+}
+
+#promo .pourcentage {
+    margin-left: 341px;
+    margin-top: 18px;
+}
+
+#voyage {
+    display: grid;
+    padding-bottom: 37px;
+    margin-bottom: 0px;
+    grid-template-columns: auto auto;
+    border-bottom-left-radius: unset;
+    border-bottom-right-radius: unset;
+}
+
+#voyage form {
+    width: 220px;
+    padding: 15px;
+    background-color: #EFEFEF;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px 5px RGBa(0,0,0,0.2);
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 7;
+}
+
+#voyage .vignette {
+    margin: 10px;
+    width: 98%;
+}
+
+#voyage .vignette .information {
+    height: 116px;
+    max-height: 116px;
+}
+
+#voyage .vignette img {
+    width: 300px;
+}
+
+#voyage #voyage_1 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+#voyage #voyage_2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+#voyage #voyage_3 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+#voyage #voyage_4 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+#voyage #voyage_5 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+
+#voyage #list_page {
+    opacity: 0.6;
+    padding-top: 15px;
+    font-size: 25px;
+    justify-self: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 6;
+    grid-row-end: 7;
+}
+
+#list_page img, #voyage form img {
+    vertical-align: middle;
+    width: 25px;
+}
+
+#voyage form img {
+    display: none;
+}
+
+#list_page a,
+#list_page a:link {
+    color: black;
+    text-decoration: none;
+    text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff,
+    2px 2px 0 #fff;
+}
+
+#voyage form input {
+    margin-right: 5px;
+}
+
+#voyage form .title-option {
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    color: white;
+    background-color: RGB(226, 43, 202);
+    box-shadow: 0px 10px 14px 6px RGBa(226, 43, 202, 0.11);
+    border-radius: 10px;
+}
+
+/**********************/
+/** version < 866px ***/
+/**********************/
+@media screen and (max-width: 866px) {
+
+    #voyage {
+        grid-template-columns: auto 1fr;
+    }
+
+    #voyage .vignette {
+        margin-left: unset;
+        width: 100%;
+        justify-self: center;
+    }
+
+    #voyage .vignette {
+        width: 350px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    #voyage .vignette img {
+        width: 100%;
+    }
+
+    #voyage .vignette .titre {
+        margin-top: 5px;
+    }
+
+    #voyage .vignette a {
+        margin-top: 10px;
+    }
+}
+
+/**********************/
+/** version < 866px ***/
+/**********************/
+@media screen and (max-width: 724px) {
+    .vignette .information {
+        height: 116px;
+        max-height: 116px;
+    }
+
+    .vignette img {
+        width: 300px;
+    }
+
+    #promo .pourcentage {
+        margin-left: 240px;
+        margin-top: 18px;
+    }
+}
+
+/**********************/
+/** version < 866px ***/
+/**********************/
+@media screen and (max-width: 655px) {
+    .vignette, #voyage .vignette, #voyage form {
+        width: 300px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .vignette img, #voyage .vignette img {
+        width: 100%;
+    }
+
+    .vignette .titre {
+        margin-top: 5px;
+    }
+
+    .vignette .information {
+        text-align: left;
+        height: 116px;
+        max-height: 116px;
+    }
+
+    .vignette a {
+        margin-top: 10px;
+    }
+
+    #promo, #voyage {
+        padding-left: unset;
+        padding-right: unset;
+        text-align: center;
+    }
+
+    #promo .pourcentage {
+        margin-left: -132px;
+        margin-top: 18px;
+    }
+
+    #promo .pourcentage p {
+        transform: rotate(-50deg);
+        margin-left: -28px;
+        margin-top: -6px;
+    }
+    
+    #voyage {
+        display: block;
+    }
+
+    #voyage form {
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+
+    #voyage form .title-option {
+        margin-top: unset;
+    }
+
+    .block_option {
+        text-align: left;
+        width: 220px;
+        margin-top: unset;
+        padding-top: unset;
+        padding: 5px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    #voyage form img {
+        display: block;
+        margin-top: 12px;
+    }
+
+    #option_1 {
+        display:none;
+    }
+
+    #option_2 {
+        display:none;
+    }
+
+    #option_3 {
+        display:none;
+    }
+
+}
+
+/**********************/
+/** version < 866px ***/
+/**********************/
+@media screen and (max-width: 302px) {
+    .vignette, #voyage .vignette, #voyage form {
+        width: 100%;
+    }
+}

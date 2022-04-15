@@ -1,0 +1,660 @@
+/* ---------------------------------- */
+/* les objets a utiliser dans la page */
+/* vertical texte */
+.vertical-texte {
+  display: inline-block;
+  writing-mode: vertical-lr;
+  text-orientation: sideways;
+  text-align: center;
+  transform: rotate(-180deg);
+  margin: unset;
+}
+
+/* les vignettes promo */
+#vignettes-promos {
+  width: 95%;
+  display: flex;
+  justify-content: space-around;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
+  padding: 5px;
+}
+
+#vignettes-promos article h6 {
+  font-size: 20px;
+  font-weight: unset;
+  padding: 15px;
+  text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff,
+    2px 2px 0 #fff;
+}
+
+.vignette-promo {
+  width: 210px;
+  height: 285px;
+  padding: 0;
+  margin: 0;
+  border: 0.5px solid #000000;
+  box-sizing: border-box;
+  overflow: hidden;
+  box-shadow: 7px 8px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  flex-wrap: wrap;
+}
+
+.vignette-promo img {
+  height: 285px;
+  margin: auto;
+}
+
+.vignette-promo:hover {
+  transform: scale(1.05);
+}
+
+.vignette-promo .prix-promo {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  width: 200px;
+  margin-left: 4px;
+  margin-top: 223px;
+  text-align: center;
+  text-shadow: 0px 0px 10px rgb(230 230 120);
+  padding: 0px 20px;
+}
+
+.vignette-promo .prix-promo span {
+  text-decoration: none;
+  font-family: "Inter-Bold";
+  color: #ff6b00;
+  font-size: 45px;
+}
+
+.vignette-promo .prix-promo .old-price {
+  text-decoration: none;
+  font-family: "Inter-Regular";
+  text-decoration: line-through;
+  color: unset;
+  font-size: 22px;
+  text-shadow: none;
+}
+
+/* categorie voyage */
+.categorie {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-left: 20px;
+  justify-content: space-around;
+  margin-top: 25px;
+}
+
+/* vignette de voyage */
+.categorie .vignette_voyage {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  width: 42%;
+  height: 140px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border: black 1px solid;
+  box-shadow: 7px 8px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+.vignette_voyage img {
+  margin: auto;
+  width: 100%;
+  margin-top: -45px;
+}
+
+.vignette_voyage img {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+
+.vignette_voyage:hover {
+  transform: scale(1.05) rotate(2deg);
+}
+
+.vignette_voyage .display_texte {
+  position: absolute;
+  text-align: right;
+  width: 42%;
+}
+
+.vignette_voyage .display_texte {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.vignette_voyage .prix-voyage {
+  font-family: "Inter-Bold";
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  font-size: 20px;
+  margin-top: 99px;
+  margin-right: 5px;
+  z-index: 2;
+}
+
+.vignette_voyage .prix-voyage {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  justify-self: right;
+}
+
+/* texte dans les vignettes */
+.vignette_voyage .titre_voyage,
+.vignette-promo .titre_voyage_promo {
+  margin-top: 5px;
+  margin-left: 5px;
+  min-width: 124px;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px 30px;
+  border-radius: 694px / 208px;
+  box-shadow: 0px 0px 20px white;
+}
+
+.vignette_voyage .titre_voyage p,
+.vignette-promo .titre_voyage_promo p {
+  opacity: 1;
+}
+
+/* tabbled */
+.tabbled {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+
+.tabbled ul {
+  padding: 0px;
+  margin-left: 18px;
+  margin-bottom: 5px;
+  list-style: none;
+}
+
+.tabbled ul li {
+  display: inline;
+}
+
+.tabbled ul li [type="radio"] {
+  display: none;
+}
+
+.tabbled ul li .onglet_default {
+  background-color: #e2e2e2;
+  padding: 10px;
+  border: #8a8a8a 1px solid;
+  color: #8b8b8b;
+  border-bottom: unset;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 0px;
+}
+
+.tabbled ul li [type="radio"]:checked ~ .onglet_default {
+  background-color: #ebebeb;
+  color: black;
+  padding-bottom: 6px;
+}
+
+.tabbled form {
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: #ebebeb;
+  padding: 20px;
+  border: #8a8a8a 1px solid;
+  border-radius: 10px;
+}
+
+/* ---------------------------------- */
+/* le contenu de la page */
+/* section promo */
+#section-promo {
+  text-align: center;
+  margin-top: 28px;
+  padding-top: 26px;
+  border-top-left-radius: unset;
+  border-top-right-radius: unset;
+}
+
+/* titre promo */
+#title_promo {
+  font-family: "YatraOne-Regular";
+  color: #ff6b00;
+  font-size: 65px;
+  margin-bottom: 0px;
+}
+
+/* section recherche */
+.label_no_mobile {
+  display: none;
+}
+
+#form_find_mobile {
+  display: none;
+  width: 100%;
+  text-align: center;
+}
+
+#form_find_mobile img {
+  width: 50px;
+  padding: 10px;
+}
+
+#form_find_mobile p {
+  font-size: 22px;
+}
+
+form,
+form input {
+  text-align: center;
+  font-size: 17px;
+  box-shadow: 7px 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+form label {
+  padding: 15px;
+}
+
+form #buttom_find {
+  text-decoration: none;
+}
+
+form #date_depart_voyage {
+  margin-right: 15px;
+}
+
+form #date_arrivee_voyage {
+  margin-left: 15px;
+}
+
+form input {
+  text-align: center;
+  padding: 8px;
+  border: none;
+  border: #8a8a8a 1px solid;
+  border-radius: 20px;
+}
+
+form input:focus {
+    /*color: #0737b5;
+    border-color: #0737b5;*/
+    color: RGB(226, 43, 202);
+    border-color: RGB(226, 43, 202);
+    outline: none;
+}
+
+form #depart_voyage {
+  border-top-right-radius: unset;
+  border-bottom-right-radius: unset;
+}
+
+form #destination_voyage {
+  border-top-left-radius: unset;
+  border-bottom-left-radius: unset;
+}
+
+form input:hover {
+    transform: scale(1.08);
+}
+
+#buttom_find {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 5;
+  grid-row-end: 6;
+  margin-top: 25px;
+  color: white;
+  width: 200px;
+  padding: 12px;
+  border-radius: 25px;
+  /*background-color: #0737b5;*/
+  /*color: RGB(226, 43, 202);*/
+  background-color: RGB(226, 43, 202);
+  border: #8a8a8a 1px solid;
+  justify-self: center;
+  /*box-shadow: 0px 10px 14px 6px rgba(00, 122, 255, 0.11);*/
+  box-shadow: 0px 10px 14px 6px RGBa(226, 43, 202, 0.11);
+}
+
+#buttom_find:hover {
+  transform: scale(1.08);
+}
+
+#label_depart_voyage {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+#depart_voyage {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+#label_destination_voyage {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+#destination_voyage {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+#label_date_depart_voyage {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+#date_depart_voyage {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+#label_date_arrivee_voyage {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+#date_arrivee_voyage {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+
+/* section voyages */
+#voyages {
+  padding-bottom: 48px;
+  margin-bottom: 0px;
+  border-bottom-left-radius: unset;
+  border-bottom-right-radius: unset;
+}
+
+#voyages .vertical-texte {
+  font-size: 18px;
+  text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff,
+    2px 2px 0 #fff;
+  margin: 0px -15px;
+}
+
+#vignettes-promos article {
+  padding: 15px;
+  padding-top: 20px;
+}
+
+.categorie .vignette_voyage {
+  margin-left: -37px;
+}
+
+/**********************/
+/** version < 950px ***/
+/**********************/
+@media screen and (max-width: 950px) {
+  .tabbled {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+  }
+}
+
+/***************************/
+/** version mobile 728px ***/
+/***************************/
+@media screen and (max-width: 728px) {
+  .vignette_voyage img {
+    margin-top: -16px;
+  }
+}
+
+/***************************/
+/** version mobile 655px ***/
+/***************************/
+@media screen and (max-width: 655px) {
+  @keyframes animation_promo_1 {
+    0% {
+      transform: translate(0%);
+      opacity: 1;
+    }
+    26% {
+      transform: translate(0%);
+      opacity: 1;
+    }
+    29% {
+      transform: translate(-100%);
+      opacity: 0;
+    }
+    93% {
+      transform: translate(100%);
+      opacity: 0;
+    }
+    96% {
+      transform: translate(0%);
+      opacity: 1;
+    }
+  }
+
+  @keyframes animation_promo_2 {
+    29% {
+      transform: translate(100%);
+      opacity: 0;
+    }
+    32% {
+      transform: translate(0%);
+      opacity: 1;
+    }
+    58% {
+      transform: translate(0%);
+      opacity: 1;
+    }
+    61% {
+      transform: translate(-100%);
+      opacity: 0;
+    }
+  }
+
+  @keyframes animation_promo_3 {
+    61% {
+      transform: translate(100%);
+      opacity: 0;
+    }
+    64% {
+      transform: translate(0%);
+      opacity: 1;
+    }
+    90% {
+      transform: translate(0%);
+      opacity: 1;
+    }
+    93% {
+      transform: translate(-100%);
+      opacity: 0;
+    }
+  }
+
+  .categorie {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-left: unset;
+    margin-top: unset;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: unset;
+  }
+
+  #voyages .vertical-texte {
+    margin: unset;
+    margin: 10px 0px;
+  }
+
+  /* vignette de voyage */
+  .categorie .vignette_voyage {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    height: 140px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border: black 1px solid;
+    border-radius: 20px;
+    margin-top: auto;
+  }
+
+  .vignette_voyage img {
+    margin-top: -120px;
+  }
+
+  .vertical-texte {
+    display: inline-block;
+    writing-mode: unset;
+    text-orientation: unset;
+    text-align: center;
+    transform: unset;
+    margin: unset;
+  }
+
+  #vignettes-promos {
+    display: flex;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: unset;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+
+  #promo_1 {
+    animation: animation_promo_1 17s linear infinite;
+  }
+
+  #promo_2 {
+    margin-left: -240px;
+    opacity: 0;
+    animation: animation_promo_2 17s linear infinite;
+  }
+
+  #promo_3 {
+    margin-left: -240px;
+    opacity: 0;
+    animation: animation_promo_3 17s linear infinite;
+  }
+
+  #recherche #form_find {
+    width: 100%;
+    margin: unset;
+  }
+
+  #form_find_mobile {
+    display: block;
+  }
+
+  #form_find ul {
+    display: none;
+  }
+
+  .tabbled form {
+    grid-template-columns: auto;
+  }
+
+  form #depart_voyage {
+    border-radius: 20px;
+  }
+
+  form #destination_voyage {
+    border-radius: 20px;
+  }
+
+  form #date_depart_voyage {
+    margin-right: 0;
+  }
+
+  form #date_arrivee_voyage {
+    margin-left: 0;
+  }
+
+  #buttom_find {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 9;
+    grid-row-end: 10;
+  }
+
+  #label_depart_voyage {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  #depart_voyage {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  #label_destination_voyage {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+  #destination_voyage {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+  #label_date_depart_voyage {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+  #date_depart_voyage {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 6;
+    grid-row-end: 7;
+  }
+  #label_date_arrivee_voyage {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 7;
+    grid-row-end: 8;
+  }
+  #date_arrivee_voyage {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 8;
+    grid-row-end: 9;
+  }
+}
+
+/***************************/
+/** version mobile 474px ***/
+/***************************/
+@media screen and (max-width: 474px) {
+  .vignette_voyage img {
+    margin-top: -16px;
+  }
+}

@@ -1,30 +1,272 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ACS Voyages</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/font.css" />
+    <link rel="stylesheet" href="../css/index_body.css" />
+    <link rel="stylesheet" href="../css/header_footer.css" />
+    <link rel="stylesheet" href="../css/index_sections_pourcentage.css" />
+    <link rel="stylesheet" href="../css/categorie.css" />
+    <link rel="shortcut icon" type="image/icon" href="../favicon.ico" />
+    <title>ACS Voyages : Croisière</title>
+  </head>
 
-    <body>
+  <body>
+    <header>
+      <div id="fix-menu">
+        <div class="logo-name" id="logo-header">
+          <img
+            title="logo"
+            class="logo"
+            src="../img/logo_site_voyage_final.png"
+            alt="logo"
+          />
+          <p>ACS Voyage</p>
+        </div>
 
-        <header>
+        <nav>
+          <img
+            id="menu_mobile"
+            src="../img/burger_icon.svg"
+            alt="bouton menu"
+          />
+          <ul id="head_right">
+            <li>
+              <a href="./../index.html">Accueil</a>
+            </li>
+            <li id="submenu_categories">
+              <a href="#">Catégorie</a>
+              <ul class="submenu" id="submenu_categorie">
+                <li>
+                  <a href="./vol.html">Vol+hôtel</a>
+                </li>
+                <li>
+                  <a href="./train.html">Train+hôtel</a>
+                </li>
+                <li>
+                  <a href="./croisiere.html">Croisière</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="./connexion.html">Connexion</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
+    <section id="promo">
+      <h6>promo</h6>
+      <figure class="pourcentage"><p>-35%</p></figure>
+      <figure class="vignette">
+        <img src="../data/thumb/Kiel_Grand.jpg" alt="" onclick="window.location.href = './mer_kiel.html'" />
+        <p class="titre">Kiel</p>
+        <p class="information">
+          En choisissant Sol Palmanova Mallorca à Calvià, vous profiterez d'un
+          séjour au bord de la mer, à moins de 10 minutes de marche de Plage de
+          Palma Nova et de Parc d'attractions Katmandu Park. Cet hôtel 4 étoiles
+          se trouve à 6,8 km de Puerto Portals et à 9,7 km de Plage de Cala
+          Mayor.
+        </p>
+        <a href="./mer_kiel.html">Tarifs</a>
+      </figure>
+    </section>
 
-        </header>
+    <section class="separateur_section">
+      <h6>separateur de section</h6>
+      <img title="clous" alt="clous" src="./../img/clous.svg" />
+      <img title="clous" alt="clous" src="./../img/clous.svg" />
+      <img title="clous" alt="clous" src="./../img/clous.svg" />
+      <img title="clous" alt="clous" src="./../img/clous.svg" />
+    </section>
 
-        
+    <section id="voyage">
+      <h6>voyage</h6>
+      <form>
+        <img
+            alt="gauche"
+            id="option_previous"
+            src="./../img/direction_control_undo_back_backward_left_previous_icon_219294.svg"
+          />
+        <div id="option_0" class="block_option">
+            <label class="title-option">Formules</label>
+            <figure>
+                <input type="checkbox" id="all_inclusive" name="all_inclusive"/><label>Tout Compris</label>
+            </figure>
+            <figure>
+                <input type="checkbox" id="pension_complete" name="pension_complete"/><label>Pension complète</label>
+            </figure>
+            <figure>
+                <input type="checkbox" id="demi_pension" name="demi_pension"/><label>Demi-Pension</label>
+            </figure>
+            <figure>
+                <input type="checkbox" id="petit_dejeuner" name="petit_dejeuner"/><label>Petit déjeuner</label>
+            </figure>
+            <figure>
+                <input type="checkbox" id="aucun_repas" name="aucun_repas"/><label>Aucun repas</label>
+            </figure>
+        </div>
+        <div id="option_1" class="block_option">
+            <label class="title-option">Accès plage</label>
+            <figure>
+                <input type="checkbox" id="a_proximite" name="a_proximite"/><label>A proximité</label>
+            </figure>
+            <figure>
+                <input type="checkbox" id="pieds_dans_l_eau" name="pieds_dans_l_eau"/><label>Pieds dans l'eau</label>
+            </figure>
+        </div>
+        <div id="option_2" class="block_option">
+            <label class="title-option">Loisirs / Animations</label>
+            <figure>
+                <input type="checkbox" id="piscine_exterieure" name="piscine_exterieure"/><label>Piscine extérieure</label>
+            </figure>
+            <figure>
+                <input type="checkbox" id="animation" name="animation"/><label>Animation</label>
+            </figure>
+        </div>
+        <div id="option_3" class="block_option">
+            <label class="title-option">Equipements</label>
+            <figure>
+                <input type="checkbox" id="chambres_climatisees" name="chambres_climatisees"/><label>Chambres climatisées</label>
+            </figure>
+            <figure>
+                <input type="checkbox" id="mobilite_reduite" name="mobilite_reduite"/><label>Mobilité réduite</label>
+            </figure>
+        </div>
+        <img
+            alt="droite"
+            id="option_next"
+            src="./../img/arrow_control_forward_direction_step_right_next_icon_219289.svg"
+        />
+      </form>
+      <figure class="vignette" id="voyage_1">
+        <img src="../data/thumb/buenosAires_Grand.jpg" alt="" onclick="window.location.href = './mer_buenosAires.html'" />
+        <p class="titre">Buenos Aires</p>
+        <p class="information">
+          Chaque quartier de Buenos Aires raconte l'histoire de la ville, aux multiples facettes et cosmopolite, résultat du contact entre 
+          les différentes cultures qui dure depuis des siècles.
+        </p>
+        <a href="./mer_buenosAires.html">Tarifs</a>
+      </figure>
+      <figure class="vignette" id="voyage_2">
+        <img src="../data/thumb/caraibes_Grand.jpg" alt="" onclick="window.location.href = './mer_caraibes.html'" />
+        <p class="titre">Caraïbes</p>
+        <p class="information">
+          Entre les plantations de bananes et de canne à sucre s’étend la forêt tropicale de la Martinique, territoire français au cœur de la mer des Caraïbes.
+          En choisissant Sol Palmanova Mallorca à Calvià, vous profiterez d'un
+          séjour au bord de la mer, à moins de 10 minutes de marche de Plage de
+          Palma Nova et de Parc d'attractions Katmandu Park. Cet hôtel 4 étoiles
+          se trouve à 6,8 km de Puerto Portals et à 9,7 km de Plage de Cala
+          Mayor.
+        </p>
+        <a href="./mer_caraibes.html">Tarifs</a>
+      </figure>
+      <figure id="list_page">
+        <a href="#">
+          <img
+            alt="gauche"
+            src="./../img/direction_control_undo_back_backward_left_previous_icon_219294.svg"
+          />
+        </a>
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">...</a>
+        <a href="#">
+          <img
+            alt="droite"
+            src="./../img/arrow_control_forward_direction_step_right_next_icon_219289.svg"
+          />
+        </a>
+      </figure>
+    </section>
 
+    <footer>
+      <figure>
+        <div class="block_footer logo-name" id="logo-footer">
+          <img
+            title="logo"
+            class="logo"
+            src="../img/logo_site_voyage_final.png"
+            alt="logo"
+          />
+          <p>ACS Voyage</p>
+        </div>
+        <div class="block_footer" id="block-footer-center">
+          <ul>
+            <li class="title">Entreprise</li>
+            <li><a href="./a_propos.html">A propos</a></li>
+            <li><a href="./mentions_legales.html">Mentions Légales</a></li>
+            <li><a href="./politique_confidentialite.html">Politique de <br />confidentialité</a></li>
+          </ul>
 
+          <ul id="footer_title_right">
+            <li class="title">Contact</li>
+            <li><a href="./page_contact_client.html">Particulier</a></li>
+            <li><a href="./page_contact_pro.html">Professionel</a></li>
+          </ul>
+        </div>
 
+        <div class="block_footer" id="logos">
+          <p>Suivez-nous</p>
+          <a href="#"
+            ><img
+              class="img-logo"
+              id="logo_facebook"
+              title="logo facebook"
+              src="../img/facebook.svg"
+              alt="logo facebook"
+          /></a>
+          <a href="#"
+            ><img
+              class="img-logo"
+              id="logo_instagram"
+              title="logo instagram"
+              src="../img/insta.svg"
+              alt="logo instagram"
+          /></a>
+          <a href="#"
+            ><img
+              class="img-logo"
+              id="logo_twitter"
+              title="logo twitter"
+              src="../img/twitter.svg"
+              alt="logo twitter"
+          /></a>
+          <br /><br />
+          <p>Paiement sécurisé</p>
+          <a href="#"
+            ><img
+              class="img-logo-carte"
+              id="logo_carte_bleu"
+              title="logo carte bleu"
+              src="../img/picto-cb.svg"
+              alt="logo carte bleu"
+          /></a>
+          <a href="#"
+            ><img
+              class="img-logo-carte"
+              id="logo_carte_master"
+              title="logo master carte"
+              src="../img/picto-mastercard.svg"
+              alt="logo master carte"
+          /></a>
+          <a href="#"
+            ><img
+              class="img-logo-carte"
+              id="logo_carte_visa"
+              title="logo carte visa"
+              src="../img/picto-visa.svg"
+              alt="logo carte visa"
+          /></a>
+        </div>
+      </figure>
+      <p id="droits_reserves">Tous droits réservés 2022</p>
+    </footer>
 
-
-        <footer>
-
-
-        </footer>
-
-    </body>
-
+    <script src="./../js/categorie.js"></script>
+  </body>
 </html>
