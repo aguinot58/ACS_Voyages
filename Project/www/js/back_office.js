@@ -132,7 +132,7 @@ function allDragDropImg() {
 
 /* La table des pages web de voyage a lire */
 let tabpage = [
-    ["./vol_solPalmanova_test.html", "Sol palmanova test", true],
+    ["./data_file_vol_solPalmanova.html", "Sol palmanova test", true],
     ["./vol_solPalmanova.html", "Sol palmanova", true],
     ["./train_londres.html", "Londres", true],
     ["./mer_kiel.html", "Kiel", true],
