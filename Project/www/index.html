@@ -1,30 +1,262 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ACS Voyages</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/font.css" />
+        <link rel="stylesheet" href="css/index_body.css" />
+        <link rel="stylesheet" href="css/header_footer.css" />
+        <link rel="stylesheet" href="css/index_sections_pourcentage.css" />
+        <link rel="stylesheet" href="css/index.css" />
+        <link rel="shortcut icon" type="image/icon" href="favicon.ico"/>
 
+        <title>ACS Voyages</title>
+    </head>
     <body>
-
         <header>
-
-
+            <div id="fix-menu">
+                <a id="bt_recherche" href="#recherche"><img id="find-categorie" src="img/loupe.svg" alt="rechercher une catégorie" /></a>
+                <div class="logo-name" id="logo-header">
+                    <img title="logo" class="logo" src="img/logo_site_voyage_final.png" alt="logo" />
+                    <p>ACS Voyage</p>
+                </div>
+                
+                    <nav>
+                        <img id="menu_mobile" src="img/burger_icon.svg" alt="bouton menu" />
+                        <ul id="head_right">
+                            <li>
+                                <a href="./index.html">Accueil</a>
+                            </li>
+                            <li id="submenu_categories">
+                                <a href="#">Catégorie</a>
+                                <ul class="submenu" id="submenu_categorie">
+                                    <li>
+                                        <a href="./pages/vol.html">Vol+hôtel</a>
+                                    </li>
+                                    <li>
+                                        <a href="./pages/train.html">Train+hôtel</a>
+                                    </li>
+                                    <li>
+                                        <a href="./pages/croisiere.html">Croisière</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="./pages/connexion.html">Connexion</a>
+                            </li>
+                        </ul>
+                    </nav>
+            </div>
         </header>
-
-        
-
-
-
-
-
+        <section id="section-promo">
+            <h6>section promo</h6>
+            <p id="title_promo">PROMO</p>
+            <div id="vignettes-promos">
+                <article id="promo_1">
+                    <h6>Vol+hôtel</h6>
+                    <figure class="pourcentage"><p>-15%</p></figure>
+                    <figure class="vignette-promo" onclick="window.location.href = '../pages/vol_solPalmanova.html'">
+                        <p class="titre_voyage_promo">Sol palmanova</p>
+                        <p class="prix-promo"><span>279€</span></p>
+                        <img src="./data/thumb/sol_palmanova_Grand.jpg" alt="photo de l'hotel avec la piscine en premier plan et des arbres sur la droite" />
+                    </figure>
+                </article>
+                <article id="promo_2">
+                    <h6>Train+hôtel</h6>
+                    <figure class="pourcentage"><p>-20%</p></figure>
+                    <figure class="vignette-promo" onclick="window.location.href = '../pages/train_londres.html'">
+                        <p class="titre_voyage_promo">Londres</p>
+                        <p class="prix-promo"><span>927€</span></p>
+                        <img src="./data/thumb/Londres_Grand.jpg" alt="Londres" />
+                    </figure>
+                </article>
+                <article id="promo_3">
+                    <h6>Croisière</h6>
+                    <figure class="pourcentage"><p>-35%</p></figure>
+                    <figure class="vignette-promo" onclick="window.location.href = '../pages/mer_kiel.html'">
+                        <p class="titre_voyage_promo">Kiel</p>
+                        <p class="prix-promo"><span>2484€</span></p>
+                        <img src="./data/thumb/Kiel_Grand.jpg" alt="Kiel_Grand" />
+                    </figure>
+                </article>
+            </div>
+        </section>
+        <section class="separateur_section">
+            <h6>separateur de section</h6>
+            <img title="clous" alt="clous" src="./img/clous.svg" />
+            <img title="clous" alt="clous" src="./img/clous.svg" />
+            <img title="clous" alt="clous" src="./img/clous.svg" />
+            <img title="clous" alt="clous" src="./img/clous.svg" />
+        </section>
+        <section id="recherche">
+            <h6>recherche</h6>
+            <figure id="form_find_mobile" class="tabbled">
+                <img alt="gauche" id="tab_previous" src="./img/direction_control_undo_back_backward_left_previous_icon_219294.svg">
+                <img alt="droite" id="tab_next" src="./img/arrow_control_forward_direction_step_right_next_icon_219289.svg">
+                <p id="choix_recherche">Vol+hôtel</p>
+            </figure>
+            <figure id="form_find" class="tabbled">
+                <ul>
+                  <li id="onglet_one">
+                    <input type="radio" name="group1" value="0" id="tab0" checked>
+                    <label for="tab0" class="onglet_default">Vol+hôtel</label>
+                  </li>
+                  <li id="onglet_two">
+                    <input type="radio" name="group1" value="1" id="tab1">
+                    <label for="tab1" class="onglet_default">Train+hôtel</label>
+                  </li>
+                  <li id="onglet_three">
+                    <input type="radio" name="group1" value="2" id="tab2">
+                    <label for="tab2" class="onglet_default">Croisière</label>
+                  </li>
+                </ul>
+                <form class="form_active">
+                  <label id="label_depart_voyage">Départ</label>
+                    <input type="text" 
+                    id="depart_voyage"
+                    name="depart_voyage"
+                    placeholder="Paris" required />
+                    <label id="label_destination_voyage">destination</label>
+                    <input type="text" 
+                    id="destination_voyage"
+                    name="destination_voyage"
+                    placeholder="Destination" required />
+                    <label id="label_date_depart_voyage">Date de départ</label>
+                    <input type="date" 
+                    id="date_depart_voyage"
+                    name="date_depart_voyage"
+                    value="2022-04-06" required />
+                    <label id="label_date_arrivee_voyage">Date d'arrivée</label>
+                    <input type="date" 
+                    id="date_arrivee_voyage"
+                    name="date_arrivee_voyage"
+                    value="2022-04-06" required />
+                    <a id="buttom_find" href="./pages/vol.html">Rechercher</a>
+                </form>
+              
+              </figure>
+        </section>
+        <section class="separateur_section">
+            <h6>separateur de section</h6>
+            <img title="clous" alt="clous" src="./img/clous.svg" />
+            <img title="clous" alt="clous" src="./img/clous.svg" />
+            <img title="clous" alt="clous" src="./img/clous.svg" />
+            <img title="clous" alt="clous" src="./img/clous.svg" />
+        </section>
+        <section id="voyages">
+            <h6>voyages</h6>
+            <div class="categorie" id="categorie1">
+                <p class="vertical-texte">Vol+hôtel</p>
+                <figure class="vignette_voyage" onclick="window.location.href = '../pages/vol_losAngeles.html'">
+                    <p class="titre_voyage">Los Angeles</p>
+                    <p class="prix-voyage">1309€</p>
+                    <img alt="voyage" src="./data/thumb/losAngeles_Grand.jpg" />
+                </figure>
+                <figure class="vignette_voyage" onclick="window.location.href = '../pages/vol_okinawa.html'">
+                    <p class="titre_voyage">Okinawa</p>
+                    <p class="prix-voyage">1581€</p>
+                    <img alt="voyage" src="./data/thumb/okinawa_Grand.jpg" />
+                </figure>
+            </div>
+            <div class="categorie" id="categorie2">
+                <p class="vertical-texte">Train+hôtel</p>
+                <figure class="vignette_voyage" onclick="window.location.href = '../pages/train_cologne.html'">
+                    <p class="titre_voyage">Cologne</p>
+                    <p class="prix-voyage">927€</p>
+                    <img alt="voyage" src="./data/thumb/cologne_Grand.jpg" />
+                </figure>
+                <figure class="vignette_voyage" onclick="window.location.href = '../pages/train_zurich.html'">
+                    <p class="titre_voyage">Zurich</p>
+                    <p class="prix-voyage">405€</p>
+                    <img alt="voyage" src="./data/thumb/zurich_Grand.jpg" />
+                </figure>
+            </div>
+            <div class="categorie" id="categorie3">
+                <p class="vertical-texte">Croisière</p>
+                <figure class="vignette_voyage" onclick="window.location.href = '../pages/mer_buenosAires.html'">
+                    <p class="titre_voyage">Buenos Aires</p>
+                    <p class="prix-voyage">1014€</p>
+                    <img alt="voyage" src="./data/thumb/buenosAires_Grand.jpg" />
+                </figure>
+                <figure class="vignette_voyage" onclick="window.location.href = '../pages/mer_caraibes.html'">
+                    <p class="titre_voyage">Caraïbes</p>
+                    <p class="prix-voyage">979€</p>
+                    <img alt="voyage" src="./data/thumb/caraibes_Grand.jpg" />
+                </figure>
+            </div>
+        </section>
         <footer>
-
-
+            <figure>
+                <div class="block_footer logo-name" id="logo-footer">
+                    <img title="logo" class="logo" src="img/logo_site_voyage_final.png" alt="logo" />
+                    <p>ACS Voyage</p>
+                </div>
+                <div class="block_footer" id="block-footer-center">
+                    <ul>
+                      <li class="title">Entreprise</li>
+                      <li><a href="./pages/a_propos.html">A propos</a></li>
+                      <li><a href="./pages/mentions_legales.html">Mentions Légales</a></li>
+                      <li><a href="./pages/politique_confidentialite.html">Politique de <br />confidentialité</a></li>
+                    </ul>
+          
+                    <ul id="footer_title_right">
+                      <li class="title">Contact</li>
+                      <li><a href="./pages/page_contact_client.html">Particulier</a></li>
+                      <li><a href="./pages/page_contact_pro.html">Professionel</a></li>
+                    </ul>
+                </div>
+          
+                <div class="block_footer" id="logos">
+                    <p>Suivez-nous</p>
+                    <a href="#"><img
+                        class="img-logo"
+                        id="logo_facebook"
+                        title="logo facebook"
+                        src="img/facebook.svg"
+                        alt="logo facebook"
+                    /></a>
+                    <a href="#"><img
+                        class="img-logo"
+                        id="logo_instagram"
+                        title="logo instagram"
+                        src="img/insta.svg"
+                        alt="logo instagram"
+                    /></a>
+                    <a href="#"><img
+                        class="img-logo"
+                        id="logo_twitter"
+                        title="logo twitter"
+                        src="img/twitter.svg"
+                        alt="logo twitter"
+                    /></a>
+                    <br /><br />
+                    <p>Paiement sécurisé</p>
+                    <a href="#"><img
+                        class="img-logo-carte"
+                        id="logo_carte_bleu"
+                        title="logo carte bleu"
+                        src="img/picto-cb.svg"
+                        alt="logo carte bleu"
+                    /></a>
+                    <a href="#"><img
+                        class="img-logo-carte"
+                        id="logo_carte_master"
+                        title="logo master carte"
+                        src="img/picto-mastercard.svg"
+                        alt="logo master carte"
+                    /></a>
+                    <a href="#"><img
+                        class="img-logo-carte"
+                        id="logo_carte_visa"
+                        title="logo carte visa"
+                        src="img/picto-visa.svg"
+                        alt="logo carte visa"
+                    /></a>
+                  </div>
+            </figure>
+            <p id="droits_reserves">Tous droits réservés 2022</p>
         </footer>
-
+        <script src="./js/tabbled_find.js"></script>
     </body>
-
 </html>

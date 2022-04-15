@@ -1,0 +1,149 @@
+form {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  background-color: #ebebeb;
+  padding: 20px;
+  border: #8a8a8a 1px solid;
+  border-radius: 10px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  box-shadow: 7px 8px 20px rgb(0 0 0 / 25%);
+}
+
+form h3,
+form a {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  align-items: center;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+form label {
+  width: 100%;
+  text-align: right;
+  align-items: right;
+  padding-right: 10px;
+}
+
+form textarea {
+  height: 200px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  text-align: left;
+}
+
+form input {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+form input,
+form textarea {
+  padding: 8px;
+  border: none;
+  border: #8a8a8a 1px solid;
+  border-radius: 20px;
+  box-shadow: 7px 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+form input:focus,
+form textarea:focus {
+  /*color: #0737b5;
+      border-color: #0737b5;*/
+  color: RGB(226, 43, 202);
+  border-color: RGB(226, 43, 202);
+  outline: none;
+}
+
+form input:hover,
+form textarea:focus {
+  transform: scale(1.02);
+}
+
+form a {
+  margin-top: 25px;
+  color: white;
+  width: 200px;
+  padding: 12px;
+  border-radius: 25px;
+  text-decoration: none;
+  /*background-color: #0737b5;*/
+  /*color: RGB(226, 43, 202);*/
+  background-color: RGB(226, 43, 202);
+  border: #8a8a8a 1px solid;
+  justify-self: center;
+  /*box-shadow: 0px 10px 14px 6px rgba(00, 122, 255, 0.11);*/
+  box-shadow: 0px 10px 14px 6px RGBa(226, 43, 202, 0.11);
+}
+
+form a:hover {
+  transform: scale(1.08);
+}
+
+.color--quinary {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin-top: 15px;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+}
+
+#section_footer {
+    border-bottom-left-radius: unset;
+    border-bottom-right-radius: unset;
+}
+
+#section_header {
+    border-top-left-radius: unset;
+    border-top-right-radius: unset;
+    margin-top: 27px;
+}
+
+/*****************************/
+/** version tablette 634px ***/
+/*****************************/
+@media screen and (max-width: 634px) {
+  #section_footer {
+      display: none;
+  }
+
+  #section_header {
+      display: none;
+  }
+}
+
+/*****************************/
+/** version tablette 474px ***/
+/*****************************/
+@media screen and (max-width: 474px) {
+  form {
+    grid-template-columns: auto;
+    text-align: center;
+  }
+
+  form label {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+
+  .color--quinary, form textarea, form a, form h3 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  form h3 {
+    margin-top: 30px;
+    margin-bottom : 5px;
+  }
+
+  form textarea {
+    margin-top: 10px;
+  }
+}

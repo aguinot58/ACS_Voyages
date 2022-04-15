@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/font.css" />
+    <link rel="stylesheet" href="../css/index_body.css" />
+    <link rel="stylesheet" href="../css/header_footer.css" />
+    <link rel="stylesheet" href="../css/index_sections_pourcentage.css" />
+    <link rel="stylesheet" href="../css/contact.css" />
+    <link rel="shortcut icon" type="image/icon" href="../favicon.ico" />
+    <title>ACS Voyages : Contact Professionel</title>
+  </head>
+
+  <body>
+    <header>
+      <div id="fix-menu">
+        <div class="logo-name" id="logo-header">
+          <img
+            title="logo"
+            class="logo"
+            src="../img/logo_site_voyage_final.png"
+            alt="logo"
+          />
+          <p>ACS Voyage</p>
+        </div>
+
+        <nav>
+          <img
+            id="menu_mobile"
+            src="../img/burger_icon.svg"
+            alt="bouton menu"
+          />
+          <ul id="head_right">
+            <li>
+              <a href="./../index.html">Accueil</a>
+            </li>
+            <li id="submenu_categories">
+              <a href="#">Catégorie</a>
+              <ul class="submenu" id="submenu_categorie">
+                <li>
+                  <a href="./vol.html">Vol+hôtel</a>
+                </li>
+                <li>
+                  <a href="./train.html">Train+hôtel</a>
+                </li>
+                <li>
+                  <a href="./croisiere.html">Croisière</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="./connexion.html">Connexion</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="section_header">
+      <h6>section header</h6>
+    </section>
+
+    <section class="separateur_section">
+      <h6>separateur de section</h6>
+      <img title="clous" alt="clous" src="./../img/clous.svg" />
+      <img title="clous" alt="clous" src="./../img/clous.svg" />
+      <img title="clous" alt="clous" src="./../img/clous.svg" />
+      <img title="clous" alt="clous" src="./../img/clous.svg" />
+    </section>
+
+    <section id="section_contact">
+      <h6>section contact</h6>
+      <form id="GroupQuotationForm" novalidate="novalidate">
+          <label>Civilité*</label>
+          <figure id="info_civilite">
+            <label class="input-inline">
+              <input
+                data-val="true"
+                data-val-required="Veuillez renseigner la civilité"
+                id="Civilite"
+                name="Civilite"
+                type="radio"
+                value="Monsieur"
+              />
+              Monsieur
+            </label>
+            <label class="input-inline">
+              <input id="Civilite" name="Civilite" type="radio" value="Madame" />
+              Madame
+            </label>
+          </figure>
+        </div>
+          <label>Prénom*</label>
+          <input
+            class="form-control"
+            data-val="true"
+            data-val-maxlength="80 caractère au maximum"
+            data-val-maxlength-max="80"
+            data-val-regex="Veuillez saisir des lettres uniquement"
+            data-val-regex-pattern="^[a-zA-ZÀ-ÿ-' ]+$"
+            data-val-required="Veuillez renseigner le prénom"
+            id="Prenom"
+            name="Prenom"
+            type="text"
+            value=""
+            required
+          />
+          <label>Nom*</label>
+          <input
+            class="form-control"
+            data-val="true"
+            data-val-maxlength="80 caractère au maximum"
+            data-val-maxlength-max="80"
+            data-val-regex="Veuillez saisir des lettres uniquement"
+            data-val-regex-pattern="^[a-zA-ZÀ-ÿ-' ]+$"
+            data-val-required="Veuillez renseigner le nom"
+            id="Nom"
+            name="Nom"
+            type="text"
+            value=""
+            required
+          />
+          <label>Adresse e-mail*</label>
+          <input
+            class="form-control"
+            data-val="true"
+            data-val-email="The Email field is not a valid e-mail address."
+            data-val-maxlength="40 charactère au maximum"
+            data-val-maxlength-max="40"
+            data-val-regex="Votre e-mail est invalide"
+            data-val-regex-pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
+            data-val-required="Veuillez renseigner un e-mail"
+            id="Email"
+            name="Email"
+            type="text"
+            value=""
+            required
+          />
+          <label>Numéro de téléphone*</label>
+          <input
+            class="form-control"
+            data-val="true"
+            data-val-maxlength="15 charactère au maximum"
+            data-val-maxlength-max="15"
+            data-val-regex="Veuillez renseigner un numéro de téléphone"
+            data-val-regex-pattern="[\s-]?\(?(\d{3})\)?[\s-]?\d{3}[\s-]?\d{4,9}"
+            data-val-required="Veuillez renseigner un numéro de téléphone"
+            id="Phone"
+            name="Phone"
+            type="text"
+            value=""
+            required
+          />
+          <label>Adresse*</label>
+          <input
+            class="form-control"
+            data-val="true"
+            data-val-length="Veuillez renseigner l'adresse"
+            data-val-length-max="200"
+            data-val-length-min="2"
+            data-val-required="Veuillez renseigner l'adresse"
+            id="Adresse"
+            name="Adresse"
+            type="text"
+            value=""
+            required
+          />
+          <label>Code postal*</label>
+          <input
+            class="form-control"
+            data-val="true"
+            data-val-regex="Veuillez indiquer un code postal à 5 chiffres"
+            data-val-regex-pattern="^[0-9]{5}$"
+            data-val-required="Veuillez renseigner un code postal à 5 chiffres"
+            id="ZipCode"
+            name="ZipCode"
+            type="text"
+            value=""
+            required
+          />
+          <label>Ville*</label>
+          <input
+            class="form-control"
+            data-val="true"
+            data-val-length="Veuillez renseigner votre ville"
+            data-val-length-max="100"
+            data-val-length-min="2"
+            data-val-regex="Ville invalide"
+            data-val-regex-pattern="^[a-zA-ZÀ-ÿ-' ]+$"
+            data-val-required="Veuillez renseigner votre ville"
+            id="City"
+            name="City"
+            type="text"
+            value=""
+            required
+          />
+        <h3>Informations sur votre société</h3>
+          <label>Raison sociale*</label>
+          <input
+            class="form-control"
+            data-val="true"
+            data-val-maxlength="100 caractères maximum "
+            data-val-maxlength-max="100"
+            data-val-required="Veuillez renseigner la raison sociale"
+            id="RaisonSociale"
+            name="RaisonSociale"
+            type="text"
+            value=""
+            required
+          />
+          <label>Siret*</label><input
+          class="form-control"
+          data-val="true"
+          data-val-maxlength="100 caractères maximum "
+          data-val-maxlength-max="100"
+          data-val-required="Veuillez renseigner la raison sociale"
+          id="siret"
+          name="siret"
+          type="text"
+          value=""
+          required
+          />
+          <h3 class="title">Votre message</h3>
+          <textarea
+            class="form-control"
+            cols="20"
+            data-val="true"
+            data-val-maxlength="Merci de ne pas dépasser 1000 caractères"
+            data-val-maxlength-max="1000"
+            id="Message"
+            name="Message"
+            rows="2"
+            required
+          ></textarea>
+          <p class="color--quinary">
+            *Ces données sont obligatoires et indispensables au traitement de
+            votre demande.
+          </p>
+          <a
+            type="submit"
+            href="#"
+          >
+            Envoi
+          </a>
+      </form>
+      
+    </section>
+
+    <section class="separateur_section">
+      <h6>separateur de section</h6>
+      <img title="clous" alt="clous" src="./../img/clous.svg" />
+      <img title="clous" alt="clous" src="./../img/clous.svg" />
+      <img title="clous" alt="clous" src="./../img/clous.svg" />
+      <img title="clous" alt="clous" src="./../img/clous.svg" />
+    </section>
+
+    <section id="section_footer">
+      <h6>section footer</h6>
+    </section>
+
+    <footer>
+      <figure>
+        <div class="block_footer logo-name" id="logo-footer">
+          <img
+            title="logo"
+            class="logo"
+            src="../img/logo_site_voyage_final.png"
+            alt="logo"
+          />
+          <p>ACS Voyage</p>
+        </div>
+        <div class="block_footer" id="block-footer-center">
+          <ul>
+            <li class="title">Entreprise</li>
+            <li><a href="./a_propos.html">A propos</a></li>
+            <li><a href="./mentions_legales.html">Mentions Légales</a></li>
+            <li>
+              <a href="./politique_confidentialite.html"
+                >Politique de <br />confidentialité</a
+              >
+            </li>
+          </ul>
+
+          <ul id="footer_title_right">
+            <li class="title">Contact</li>
+            <li><a href="./page_contact_client.html">Particulier</a></li>
+            <li><a href="./page_contact_pro.html">Professionel</a></li>
+          </ul>
+        </div>
+
+        <div class="block_footer" id="logos">
+          <p>Suivez-nous</p>
+          <a href="#"
+            ><img
+              class="img-logo"
+              id="logo_facebook"
+              title="logo facebook"
+              src="../img/facebook.svg"
+              alt="logo facebook"
+          /></a>
+          <a href="#"
+            ><img
+              class="img-logo"
+              id="logo_instagram"
+              title="logo instagram"
+              src="../img/insta.svg"
+              alt="logo instagram"
+          /></a>
+          <a href="#"
+            ><img
+              class="img-logo"
+              id="logo_twitter"
+              title="logo twitter"
+              src="../img/twitter.svg"
+              alt="logo twitter"
+          /></a>
+          <br /><br />
+          <p>Paiement sécurisé</p>
+          <a href="#"
+            ><img
+              class="img-logo-carte"
+              id="logo_carte_bleu"
+              title="logo carte bleu"
+              src="../img/picto-cb.svg"
+              alt="logo carte bleu"
+          /></a>
+          <a href="#"
+            ><img
+              class="img-logo-carte"
+              id="logo_carte_master"
+              title="logo master carte"
+              src="../img/picto-mastercard.svg"
+              alt="logo master carte"
+          /></a>
+          <a href="#"
+            ><img
+              class="img-logo-carte"
+              id="logo_carte_visa"
+              title="logo carte visa"
+              src="../img/picto-visa.svg"
+              alt="logo carte visa"
+          /></a>
+        </div>
+      </figure>
+      <p id="droits_reserves">Tous droits réservés 2022</p>
+    </footer>
+  </body>
+</html>
