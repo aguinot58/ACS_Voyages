@@ -1,0 +1,165 @@
+@media all and (max-width: 687px){
+
+    #bouton-valid-reduc{
+
+        margin-top: 15px;
+
+    }
+
+}
+
+
+@media all and (max-width: 656px){
+
+    #voyageur, #options, #reduction{
+
+        margin-top: 0px;
+
+    }
+
+}
+
+
+@media all and (max-width: 655px){
+
+    #fix-menu {
+        display: flex;
+    }
+
+    #menu_mobile {
+        display: block;
+        margin-top: 4px;
+    }
+
+    section{
+
+        border-radius: 00px;
+        border: none;
+
+    }
+
+    #voyageur, #options, #reduction{
+
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+    }
+
+    #partie-haute, #partie-basse{
+
+        display: none;
+
+    }
+
+    #voyage{
+
+        padding-bottom: 10px;
+        padding-top: 100px;
+
+    }
+
+    h1{
+
+        top: 55px;
+
+    }
+
+    h3{
+
+        font-size: 16px;
+
+    }
+
+    #infos-voyage label, #infos-voyage p, p{
+
+        font-size: 14px;
+
+    }
+
+    .titre-assur{
+
+        width: 60%;
+
+    }
+
+    #opt-art-code-reduction label, #voyageur label, #reduction label{
+
+        font-size: 14px;
+
+    }
+
+    #opt-code-reduction, #pourcentage-reduc{
+
+        margin-left: 10px;
+
+    }
+
+}
+
+
+@media all and (max-width: 550px){
+
+    #infos-voyage, #assurance{
+
+        padding-left: 10px;
+        padding-right: 10px;
+
+    }
+
+    .conteneur-info{
+
+        flex-direction: column;
+        width: 100%;
+
+    }
+
+    .conteneur-info .renseignement1, .conteneur-info .renseignement2{
+
+        width: 100%;
+
+    }
+
+    .conteneur-info .renseignement1 p, .conteneur-info .renseignement2 p{
+
+        width: 70%;
+
+    }
+
+    .conteneur-info .renseignement1 label, .conteneur-info .renseignement2 label{
+
+        width: 60%;
+
+    }
+
+}
+
+
+@media all and (max-width: 385px){
+
+    #infos-voyage label, #infos-voyage p{
+
+        font-size: 12px;
+
+    }
+
+    .conteneur-info .renseignement1 label, .conteneur-info .renseignement2 label{
+
+        width: 60%;
+
+    }
+
+    #voyage, #options{
+
+        padding-left: 15px;
+        padding-right: 15px;
+
+    }
+
+    #opt-assurance, #opt-transport, #opt-reduction, #voyageur, #transport{
+
+        padding-left: 10px;
+        padding-right: 10px;
+
+    }
+
+}

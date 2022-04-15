@@ -59,7 +59,7 @@
       </div>
     </header>
 
-    <h1>Kiel</h1>
+    <h1 id="voyage">Kiel</h1>
     <figure class="pourcentage"><p>-35%</p></figure>
 
     <section id="photos-presentation">
@@ -256,8 +256,8 @@
 
               <article class="detail-vol">
                 <div class="dte-dep">
-                    <p>4 juin</p>
-                    <p>sam.</p>
+                    <p id="dte-depart">4 juin</p>
+                    <p id="jour-depart">sam.</p>
                 </div>
 
                 <div class="heure-dep">
@@ -310,8 +310,8 @@
 
               <article class="detail-vol">
                 <div class="dte-dep">
-                    <p>8 juin</p>
-                    <p>mer.</p>
+                    <p id="dte-retour">8 juin</p>
+                    <p id="jour-retour">mer.</p>
                 </div>
 
                 <div class="heure-dep">
@@ -392,7 +392,7 @@
         </article>
 
         <article class="conteneur-infos-chambre">
-          <h5>Cabine extérieure</h5>
+          <h5 id="chambre1">Cabine extérieure</h5>
 
           <article class="details-chambre">
             <article class="details-generaux">
@@ -434,14 +434,14 @@
             <article class="conteneur-infos-prix">
               <article class="conteneur-prix">
                 <p class="promotion">Promotion !</p>
-                <p class="prix">2484 €</p>
+                <p class="prix" id="prix_1">2484 €</p>
               </article>
 
-              <p class="infos-offre">Par pers., 3 nuits, vol incl.</p>
+              <p class="infos-offre" id="info_offre-prix_1">Par pers., 3 nuits, vol incl.</p>
             </article>
 
             <article class="bouton-continuer">
-              <button>Continuer</button>
+              <button id="bouton-prix_1" onclick="checkCookie(event)">Continuer</button>
             </article>
           </article>
 
@@ -457,14 +457,14 @@
             <article class="conteneur-infos-prix">
               <article class="conteneur-prix">
                 <p class="promotion">Promotion !</p>
-                <p class="prix">2859 €</p>
+                <p class="prix" id="prix_2">2859 €</p>
               </article>
 
-              <p class="infos-offre">Par pers., 3 nuits, vol incl.</p>
+              <p class="infos-offre" id="info_offre-prix_2">Par pers., 3 nuits, vol incl.</p>
             </article>
 
             <article class="bouton-continuer">
-              <button>Continuer</button>
+              <button id="bouton-prix_2" onclick="checkCookie(event)">Continuer</button>
             </article>
           </article>
         </article>
@@ -504,7 +504,7 @@
         </article>
 
         <article class="conteneur-infos-chambre">
-          <h5>Suite</h5>
+          <h5 id="chambre2">Suite</h5>
 
           <article class="details-chambre">
             <article class="details-generaux">
@@ -546,14 +546,14 @@
             <article class="conteneur-infos-prix">
               <article class="conteneur-prix">
                 <p class="promotion">Promotion !</p>
-                <p class="prix">5076 €</p>
+                <p class="prix" id="prix_3">5076 €</p>
               </article>
 
-              <p class="infos-offre">Par pers., 3 nuits, vol incl.</p>
+              <p class="infos-offre" id="info_offre-prix_3">Par pers., 3 nuits, vol incl.</p>
             </article>
 
             <article class="bouton-continuer">
-              <button>Continuer</button>
+              <button id="bouton-prix_3" onclick="checkCookie(event)">Continuer</button>
             </article>
           </article>
 
@@ -569,14 +569,14 @@
             <article class="conteneur-infos-prix">
               <article class="conteneur-prix">
                 <p class="promotion">Promotion !</p>
-                <p class="prix">5578 €</p>
+                <p class="prix" id="prix_4">5578 €</p>
               </article>
 
-              <p class="infos-offre">Par pers., 3 nuits, vol incl.</p>
+              <p class="infos-offre" id="info_offre-prix_4">Par pers., 3 nuits, vol incl.</p>
             </article>
 
             <article class="bouton-continuer">
-              <button>Continuer</button>
+              <button id="bouton-prix_4" onclick="checkCookie(event)">Continuer</button>
             </article>
           </article>
         </article>
@@ -2089,8 +2089,8 @@
 
           <ul id="footer_title_right">
             <li class="title">Contact</li>
-            <li><a href="#">Particulier</a></li>
-            <li><a href="#">Professionel</a></li>
+            <li><a href="../pages/page_contact_client.html">Particulier</a></li>
+            <li><a href="../pages/page_contact_pro.html">Professionel</a></li>
           </ul>
         </div>
 
@@ -2152,5 +2152,6 @@
     </footer>
 
     <script src="../js/voyage.js"></script>
+    <script src="../js/recap_voyage.js"></script>
   </body>
 </html>

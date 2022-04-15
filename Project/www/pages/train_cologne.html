@@ -59,7 +59,7 @@
       </div>
     </header>
 
-    <h1>Cologne</h1>
+    <h1 id="voyage">Cologne</h1>
 
     <section id="photos-presentation">
       <article class="photos-pres">
@@ -224,8 +224,8 @@
 
               <article class="detail-vol">
                 <div class="dte-dep">
-                    <p>11 mai</p>
-                    <p>mer.</p>
+                    <p id="dte-depart">11 mai</p>
+                    <p id="jour-depart">mer.</p>
                 </div>
 
                 <div class="heure-dep">
@@ -271,8 +271,8 @@
 
               <article class="detail-vol">
                 <div class="dte-dep">
-                    <p>14 mai</p>
-                    <p>sam.</p>
+                    <p id="dte-retour">14 mai</p>
+                    <p id="jour-retour">sam.</p>
                 </div>
 
                 <div class="heure-dep">
@@ -353,7 +353,7 @@
         </article>
 
         <article class="conteneur-infos-chambre">
-          <h5>Chambre King Size</h5>
+          <h5 id="chambre1">Chambre King Size</h5>
 
           <article class="details-chambre">
             <article class="details-generaux">
@@ -394,14 +394,14 @@
 
             <article class="conteneur-infos-prix">
               <article class="conteneur-prix">
-                <p class="prix">927 €</p>
+                <p class="prix" id="prix_1">927 €</p>
               </article>
 
-              <p class="infos-offre">Par pers., 3 nuits, train incl.</p>
+              <p class="infos-offre" id="info_offre-prix_1">Par pers., 3 nuits, train incl.</p>
             </article>
 
             <article class="bouton-continuer">
-              <button>Continuer</button>
+              <button id="bouton-prix_1" onclick="checkCookie(event)">Continuer</button>
             </article>
           </article>
 
@@ -416,14 +416,14 @@
 
             <article class="conteneur-infos-prix">
               <article class="conteneur-prix">
-                <p class="prix">1018 €</p>
+                <p class="prix" id="prix_2">1018 €</p>
               </article>
 
-              <p class="infos-offre">Par pers., 3 nuits, train incl.</p>
+              <p class="infos-offre" id="info_offre-prix_2">Par pers., 3 nuits, train incl.</p>
             </article>
 
             <article class="bouton-continuer">
-              <button>Continuer</button>
+              <button id="bouton-prix_2" onclick="checkCookie(event)">Continuer</button>
             </article>
           </article>
         </article>
@@ -463,7 +463,7 @@
         </article>
 
         <article class="conteneur-infos-chambre">
-          <h5>Chambre Energy River</h5>
+          <h5 id="chambre2">Chambre Energy River</h5>
 
           <article class="details-chambre">
             <article class="details-generaux">
@@ -504,14 +504,14 @@
 
             <article class="conteneur-infos-prix">
               <article class="conteneur-prix">
-                <p class="prix">1044 €</p>
+                <p class="prix" id="prix_3">1044 €</p>
               </article>
 
-              <p class="infos-offre">Par pers., 3 nuits, train incl.</p>
+              <p class="infos-offre" id="info_offre-prix_3">Par pers., 3 nuits, train incl.</p>
             </article>
 
             <article class="bouton-continuer">
-              <button>Continuer</button>
+              <button id="bouton-prix_3" onclick="checkCookie(event)">Continuer</button>
             </article>
           </article>
 
@@ -526,14 +526,14 @@
 
             <article class="conteneur-infos-prix">
               <article class="conteneur-prix">
-                <p class="prix">1153 €</p>
+                <p class="prix" id="prix_4">1153 €</p>
               </article>
 
-              <p class="infos-offre">Par pers., 3 nuits, train incl.</p>
+              <p class="infos-offre" id="info_offre-prix_4">Par pers., 3 nuits, train incl.</p>
             </article>
 
             <article class="bouton-continuer">
-              <button>Continuer</button>
+              <button id="bouton-prix_4" onclick="checkCookie(event)">Continuer</button>
             </article>
           </article>
         </article>
@@ -2046,8 +2046,8 @@
 
           <ul id="footer_title_right">
             <li class="title">Contact</li>
-            <li><a href="#">Particulier</a></li>
-            <li><a href="#">Professionel</a></li>
+            <li><a href="../pages/page_contact_client.html">Particulier</a></li>
+            <li><a href="../pages/page_contact_pro.html">Professionel</a></li>
           </ul>
         </div>
 
@@ -2109,5 +2109,6 @@
     </footer>
 
     <script src="../js/voyage.js"></script>
+    <script src="../js/recap_voyage.js"></script>
   </body>
 </html>
