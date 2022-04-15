@@ -243,7 +243,7 @@ La creation de tous les contenus de la page (general, transport, chambres, servi
 id_conteneur (string) : id du contenur de celui-ci
 id_contenu (string) : id du contenu
 class_contenu (string) : la ou les classe du contenu
-contenu (string) le contenu du bloc
+contenu (string) : le contenu du bloc
 */
 function create_contenu_all(id_conteneur, id_contenu, class_contenu, contenu) {
     document.getElementById(id_conteneur).innerHTML += '<figure id="'+id_contenu+'" class="'+class_contenu+' drag_contenu" draggable="true">'+
@@ -646,7 +646,7 @@ function loadFilesChambre(event) {
       if (!imageType.test(file.type)) {
         continue;
       }
-  
+
       var img = document.createElement("img");
       img.classList.add("obj");
       img.classList.add("img-slide-presentation");
@@ -687,13 +687,12 @@ function loadFiles(event) {
     let preview = document.getElementById("add_img");
     for (var i = 0; i < files.length; i++) {
       var file = files[i];
-      console.log(file);
       var imageType = /^image\//;
   
       if (!imageType.test(file.type)) {
         continue;
       }
-  
+
       var img = document.createElement("img");
       img.classList.add("obj");
       img.classList.add("img-slide-presentation");

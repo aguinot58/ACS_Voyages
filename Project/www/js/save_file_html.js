@@ -1,18 +1,41 @@
+function remplace_title(text) {
+    return text.replaceAll("#voyage_title#", document.getElementById("titre-page").value);
+}
+
+function remplace_pourcentage(text) {
+    let value = document.getElementById("pourcentage-page").value;
+    let display_pour = "";
+    if(value < 0) {
+        display_pour = '<figure class="pourcentage"><p>'+value+'%</p></figure>';
+    }
+    return text.replaceAll("#voyage_pourcentage#", display_pour);
+}
+
+
 async function loadtext(doc) {
-    // create a new handle
-    const newHandle = await window.showSaveFilePicker();
-    
-    // create a FileSystemWritableFileStream to write to
-    const writableStream = await newHandle.createWritable();
+    let htmlPage = "<!DOCTYPE html>"+"\n";
+    htmlPage += doc.documentElement.outerHTML;
 
-    // ecrire le doctype de la page html
-    await writableStream.write("<!DOCTYPE html>");
+    htmlPage = remplace_title(htmlPage);
+    htmlPage = remplace_pourcentage(htmlPage);
+    //console.log(htmlPage);
 
-    // ecrire le contenu de la page html lu sur le serveur
-    await writableStream.write(doc.documentElement.outerHTML);
+    console.log(htmlPage);
+    // On ajoute un type MIME pertinent
+    var blob = new Blob([htmlPage], { type: "text/html" });
+    blob.name = "testing";
+    var file = new File([blob], "name");
+    const blobUrl = URL.createObjectURL(blob);
 
-    // enregistrer sur le disque dur.
-    await writableStream.close();
+    // create <a> tag dinamically
+    var fileLink = document.createElement('a');
+    fileLink.href = blobUrl;
+
+    // it forces the name of the downloaded file
+    fileLink.download = 'new_file_'+Date.now();
+
+    // triggers the click event
+    fileLink.click();
 }
 
 async function saveFile() {
@@ -25,7 +48,7 @@ async function saveFile() {
         formData.append(`photos_${i}`, photos.files[i]);
     }
     console.log(formData);*/
-    loadHTMLDefault("./vol_solPalmanova_test.html");
+    loadHTMLDefault("./page_default.html");
     
 }
 
