@@ -61,7 +61,7 @@ var dragSrcElImg = null;
       dragSrcElImg = e.target;
   
       e.dataTransfer.effectAllowed = 'move';
-      e.dataTransfer.setData('text', e.target.src);
+      e.dataTransfer.setData('text', e.target.id);
     }
   
     function handleDragImgOver(e) {
@@ -87,8 +87,12 @@ var dragSrcElImg = null;
         e.stopPropagation();
       }
       if (dragSrcElImg != this) {
-          dragSrcElImg.src = e.target.src;
-        e.target.src = e.dataTransfer.getData('text');
+        let src = document.getElementById(e.dataTransfer.getData('text')).src;
+        let file = document.getElementById(e.dataTransfer.getData('text')).file;
+        dragSrcElImg.src = e.target.src;
+        dragSrcElImg.file = e.target.file;
+        e.target.src = src;
+        e.target.file = file;
       }
       
       return false;
