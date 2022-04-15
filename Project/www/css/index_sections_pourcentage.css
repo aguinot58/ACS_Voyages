@@ -1,0 +1,104 @@
+/* -------------------- */
+/* la base des sections */
+section {
+  max-width: 950px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  /*background: url("../img/wood-6653691_960_720.svg") no-repeat;
+  background-size: cover;
+  background-position: center;*/
+  background: url("../img/wood-6653691_960_720_2.svg") repeat;
+  box-sizing: border-box;
+  border-radius: 20px;
+  border: #000000 1px solid;
+  padding: 40px 0px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  transition-property: border-radius, box-shadow;
+  transition-duration: 0.5s;
+}
+
+.separateur_section {
+  display: flex;
+  background: unset;
+  border: unset;
+  border-radius: unset;
+  padding: 0px 25px;
+  justify-content: space-between;
+  margin-top: -24px;
+  margin-bottom: -25px;
+  box-shadow: unset;
+  transition-property: margin-bottom, margin-top;
+  transition-duration: 0.5s;
+}
+
+.separateur_section img {
+  width: 15px;
+  border: #8a8a8a 1px solid;
+  border-radius: 18px;
+  box-shadow: 4px 3px 7px rgba(0, 0, 0, 0.45);
+  transition-property: width;
+  transition-duration: 0.5s;
+}
+
+/**********************/
+/** version < 950px ***/
+/**********************/
+@media screen and (max-width: 950px) {
+  section {
+    border-radius: unset;
+    box-shadow: unset;
+  }
+
+  .separateur_section img {
+    width: 9px;
+    margin-top: 0;
+    transition-property: width, opacity;
+    transition-duration: 0.5s;
+  }
+}
+
+/***************************/
+/** version mobile 655px ***/
+/***************************/
+@media screen and (max-width: 655px) {
+  .separateur_section {
+    margin-top: -1px;
+    margin-bottom: -2px;
+  }
+
+  .separateur_section img {
+    /*margin-top: 46px;*/
+    width: 0px;
+    opacity: 0;
+  }
+}
+
+/* -------------- */
+/* le pourcentage */
+.pourcentage {
+  display: inline-block;
+  position: absolute;
+  overflow: hidden;
+  margin-left: 64px;
+  margin-top: -21px;
+  color: white;
+  background-color: #ff6b00;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 22px;
+  border: red 1px solid;
+  transform: rotate(25deg);
+  text-align: center;
+  z-index: 2;
+}
+
+.pourcentage p {
+  font-family: "Inter-Regular";
+  vertical-align: middle;
+  padding-top: 50%;
+  margin-top: -20%;
+  margin-left: 2px;
+}

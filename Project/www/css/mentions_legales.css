@@ -1,0 +1,233 @@
+/* RAZ de la page */
+* {
+
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: Inter-Regular;
+
+}
+
+html, body{
+
+    height:100%;
+
+}
+
+body{
+
+    text-align: center;
+
+}
+
+/* CSS général pour toutes les sections */
+section{
+
+    max-width: 950px;
+    background-image: url(../img/wood-6653691_960_720.svg);
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 25px 0 25px 0;
+    border-radius: 30px;
+    border: 1px solid rgba(50, 50, 50,0.5);
+    text-align: center;
+    margin-bottom: 0px;
+    position: relative;
+
+}
+
+
+/* le menu header */
+#fix-menu{
+    display: block;
+    max-width: 950px;
+    margin-left: -5px;
+    margin-right: unset;
+}
+
+
+/* CSS pour les sections de séparations avec les clous */
+.separateur_section {
+
+    z-index: 2;
+
+}
+
+/* CSS des parties hautes et basses de la page pour faire les liaisons avec les clous */
+#partie-haute{
+
+    border-radius: 0 0 30px 30px; 
+    width: 100%;
+    height: 75px;
+
+}
+
+#partie-basse{
+
+    width: 100%;
+    height: 50px;
+    border-radius: 30px 30px 0 0;
+
+}
+
+
+/* CSS pour le titre de la page */
+h1{
+
+    font-size: 30px;
+    position: relative;
+    top: 50px;
+    z-index: 3;
+    color:rgb(226, 43, 202);
+    max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+/* CSS partie centrale avec le texte */
+#mentions-legales{
+
+    padding: 150px 50px 50px 50px;
+    margin-top: -75px;
+    text-align: justify;
+
+}
+
+#mentions-legales article{
+
+    box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.2);
+    background-color: #EFEFEF;
+    border-radius: 10px;
+    padding: 30px 40px 30px 40px;
+
+}
+
+#mentions-legales p{
+
+    font-size: 16px;
+    margin-bottom: 20px;
+
+}
+
+#mentions-legales h5{
+
+    margin-top: 50px;
+    margin-bottom: 20px;
+
+}
+
+#mentions-legales ul{
+
+    margin-left: 15px;
+
+}
+
+#mentions-legales li{
+
+    margin-bottom: 25px;
+
+}
+
+#mentions-legales a{
+
+    text-decoration: none;
+    color:rgb(226, 43, 202);
+
+}
+
+#mentions-legales a:visited{
+
+    color:rgb(226, 43, 202);
+
+}
+
+/* CSS flêche pour remonter en haut de page */
+#scroll_to_top {
+
+    position: fixed;
+    width: 45px;
+    height: 45px;
+    bottom: 50px;
+    right: 30px;
+
+}
+
+#scroll_to_top img {
+
+    width: 45px;
+    border-radius: 15px;
+
+}
+
+
+@media all and (max-width: 700px) {
+
+    #partie-haute, #partie-basse, #mentions-legales{
+
+        border-radius: 0 0 0 0; 
+
+    }
+
+    #mentions-legales{
+
+        margin-top: -108px;
+        padding-top: 175px;
+
+    }
+
+}
+
+
+@media all and (max-width: 656px){
+
+    #fix-menu {
+        display: flex;
+    }
+
+    #menu_mobile {
+        display: block;
+        margin-top: 4px;
+    }
+
+    #partie-haute, #partie-basse{
+
+        display: none;
+
+    }
+
+    #mentions-legales{
+
+        padding-left: 5px;
+        padding-right: 5px;
+
+    }
+
+    #mentions-legales article{
+
+        padding-left: 10px;
+        padding-right: 10px;
+
+    }
+
+    #mentions-legales p{
+
+        font-size: 12px;
+        margin-bottom: 20px;
+    
+    }
+
+    h1{
+
+        font-size: 20px;
+
+    }
+
+    #mentions-legales article h5{
+
+        font-size: 14px;
+
+    }
+
+}

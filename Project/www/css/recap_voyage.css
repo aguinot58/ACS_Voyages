@@ -1,0 +1,300 @@
+/* RAZ de la page */
+* {
+
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: Inter-Regular;
+
+}
+
+html, body{
+
+    height:100%;
+
+}
+
+body{
+
+    text-align: center;
+
+}
+
+
+/* CSS général pour toutes les sections */
+section{
+
+    max-width: 950px;
+    background-image: url(../img/wood-6653691_960_720.svg);
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 25px 0 25px 0;
+    border-radius: 30px;
+    border: 1px solid rgba(50, 50, 50,0.5);
+    text-align: center;
+    margin-bottom: 0px;
+    position: relative;
+
+}
+
+
+/* le menu header */
+#fix-menu{
+    display: block;
+    max-width: 950px;
+    margin-left: -5px;
+    margin-right: unset;
+}
+
+
+/* CSS pour les sections de séparations avec les clous */
+.separateur_section {
+
+    z-index: 2;
+
+}
+
+/* CSS des parties hautes et basses de la page pour faire les liaisons avec les clous */
+#partie-haute{
+
+    border-radius: 0 0 30px 30px; 
+    width: 100%;
+    height: 75px;
+
+}
+
+#partie-basse{
+
+    width: 100%;
+    height: 50px;
+    border-radius: 30px 30px 0 0;
+
+}
+
+h1{
+
+    font-size: 30px;
+    position: relative;
+    top: 30px;
+    z-index: 3;
+    color:rgb(226, 43, 202);
+    max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+h2{
+
+    margin-top: 20px;
+
+}
+
+#voyage, #voyageur, #options, #reduction{
+
+    padding: 70px 30px 40px 30px;
+    margin-top: -35px;
+
+}
+
+#voyageur, #options{
+
+    padding-top: 50px;
+
+}
+
+#infos-voyage, #assurance, #nombre-voyageur, #opt-assurance, #transport, #opt-transport, #opt-reduction, #conteneur-reduc{
+
+    box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.2);
+    background-color: #EFEFEF;
+    border-radius: 10px;
+    padding: 30px 40px 20px 40px;
+    margin-top: 10px;
+    text-align: left;
+    margin-bottom: 15px;
+
+}
+
+.conteneur-info, .renseignement1, .renseignement2, #art-assurance-totale,
+#art-assurance-annul, #art-assurance-none, .option-assurance, #qte-voyageur,
+#art-trsp-commun, #art-trsp-standard, #art-trsp-premium, .conteneur_transport,
+#opt-art-code-reduction{
+
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.renseignement1, .renseignement2{
+
+    width: 50%;
+    padding-bottom: 15px;
+
+}
+
+label{
+    
+    font-weight: bold;
+
+}
+
+.conteneur_assurance{
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.conteneur_assurance > p, .conteneur_transport > p{
+
+    margin-top: -3px;
+    margin-bottom: 10px;
+
+}
+
+#art-assurance-totale, #art-assurance-annul, #art-assurance-none,
+#art-trsp-commun, #art-trsp-standard, #art-trsp-premium{
+
+    margin-bottom: 25px;
+    align-items: flex-start;
+
+}
+
+input[type="radio"], input[type="checkbox"]{
+
+    margin-right: 15px;
+
+}
+
+input[type="number"]{
+
+    margin-left: 15px;
+    width: 75px;
+    text-align: center;
+
+}
+
+ul{
+
+    margin-left: 20px;
+
+}
+
+.titre{
+
+    text-align: center;
+    margin-bottom: 30px;
+    color:rgb(226, 43, 202);
+
+}
+
+#opt-assurance{
+
+    text-align: left;
+
+}
+
+.titre-assur{
+
+    width: 80%;
+
+}
+
+#qte-voyageur{
+
+    justify-content: center;
+    padding-bottom: 20px;
+
+}
+
+#opt-assur-1, #opt-assur-2, #opt-trsp-1, #opt-trsp-2, #opt-trsp-3, #opt-transport, #opt-reduction{
+
+    display: none;
+
+}
+
+.conteneur_transport, #opt-art-code-reduction{
+
+    width: 100%;
+    justify-content: space-around;
+
+}
+
+.conteneur_transport p:not([class="moyen-trsp"]){
+
+    width: 100%;
+    text-align: center;
+
+}
+
+.conteneur_transport p[class="moyen-trsp"]{
+
+    width: 100%;
+
+}
+
+#code-reduction{
+
+    text-align: center;
+
+}
+
+.label_variable{
+
+    color:rgb(226, 43, 202);
+    margin-left: 20px;
+
+}
+
+#bouton-valid-reduc{
+
+    background-color: white;
+    color:rgb(226, 43, 202);
+    border: 1px solid rgb(226, 43, 202);
+    font-weight: bold;
+    font-size: 15px;
+    width: 80px;
+    height: 20px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.3);
+
+}
+
+#bouton-retour{
+
+    background-color: white;
+    color:rgb(216, 46, 46);
+    border: 1px solid rgb(216, 46, 46);
+    font-weight: bold;
+    font-size: 15px;
+    width: 110px;
+    height: 40px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.3);
+
+}
+
+
+#bouton-suivant{
+
+    background-color: white;
+    color:rgb(36, 192, 75);
+    border: 1px solid rgb(36, 192, 75);
+    font-weight: bold;
+    font-size: 15px;
+    width: 110px;
+    height: 40px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.3);
+
+}
+
+#navigation{
+
+    display: flex;
+    justify-content: space-around;
+
+}
+
+
+
