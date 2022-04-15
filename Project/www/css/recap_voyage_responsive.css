@@ -1,4 +1,10 @@
-@media all and (max-width: 687px){
+@media all and (max-width: 767px){
+
+    #art-code-reduction{
+
+        text-align: center;
+
+    }
 
     #bouton-valid-reduc{
 
@@ -134,6 +140,18 @@
 }
 
 
+@media all and (max-width: 498px){
+
+    #opt-code-reduction, #pourcentage-reduc{
+
+        margin-left: 30px;
+
+    }
+
+
+}
+
+
 @media all and (max-width: 385px){
 
     #infos-voyage label, #infos-voyage p{
@@ -148,18 +166,31 @@
 
     }
 
-    #voyage, #options{
+    #voyage, #options, #reduction{
 
         padding-left: 15px;
         padding-right: 15px;
 
     }
 
-    #opt-assurance, #opt-transport, #opt-reduction, #voyageur, #transport{
+    #opt-assurance, #opt-transport, #voyageur, #transport{
 
         padding-left: 10px;
         padding-right: 10px;
 
     }
+
+}
+
+
+@media all and (max-width: 350px){
+
+    #opt-reduction{
+
+        padding-left: 25px;
+        padding-right: 10px;
+
+    }
+
 
 }

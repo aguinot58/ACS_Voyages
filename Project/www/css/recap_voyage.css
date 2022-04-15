@@ -103,7 +103,7 @@ h2{
 
 }
 
-#infos-voyage, #assurance, #nombre-voyageur, #opt-assurance, #transport, #opt-transport, #opt-reduction{
+#infos-voyage, #assurance, #nombre-voyageur, #opt-assurance, #transport, #opt-transport, #opt-reduction, #conteneur-reduc{
 
     box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.2);
     background-color: #EFEFEF;
