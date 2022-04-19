@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin :0 ;
+}
+
+body {
+    width: 100%;
+    min-width: 290px;
+    box-sizing: border-box;
+    overflow: auto;
+    scroll-behavior: auto;
+}
+
+section {
+    height: 90vh;
+    width: 100%;
+    flex-wrap: nowrap;
+    box-sizing: hidden;
+}
+
+#all_imgs {
+    width: 100%;
+    position: fixed;
+    display: flex;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+    overflow: auto;
+    padding: 10px;
+    bottom: 0;
+    margin-bottom: 5px;
+    background-color: rgb(243, 243, 243);
+}
+
+#all_imgs img {
+    height: 200px;
+    padding: 10px;
+}
+
+#img_main {
+    width: 100%;
+    height: 78%;
+    margin-top: 20px;
+    text-align: center;
+    flex-wrap: nowrap;
+    box-sizing: hidden;
+    height: 100%;
+}
