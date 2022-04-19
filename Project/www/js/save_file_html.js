@@ -1,3 +1,8 @@
+/*
+Recupere les valeurs ajouter au tableau dans la back-office et ajoute la nouvelle page.
+tab_add (array) : la nouvelle page.
+return (array) : tableau a ajouter avec les nouvelles pages html.
+*/
 function loadTabDat(tab_add) {
   let tr = document.getElementById("tab_find").querySelectorAll("tr");
   let tab_save = [];
@@ -12,6 +17,13 @@ function loadTabDat(tab_add) {
   return tab_save;
 }
 
+/*
+ajouter une formule a la chambre.
+title (string) : le titre.
+prix (int) : le prix.
+promo (boolean) : c'est une promo ou pas.
+retrun (string) : la ligne avec la formule.(format HTML)
+*/
 function addformuleChambre(title, prix, promo) {
   return (
     '<article class="demi-pension formule-chambre">' +
@@ -39,6 +51,12 @@ function addformuleChambre(title, prix, promo) {
   );
 }
 
+/*
+Ajouter un service pour le voyage.
+title (string) : ajouter un titre.
+contenu (string) : contenu du service.
+return (string) : le service a ajouter.(format HTML)
+*/
 function addService(title, contenu) {
   letarraycontenu = contenu.split("\n");
   let value = '<article class="conteneur-service">';
@@ -55,6 +73,11 @@ function addService(title, contenu) {
   return value;
 }
 
+/*
+ajouter des services a la page.
+text (string) : la page html (format HTML)
+return (string) : la page html modifie. (format HTML)
+*/
 function addServices(text) {
   let textinfo = "";
   let arrayChambres = document
@@ -76,18 +99,27 @@ function addServices(text) {
   return text.replaceAll("#services_voyage#", textinfo);
 }
 
-function addChambre(title, formule, photos, detail, nb_chambre) {
+/*
+ajoute une chambre a la page
+title (string) : titre de celui-ci
+formule (string) : les formules de la chambre. (format HTML)
+photos (string) : ajouter les photos a la chambre (format HTML)
+detail (string) : le detail de la chambre (format HTML)
+nm_chambre (int) : numero de la chambre dans la page
+return (string) : la chambre (format HTML) 
+*/
+function addChambre(title, formule, photos, detail, nm_chambre) {
   let text =
     '<article class="conteneur-general-chambre chambre' +
-    nb_chambre +
+    nm_chambre +
     '">' +
     '<article class="conteneur-photos-chambre">' +
     photos +
     '<div class="precedent" onclick="ChangeSlideChambre' +
-    nb_chambre +
+    nm_chambre +
     '(-1)"><</div>' +
     '<div class="suivant" onclick="ChangeSlideChambre' +
-    nb_chambre +
+    nm_chambre +
     '(1)">></div>' +
     "</article>" +
     '<article class="conteneur-infos-chambre">' +
@@ -97,7 +129,7 @@ function addChambre(title, formule, photos, detail, nb_chambre) {
     '<article class="details-chambre">' +
     detail +
     '<p class="afficher-details" id="parag-aff-masq-details' +
-    nb_chambre +
+    nm_chambre +
     '">' +
     "Voir plus de détails" +
     "</p>" +
@@ -110,8 +142,8 @@ function addChambre(title, formule, photos, detail, nb_chambre) {
 
 /*
 Entrer le texte sous format html et remplacer "#voyage_title#" par le titre
-text (String) : texte sous format html
-return (string) : texte modifier
+text (String) : texte sous format html (format HTML)
+return (string) : texte modifier (format HTML)
 */
 function remplace_title(text) {
   return text.replaceAll(
@@ -122,8 +154,8 @@ function remplace_title(text) {
 
 /*
 Entrer le texte sous format html et remplacer "#voyage_pourcentage#" par le pourcentage
-text (String) : texte sous format html
-return (string) : texte modifier
+text (String) : texte sous format html (format HTML)
+return (string) : texte modifier (format HTML)
 */
 function remplace_pourcentage(text) {
   let value = document.getElementById("pourcentage-page").value;
@@ -134,14 +166,28 @@ function remplace_pourcentage(text) {
   return text.replaceAll("#voyage_pourcentage#", display_pour);
 }
 
+/*
+Savoir si la page a un pourcentage
+return (boolean) : a un pourcentage
+*/
 function ispourcentage() {
   return document.getElementById("pourcentage-page").value < 0;
 }
 
+/*
+recupere le type de stransport
+return (string) : type de transport
+*/
 function loadtransport() {
   return document.getElementById("type-transport").value;
 }
 
+/*
+remplace le nom du transport dans la page.
+text (string) : page a modifier (html)
+transport (string) : le type de transport
+return (string) : la page html modifie (format HTML)
+*/
 function remplace_transport(text, transport) {
   let name_transport = "Vols";
   let type_transport = "Vol";
@@ -157,7 +203,7 @@ function remplace_transport(text, transport) {
 }
 
 /*
-Entrer le texte sous format html et remplacer "#voyage_pourcentage#" par le pourcentage
+Recuperer les photos de la page
 id (String) : qui contient les images
 return (array) : les "src" des images
 */
@@ -176,6 +222,11 @@ function loadImgFile(id) {
   return arrayImg;
 }
 
+/*
+Remplacer les images dans la partie general de la page
+text (string) : page a modifier (html)
+return (string) : la page html modifie (format HTML)
+*/
 function remplace_image_general(text) {
   let arrayImgs = loadImgFile("add_img");
 
@@ -206,6 +257,12 @@ function remplace_image_general(text) {
   return text;
 }
 
+/*
+Creation d'une information dans la partie general de la page
+title (string) : le titre de celui-ci
+contenu (string) : le contenu de celui-ci
+return (string) : le texte de l'information (format HTML)
+*/
 function addInfoGener(title, contenu) {
   let value = '<p class="titre-paragraphe">' + title + "</p>";
   let arrayContenus = contenu.split("\n");
@@ -221,6 +278,11 @@ function addInfoGener(title, contenu) {
   return value;
 }
 
+/*
+Rajouter les informations dans la partie general de la page
+text (string) : page a modifier (html)
+return (string) : la page html modifie (format HTML)
+*/
 function infoGeneral(text) {
   let textinfo = "";
   let textinfomini = "";
@@ -261,6 +323,11 @@ function infoGeneral(text) {
   return text.replaceAll("#info_general#", textAllInfo);
 }
 
+/*
+Recuperer les images de la chambre pour les placer dans la page
+nm_chambre (int) : le numero de la chambre dans la page
+return (string) : le texte contenant les images (format HTML)
+*/
 function remplace_image_chambre(nm_chambre) {
   let arrayImgs = loadImgFile("add_img_chambre_" + nm_chambre);
 
@@ -301,6 +368,12 @@ function remplace_image_chambre(nm_chambre) {
   return imgs;
 }
 
+/*
+creation des details pour la chambre
+contenu (string) : le contenu du detail
+nm_chambre (int) : numero de la chambre dans la page
+return (string) : le detail de la chambre (format HTML)
+*/
 function detailChambre(contenu, nm_chambre) {
   let i = 0;
   let j = 0;
@@ -343,6 +416,12 @@ function detailChambre(contenu, nm_chambre) {
   );
 }
 
+/*
+Place les chambres dans la page
+text (string) : page a modifier (html)
+promo (boolean) : si on a une promo dans la page
+return (string) : la page html modifie (format HTML)
+*/
 function create_all_chambre(text, promo) {
   let chambres = "";
   let arrayChambres = document
@@ -378,8 +457,9 @@ function create_all_chambre(text, promo) {
 
 /*
 Entrer le texte sous format html et remplacer "#voyage_type#" par le type du voyage
-text (String) : texte sous format html
-return (string) : texte modifier
+Remplacer les images dans la partie general de la page
+text (string) : page a modifier (html)
+return (string) : la page html modifie (format HTML)
 */
 function remplace_type_voyage(text) {
   let value_type = document.getElementById("type-transport").value;
@@ -392,6 +472,11 @@ function remplace_type_voyage(text) {
   return text.replaceAll("#voyage_type#", add_type);
 }
 
+/*
+Creation de la date et heure du voyage
+theDate (string) : date sous format "2018-06-12T19:30"
+return (array) : jour et heure
+*/
 function jourDate(theDate) {
     let date_main = new Date(theDate);
 
@@ -405,6 +490,12 @@ function jourDate(theDate) {
     ];
 }
 
+/*
+Calcul l'ecarte entre l'arrive et le depart
+heur1 (string) : heure de depart (exemple : "19:25")
+heur2 (string) : heure d'arrive' (exemple : "19:25")
+return (string) : l'écart entre les deux (exemple : "1h 5min.")
+*/
 function calculDuree(heur1, heur2) {
     let coup1 = heur1.split(":");
     let coup2 = heur2.split(":");
@@ -416,6 +507,15 @@ function calculDuree(heur1, heur2) {
     return Math.floor(heurf)+"h "+minute+"min.";
 }
 
+/*
+Ajouter un transport
+depart (array) : information du depart
+retour (array) : information sur le retour
+detail (string) : (vide)
+aeroport (string) : information sur l'aeroport
+transport (string) : type de transport
+return (string) : texte du voyage (format HTML)
+*/
 function addUnTransport(depart, retour, detail, aeroport, transport) {
     let type = "vol";
     if (transport == "train") {
@@ -445,9 +545,9 @@ function addUnTransport(depart, retour, detail, aeroport, transport) {
     '<div class="compagnie">';
   let arrayDepart = depart[1].split("\n");
   arrayDepart.forEach((element) => {
-    addvoyage = "<p>" + element + "</p>";
+    addvoyage += "<p>" + element + "</p>";
   });
-  addvoyage =
+  addvoyage +=
     "</div>" +
     "</article>" +
     '<article class="detail-vol">' +
@@ -482,9 +582,9 @@ function addUnTransport(depart, retour, detail, aeroport, transport) {
     '<div class="compagnie">';
   let arrayRetour = retour[1].split("\n");
   arrayRetour.forEach((element) => {
-    addvoyage = "<p>" + element + "</p>";
+    addvoyage += "<p>" + element + "</p>";
   });
-  addvoyage =
+  addvoyage +=
     "</div>" +
     "</article>" +
     '<article class="detail-vol">' +
@@ -514,12 +614,18 @@ function addUnTransport(depart, retour, detail, aeroport, transport) {
     '<article class="aeroport">';
   let arrayAerop = aeroport.split("\n");
   arrayAerop.forEach((element) => {
-    addvoyage = "<p>" + element + "</p>";
+    addvoyage += "<p>" + element + "</p>";
   });
-  addvoyage = "</article>" + "</article>";
+  addvoyage += "</article>" + "</article>";
   return addvoyage;
 }
 
+/*
+Ajouter tous les transport a la page
+text (string) : page a modifier (html)
+transport (string) : le type de transport
+return (string) : la page html modifie (format HTML)
+*/
 function allTransport(text, transport) {
     let all_transport = "";
     let arrayTransp = document
@@ -546,6 +652,11 @@ function allTransport(text, transport) {
     return text.replaceAll("#all_transport#", all_transport);
 }
 
+/*
+tableau d'image a afficher dans les transport
+transport (string) : le type de transport
+return (array) : les images a afficher
+*/
 function tabtransportimg(transport) {
   let imgdep1 =
     '<svg stroke-width="0" fill="currentColor" id="plane-right_svg__filled" viewBox="0 0 52 52" height="35px" width="35px" xmlns="http://www.w3.org/2000/svg"><path d="M44.87354,31c-.49659-.0127-7.36377-.57422-12.08594-.96729L15.07129,13.27344A.99816.99816,0,0,0,14.38428,13h-4.918a.99991.99991,0,0,0-.856,1.5166l9.82129,16.272-7.97461.82862L5.13379,27.22852A.99934.99934,0,0,0,4.49756,27H2a1.00035,1.00035,0,0,0-.97412,1.22656L2.604,35.00244A5.11309,5.11309,0,0,0,7.19434,39H46.79443a4.69554,4.69554,0,0,0,3.33643-1.292,3.01322,3.01322,0,0,0,.86719-2.2417C50.94141,33.79785,47.10938,31.00439,44.87354,31Z"></path></svg>';
@@ -577,6 +688,11 @@ function tabtransportimg(transport) {
   return [imgdep1, imgdep2, imgret1, imgret2];
 }
 
+/*
+lire une page html par defaut a modifier et creation de la page html a afficher
+doc (DOM) : page a modifier
+return (array) : information de la page pour ajouter au tableau du back office
+*/
 function loadtext(doc) {
   let name_file = "new_file_" + Date.now() + ".html";
   let htmlPage = "<!DOCTYPE html>" + "\n";
@@ -595,19 +711,15 @@ function loadtext(doc) {
   htmlPage = addServices(htmlPage);
 
   htmlPage = remplace_type_voyage(htmlPage);
-
-  // On ajoute un type MIME pertinent
+  
   var blob = new Blob([htmlPage], { type: "text/html" });
   const blobUrl = URL.createObjectURL(blob);
-
-  // create <a> tag dinamically
+  
   var fileLink = document.createElement("a");
   fileLink.href = blobUrl;
-
-  // it forces the name of the downloaded file
+  
   fileLink.download = name_file;
-
-  // triggers the click event
+  
   fileLink.click();
   return [
     "./" + name_file,
@@ -616,19 +728,20 @@ function loadtext(doc) {
   ];
 }
 
+/*
+sauver les information du tableau du back office
+tab (array) : tableau a sauvegarder
+*/
 function saveData(tab) {
-  // On ajoute un type MIME pertinent
+  
   var blob = new Blob([JSON.stringify(tab)], { type: "text" });
   const blobUrl = URL.createObjectURL(blob);
-
-  // create <a> tag dinamically
+  
   var fileLink = document.createElement("a");
   fileLink.href = blobUrl;
-
-  // it forces the name of the downloaded file
+  
   fileLink.download = "data.json";
-
-  // triggers the click event
+  
   fileLink.click();
 }
 
@@ -649,19 +762,17 @@ function loadHTMLDefault(page) {
   });
 }
 
+/*
+sauvegarde de la page cree dans le back office
+*/
 function saveFile() {
-  /*const formData = new FormData();
-    const photos = document.querySelector('input[type="file"]');
-
-    formData.append('title', 'My Vegas Vacation');
-    for (let i = 0; i < photos.files.length; i++) {
-        formData.append(`photos_${i}`, photos.files[i]);
-    }
-    console.log(formData);*/
   loadHTMLDefault("./page_default.html");
   loadTabDat();
 }
 
+/*
+rendre le bouton de sauvegarde cliquable
+*/
 let itemsValider = document.querySelectorAll(".valider");
 itemsValider.forEach(function (item) {
   item.addEventListener("click", saveFile);
