@@ -1,153 +1,3 @@
-/* start drag drop pour le contenue */
-var dragSrcEl = null;
-    
-    function handleDragStart(e) {
-      this.style.opacity = '0.4';
-      
-      dragSrcEl = this;
-  
-      e.dataTransfer.effectAllowed = 'move';
-      e.dataTransfer.setData('text/html', this.innerHTML);
-    }
-  
-    function handleDragOver(e) {
-      if (e.preventDefault) {
-        e.preventDefault();
-      }
-  
-      e.dataTransfer.dropEffect = 'move';
-      
-      return false;
-    }
-  
-    function handleDragEnter(e) {
-      this.classList.add('over');
-    }
-  
-    function handleDragLeave(e) {
-      this.classList.remove('over');
-    }
-  
-    function handleDrop(e) {
-      if (e.stopPropagation) {
-        e.stopPropagation();
-      }
-      if (dragSrcEl != this) {
-        dragSrcEl.innerHTML = this.innerHTML;
-        this.innerHTML = e.dataTransfer.getData('text/html');
-      }
-
-      form_down_up_contenu_click();
-      
-      return false;
-    }
-  
-    function handleDragEnd(e) {
-      this.style.opacity = '1';
-      
-      let items = document.querySelectorAll('.drag_contenu');
-      items.forEach(function (item) {
-        item.classList.remove('over');
-      });
-    }
-/* end drag drop pour le contenue */
-
-/* start drag drop pour l'image' */
-var dragSrcElImg = null;
-    
-    function handleDragImgStart(e) {
-      this.style.opacity = '0.4';
-      
-      dragSrcElImg = e.target;
-  
-      e.dataTransfer.effectAllowed = 'move';
-      e.dataTransfer.setData('text', e.target.id);
-    }
-  
-    function handleDragImgOver(e) {
-      if (e.preventDefault) {
-        e.preventDefault();
-      }
-  
-      e.dataTransfer.dropEffect = 'move';
-      
-      return false;
-    }
-  
-    function handleDragImgEnter(e) {
-      this.classList.add('over');
-    }
-  
-    function handleDragImgLeave(e) {
-      this.classList.remove('over');
-    }
-  
-    function handleDropImg(e) {
-      if (e.stopPropagation) {
-        e.stopPropagation();
-      }
-      if (dragSrcElImg != this) {
-        let src = document.getElementById(e.dataTransfer.getData('text')).src;
-        let file = document.getElementById(e.dataTransfer.getData('text')).file;
-        dragSrcElImg.src = e.target.src;
-        dragSrcElImg.file = e.target.file;
-        e.target.src = src;
-        e.target.file = file;
-      }
-      
-      return false;
-    }
-  
-    function handleDragImgEnd(e) {
-      this.style.opacity = '1';
-      
-      let items = document.querySelectorAll('.drag_contenu');
-      items.forEach(function (item) {
-        item.classList.remove('over');
-      });
-    }
-/* end drag drop pour l'image */
-
-/* activation du drag drop pour le contenus */
-function allDragDropContenu() {
-    let items = document.querySelectorAll('.drop_contenu .drag_contenu');
-    items.forEach(function(item) {
-      item.addEventListener('dragstart', handleDragStart, false);
-      item.addEventListener('dragenter', handleDragEnter, false);
-      item.addEventListener('dragover', handleDragOver, false);
-      item.addEventListener('dragleave', handleDragLeave, false);
-      item.addEventListener('drop', handleDrop, false);
-      item.addEventListener('dragend', handleDragEnd, false);
-    });
-}
-
-/* activation du drag drop pour les images */
-function allDragDropImg() {
-    let items = document.querySelectorAll('.drop_img .drag_img');
-    items.forEach(function(item) {
-      item.addEventListener('dragstart', handleDragImgStart, false);
-      item.addEventListener('dragenter', handleDragImgEnter, false);
-      item.addEventListener('dragover', handleDragImgOver, false);
-      item.addEventListener('dragleave', handleDragImgLeave, false);
-      item.addEventListener('drop', handleDropImg, false);
-      item.addEventListener('dragend', handleDragImgEnd, false);
-    });
-}
-
-/* La table des pages web de voyage a lire */
-let tabpage = [
-    ["./data_file_vol_solPalmanova.html", "Sol palmanova test", true],
-    ["./vol_solPalmanova.html", "Sol palmanova", true],
-    ["./train_londres.html", "Londres", true],
-    ["./mer_kiel.html", "Kiel", true],
-    ["./vol_losAngeles.html", "Los Angeles", false],
-    ["./vol_okinawa.html", "Okinawa", false],
-    ["./train_cologne.html", "Cologne", false],
-    ["./train_zurich.html", "Zurich", false],
-    ["./mer_buenosAires.html", "Buenos Aires", false],
-    ["./mer_caraibes.html", "Caraïbes", false]
-];
-
 /* variables initialises */
 let nb_contenu_gener = 0;
 let nb_contenu_serv = 0;
@@ -158,11 +8,27 @@ let idAddImg = "";
 let type_transport_value = "vol";
 let up_page = false;
 let chambre_formule = [];
+let nbline = 0;
 
 /* retirer les espaces en trop */
 String.prototype.reduceWhiteSpace = function() {
     return this.replace(/\s+/g, ' ');
 };
+
+function changement_valeur_text(id) {
+    let items = document.getElementById(id).querySelectorAll('input');
+    items.forEach(function(item) {
+      item.addEventListener('input', function(e) {
+        e.target.defaultValue = e.target.value;
+      });
+    });
+    let items1 = document.getElementById(id).querySelectorAll('textarea');
+    items1.forEach(function(item) {
+      item.addEventListener('input', function(e) {
+        e.target.defaultValue = e.target.value;
+      });
+    });
+}
 
 /* supprimer les images */
 function delete_image(e) {
@@ -225,7 +91,7 @@ elemt : le tableau dans le html
 lien (string) : le lien de la page
 title (string) : le titre de la page
  */
-function addRowVoyage(pos, elmt, lien, title){
+function addRowVoyage(pos, elmt, lien, title, up){
     var tr = document.createElement('tr');
     elmt.appendChild(tr);
     var td = document.createElement('td');
@@ -234,12 +100,16 @@ function addRowVoyage(pos, elmt, lien, title){
     tr.appendChild(td);
     var td1 = document.createElement('td');
     td1.classList.add("edit");
-    td1.innerHTML = "<a href=\"#\"><img class=\"modif_row\" id=\"modif_"+pos+"\" src=\"./../img/icons8-modifier.svg\" /></a>";
+    td1.innerHTML = "<input type=\"hidden\" id=\"modif_href_"+pos+"\" value=\""+lien+"\" />"+
+                    "<input type=\"hidden\" id=\"modif_up_"+pos+"\" value=\""+up+"\" />"+
+                    "<a href=\"#\">"+
+                    "<img class=\"modif_row\" id=\"modif_"+pos+"\" src=\"./../img/icons8-modifier.svg\" />"+
+                    "</a>";
     tr.appendChild(td1);
     var td2 = document.createElement('td');
-    var tdText2 = document.createTextNode(title);
-    td2.appendChild(tdText2);
+    td2.innerHTML = '<a href="'+lien+'" id="modif_title_'+pos+'" target="_blank" />'+title+'</a>';
     tr.appendChild(td2);
+    nbline++;
 }
 
 /*
@@ -253,6 +123,7 @@ function create_contenu_all(id_conteneur, id_contenu, class_contenu, contenu) {
     document.getElementById(id_conteneur).innerHTML += '<figure id="'+id_contenu+'" class="'+class_contenu+' drag_contenu" draggable="true">'+
     contenu+
     '</figure>'; 
+    changement_valeur_text(id_conteneur);
     allDragDropContenu();
 }
 
@@ -613,8 +484,8 @@ e (event) : evenement d'ecoute
 */
 function loadHTMLPage(e) {
     let value_tab = Number.parseInt(e.target.id.split("_")[1]);
-    up_page = tabpage[value_tab][2];
-    loadHTML(tabpage[value_tab][0]);
+    up_page = document.getElementById('modif_up_'+value_tab).value;
+    loadHTML(document.getElementById('modif_href_'+value_tab).value);
 }
 
 /*
@@ -634,6 +505,21 @@ function loadHtmlDoc(doc) {
     add_chambre_page(doc)
     document.getElementById('up_page').checked = up_page;
     modif_type_transport();
+}
+
+/* lecture de la page exterieur 
+page (string) : le lien de la page a lire
+*/
+function loadHTML(page){
+    let load_Html = new LoadHTML(page);
+    load_Html.loadDOM().then(function(doc) {
+        // verifier que la valeur de celui-ci est valide
+        if(doc.getElementById("photos-presentation") != undefined) {
+            loadHtmlDoc(doc);
+        } else {
+            alert("impossible de lire le fichier");
+        }
+    });
 }
 
 /*
@@ -766,6 +652,7 @@ function add_the_formule(num, titre, prix) {
     '<label class="une_formule_prix">Prix</label>'+
     '<input class="une_formule_prix_value text_contenu" id="prix_chambre_'+num+'_'+chambre_formule[num]+'" class="prix_chambre" type="number" value="'+prix+'" />'+
     '</figure>';
+    changement_valeur_text('add_formules_'+num);
     chambre_formule[num]++;
     from_del_formule();
 }
@@ -936,10 +823,9 @@ creation du tableau de la recherche par defaut
 */
 function createTabPage() {
     let i = 0;
-
     tabpage.forEach(element => {
         let elmt = document.getElementById("tab_find");
-        addRowVoyage(i, elmt, element[0], element[1]);
+        addRowVoyage(i, elmt, element[0], element[1], element[2]);
         i++;
     });
 }
@@ -1002,7 +888,10 @@ itemsAnnuler.forEach(function(item) {
 });
 
 /* Activer le bouton pour modifier un voyage */
-let modif_row = document.querySelectorAll('.modif_row');
-modif_row.forEach(function(item) {
-    item.addEventListener('click', loadHTMLPage);
-});
+function modif_row_click() {
+    let modif_row = document.querySelectorAll('.modif_row');
+    modif_row.forEach(function(item) {
+        item.addEventListener('click', loadHTMLPage);
+    });
+}
+modif_row_click();
