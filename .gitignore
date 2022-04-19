@@ -1,2 +1,5 @@
 /Project/www/pages/data_file_*
 /Project/www/pages/new_file_*
+/Project/www/css/data_file_*
+/Project/www/data_tmp/
+/Project/www/data/data_file_*

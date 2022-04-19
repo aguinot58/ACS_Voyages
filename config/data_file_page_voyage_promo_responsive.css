@@ -1,0 +1,997 @@
+/* CSS responsive pc => tablette */
+@media all and (max-width:949px){
+
+    section, #photos-presentation, #avis{
+
+        border-radius: 0px;
+        box-shadow: none;
+
+    }
+
+    .separateur_section{
+
+        margin-top: -30px;
+
+    }
+
+}
+
+@media all and (max-width:945px){
+
+    #vols .depart{
+
+        margin-bottom: 50px;
+        
+    }
+
+    #vols .retour{
+
+        margin-top: 20px;
+        margin-bottom: 50px;
+        
+    }
+
+    #vols .depart .detail-vol{
+
+        margin-top: 10px;
+        width: 40%;
+        height: 100%;
+    
+    }
+    
+    #vols .retour .detail-vol{
+    
+        margin-top: 0px;
+        width: 40%;
+        height: 100%;
+        
+    }
+
+
+}
+
+@media all and (max-width:918px){
+
+    #chambres .conteneur-photos-chambre .deux{
+
+        margin-top: 10px;
+    
+    }
+
+    #services .covid{
+
+        max-height: 83px;
+
+    }
+
+}
+
+@media all and (max-width:874px){
+
+    #chambres .bouton-continuer button{
+
+        margin-top: 5px;
+
+    }
+
+    #chambres .details-generaux p{
+
+        margin-right: 10%;
+
+    }
+
+    #chambres .titre-chambre p{
+
+        margin-top: 10px;
+
+    }
+
+    #chambres .conteneur-prix{
+
+        margin-top: 5px;
+
+    }
+
+    #vols{
+
+        padding-bottom: 50px;
+
+    }
+
+}
+
+@media all and (max-width:800px){
+
+    #vols .dte-dep p:nth-child(1), #vols .heure-dep p:nth-child(1), #vols .heure-arr p:nth-child(1), #vols .info-vol p:nth-child(1){
+
+        font-size: 14px;
+    
+    }
+    
+    #vols .dte-dep p:nth-child(2), #vols .heure-dep p:nth-child(2), #vols .heure-arr p:nth-child(2), #vols .info-vol p:nth-child(2){
+    
+        font-size: 12px;
+    
+    }
+
+    #vols .depart p, #vols .retour p{
+
+        font-size: 14px;
+        
+    }
+
+    #vols .compagnie p{
+
+        margin-right: 25px;
+    
+    }
+
+}
+
+@media all and (max-width:793px){
+
+    #chambres .conteneur-prix .promotion, #chambres .conteneur-prix .prix, #chambres .titre-chambre p{
+
+        font-size: 16px;
+    
+    }
+    
+    #chambres .conteneur-infos-prix .infos-offre, #chambres .infos-annul{
+    
+        font-size: 12px;
+    
+    }
+
+    #services .activite{
+
+        max-height: 85px;
+
+    }
+
+}
+
+@media all and (max-width:780px){
+
+    #services .contenu-section-services p{
+
+        font-size: 14px;
+    
+    }
+
+    #services .covid{
+
+        max-height: 70px;
+
+    }
+
+    #services .internet{
+
+        max-height: 55px;
+
+    }
+
+    #services .resto{
+
+        max-height: 55px;
+
+    }
+
+    #services .general{
+
+        max-height: 55px;
+
+    }
+
+    #services .activite{
+
+        max-height: 80px;
+
+    }
+
+}
+
+@media all and (max-width:732px){
+
+    #chambres .conteneur-prix .promotion, #chambres .conteneur-prix .prix, #chambres .titre-chambre p{
+
+        font-size: 14px;
+    
+    }
+
+    #chambres .bouton-continuer button{
+
+        font-size: 12px;
+        width: 90px;
+        height: 40px;
+    
+    }
+
+    #vols article .separateur{
+
+        display: none;
+    
+    }
+
+    #services .activite{
+
+        max-height: 60px;
+
+    }
+
+    #services .masquer-responsive{
+
+        display: none;
+
+    }
+
+    #services .contenu-section-services{
+
+        grid-template-columns: repeat(2, 1fr);
+    
+    }
+
+    #vols .trajet-vol{
+
+        width: 60%;
+        
+    }
+
+}
+
+
+
+/* CSS responsive mobile */
+@media all and (max-width: 656px) {
+
+    /* Divers */
+    h1{
+
+        font-size: 24px;
+
+    }
+
+    /* CSS pastille pourcentage réduction */
+    .pourcentage{
+
+        margin-top: 10px;
+        margin-left: 100px;
+        width: 45px;
+        height: 45px;
+        font-size: 14px;
+
+    }
+
+    section h3{
+
+        text-align: center;
+        margin-left: 0;
+
+    }
+
+    #services, #chambres{
+
+        padding-top: 0;
+
+    }
+
+    .separateur_section {
+
+        margin-top: -30px;
+
+    }
+
+    /* Section photos présentation */
+    #photos-presentation{
+
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+
+    }
+
+    .photos-pres{
+
+        width: 100%;
+        margin-bottom: 0;
+    
+    }
+
+    #gde-photo{
+
+        margin-bottom: 0;
+
+    }
+
+    #gde-photo img{
+
+        width: 100%;
+        height: auto;
+        border-radius: 0px;
+        border: none;
+    
+    }
+
+    #gde-photo img:hover{
+
+        transform: none;
+
+    }
+
+    #pte-photos{
+
+        width: 656px;
+        position: relative;
+        margin-bottom: 0px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        
+    }
+    
+    #pte-photos img{
+    
+        width : 100%;
+        height: auto;
+        border-radius: 0px;
+        border: none;
+        z-index: 2;
+    
+    }
+
+    #pte-photos img:hover{
+
+        transform: none;
+
+    }
+
+    #pte-photos .img-slide-presentation{
+
+        opacity: 0;
+
+    }
+
+    #pte-photos #voyage-slide1{
+
+        opacity: 1;
+
+    }
+
+    #pte-photos #voyage-slide2, #pte-photos #voyage-slide3, #pte-photos #voyage-slide4{
+
+        position: absolute;
+
+    }
+
+    #pte-photos .precedent, #pte-photos .suivant{
+
+        display: block;
+
+    }
+
+    /* Section Navigation */
+    #barre-nav-voyage{
+
+        margin-top: 0px;
+        margin-bottom: -45px;
+        padding-top: 20px;
+        padding-bottom: 10px;
+
+    }
+
+    /* Section Informations générales */
+    #infos-generales{
+
+        margin-top: 0px;
+        padding-left: 20px;
+        padding-right: 20px;
+
+    }
+
+    /* Section Vols */
+    #vols{
+
+        padding-left: 20px;
+        padding-right: 20px;
+
+    }
+
+    #vols .texte{
+
+        width: 100%;
+        align-items: center;
+
+    }
+
+    #vols .trajet-vol{
+
+        width: 55%;
+        
+    }
+
+    #vols .depart, #vols .retour{
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+    }
+
+    #vols .depart p, #vols .retour p{
+
+        width: 60%;
+        
+    }
+
+    #vols .detail-vol{
+
+        margin-top: 10px;
+        align-items: center;
+        
+    }
+
+    #vols .dte-dep, #vols .heure-dep, #vols .heure-arr{
+
+        width: 50%;
+        text-align: center;
+    
+    }
+
+    #vols .info-vol{
+
+        width:70%;
+
+    }
+
+    #vols .dte-dep p, #vols .heure-dep p, #vols .heure-arr p, #vols .info-vol p{
+
+        width: 100%;
+    
+    }
+
+    #vols .detail{
+
+        text-align: center;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    #vols .detail p{
+
+        width: 100%;
+        font-size: 16px;
+        margin-bottom: 15px;
+
+    }
+
+    #vols .aeroport {
+
+        width: 100%;
+        margin-top: 0px;
+        align-items: center;
+
+    }
+
+    #vols .aeroport p:nth-child(1){
+
+        font-size: 16px;
+
+    }
+
+
+    /* Section Chambres */
+    #chambres .conteneur-photos-chambre{
+
+        width: 100%;
+        position: relative;
+        margin-bottom: 0px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        overflow: hidden;
+        
+    }
+
+    #chambres .conteneur-photos-chambre .photos-cotes{
+
+        width: 100%;
+        height: auto;
+        position: absolute;
+    
+    }
+    
+    #chambres .conteneur-photos-chambre .photos-milieu{
+    
+        width: 100%;
+        height: auto;
+    
+    }
+
+    #chambres .conteneur-photos-chambre img{
+    
+        width : 100%;
+        height: auto;
+        border-radius: 0px;
+        border: none;
+        z-index: 2;     
+    
+    }
+
+    #chambres .conteneur-photos-chambre .deux{
+
+        margin-top: 0px;
+    
+    }
+
+    #chambres .conteneur-photos-chambre img:hover{
+
+        transform: none;
+
+    }
+
+    #chambres .conteneur-photos-chambre  .img-slide-chambre1, #chambres .conteneur-photos-chambre  .img-slide-chambre2{
+
+        opacity: 0;
+
+    }
+
+    #chambres .conteneur-photos-chambre  #chambre1-slide1, #chambres .conteneur-photos-chambre  #chambre2-slide1{
+
+        opacity: 1;
+
+    }
+
+    #chambres .conteneur-photos-chambre .precedent, #chambres .conteneur-photos-chambre .suivant{
+
+        display: block;
+        top: 40%;
+    
+    }
+
+    /* Section Services */
+    #services{
+
+        padding: 20px 20px 50px 20px;
+
+    }
+
+    #services .conteneur-general-services{
+
+        padding: 20px 10px 50px 10px;
+
+    }
+
+    #services .activite{
+
+        height: 80px;
+
+    }
+
+    #services .general{
+
+        max-height: 50px;
+
+    }
+
+
+    /* Section Avis */
+    #avis{
+
+        padding-left: 20px;
+        padding-right: 20px;
+
+    }
+
+    #avis .conteneur-general-avis{
+
+        padding-bottom: 20px;
+
+    }
+
+    #avis h3{
+
+        margin-left: 0;
+
+    }
+
+    #avis .conteneur-note{
+
+        width: 60%;
+        align-items: center;
+    
+    }
+
+    #avis .section-avis .conteneur-commentaires{
+
+        display: none;
+
+    }
+
+    #avis .section-avis .nbr-avis{
+
+        margin-top: 10px;
+        width: 30%;
+        text-align: right;
+        
+    }
+
+}
+
+@media all and (max-width: 655px) {
+
+    #fix-menu {
+        display: flex;
+    }
+
+    #menu_mobile {
+        display: block;
+        margin-top: 4px;
+    }
+
+    #barre-nav-voyage{
+
+        display: none;
+
+    }
+
+    #chambres .infos-annul{
+
+        display: none;
+
+
+    }
+
+    #chambres .details-generaux p{
+
+        font-size: 16px;
+
+    }
+
+    #chambres .liste-details li{
+
+        font-size: 14px;
+
+    }
+
+    #chambres .titre-chambre{
+
+        width: 25%;
+        text-align: center;
+        padding-top: 5px;
+        margin-left: 15px;
+    
+    }
+    
+    #chambres .bouton-continuer{
+    
+        width: 25%;
+        text-align: center;
+        margin-top: -5px;
+    
+    }
+
+    #chambres .conteneur-infos-prix{
+
+        width: 40%;
+        text-align: right;
+        margin-right: 15px;
+    
+    }
+
+}
+
+@media all and (max-width: 612px){
+
+    #vols .depart, #vols .retour{
+
+        display:flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+
+    }
+
+    #vols .depart{
+
+        margin-top: 30px;
+
+    }
+
+    #vols .retour{
+
+        margin-top: 70px;
+
+    }
+
+    #vols .trajet-vol, #vols .compagnie-vol, #vols .detail-vol{
+
+        width: 100%;
+        justify-content: center;
+
+    }
+
+    #vols .trajet-vol p, #vols .compagnie-vol p{
+
+        width: 40%;
+        
+    }
+
+    #vols .compagnie-vol{
+
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+    }
+
+    #vols .depart .detail-vol{
+
+        margin-top: 10px;
+        width: 100%;
+
+    }
+
+    #vols .retour .detail-vol{
+
+        margin-top: -10px;
+        width: 100%;
+
+    }
+
+    #vols .dte-dep, #vols .heure-dep, #vols .heure-arr, #vols .info-vol{
+
+        width: 50%;
+    
+    }
+
+    #vols .info-vol p{
+
+        text-align: center;
+
+    }
+
+    #services .titre-section-service{
+
+        width: 100%;
+        background-color: #e6e6e6;
+        border-top: 1px solid black;
+        border-left: 1px solid black;
+
+    }
+
+    #services .conteneur-service{
+
+        flex-direction: column;
+        margin-bottom: 20px;
+
+    }
+
+    #services .conteneur-service p{
+
+        font-size: 12px;
+
+    }
+
+    #services .titre-section-service p{
+
+        font-size: 16px;
+        width: 90%;
+        
+    }
+
+    #services .covid{
+
+        max-height: 50px;
+
+    }
+
+    #services .internet, #services .resto, #services .activite, #services .general{
+
+        max-height: 35px;
+
+    }
+
+}
+
+@media all and (max-width: 570px){
+
+    #chambres .details-generaux p{
+
+        margin-right: 5%;
+
+    }
+
+    #chambres .liste-details ul:nth-child(2){
+
+        margin-left: 70px;
+        
+    }
+
+}
+
+@media all and (max-width:519px){
+
+    #vols .trajet-vol p, #vols .compagnie-vol p{
+
+        width: 50%;
+        
+    }
+
+}
+
+@media all and (max-width: 497px){
+
+    #chambres .liste-details{
+
+        flex-direction: column;
+
+    }
+
+    #chambres .liste-details ul:nth-child(2){
+
+        margin-left: 25px;
+        
+    }
+
+    #chambres .details-generaux p{
+
+        font-size: 14px;
+
+    }
+
+    #chambres .titre-chambre{
+
+        width: 20%;
+
+    }
+
+    #chambres .titre-chambre p{
+
+        font-size: 14px;
+        margin-top: -2px;
+
+    }
+
+    #chambres .conteneur-infos-prix .conteneur-prix p{
+
+        font-size: 12px;
+        margin-top: 0px;
+
+    }
+
+    #chambres .conteneur-infos-prix .infos-offre{
+
+        font-size: 10px;
+
+    }
+
+
+}
+
+@media all and (max-width:432px){
+
+    #vols .trajet-vol p, #vols .compagnie-vol p{
+
+        width: 60%;
+        
+    }
+
+    #chambres .details-generaux{
+
+        flex-direction: column;
+
+    }
+
+    #chambres .bouton-continuer{
+
+        font-size: 12px;
+        width: 90px;
+        height: 60px;
+
+    }
+
+    #chambres .demi-pension, #chambres .tout-compris{
+
+        display: grid;
+        grid-template-columns: repeat(2,auto);
+        height: 100px;
+        align-items: center;
+        justify-items: center;
+        padding: 10px 5px;
+
+
+    }
+
+    #chambres .titre-chambre{
+
+        width: 100%;
+        margin-left: 0;
+        margin-top: 8px;
+
+    }
+
+    #chambres .conteneur-infos-prix{
+
+        width: 100%;
+        margin-top: 8px;
+
+    }
+
+    #chambres .bouton-continuer{
+
+        grid-column-start: 1;
+        grid-column-end: 3;
+        margin-top: 10px;
+
+    }
+
+
+}
+
+@media all and (max-width:373px){
+
+    #vols .trajet-vol p, #vols .compagnie-vol p{
+
+        width: 70%;
+        
+    }
+
+    #services .covid{
+
+        max-height: 60px;
+
+    }
+
+    #services .internet{
+
+        max-height: 45px;
+
+    }
+
+    #services .resto{
+
+        max-height: 50px;
+
+    }
+
+}
+
+@media all and (max-width:332px){
+
+    #vols .trajet-vol p, #vols .compagnie-vol p{
+
+        width: 80%;
+        
+    }
+
+}
+
+
+
+
+/* Boutons précendent et suivant des sliders */
+.precedent, .suivant {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    position: absolute;
+    font-size: 35px;
+    color: rgba(220, 220, 220, 0.8);
+    background-color: rgba(0, 0, 0, 0.25);
+    padding: 10px;
+    z-index: 3;
+}
+
+.precedent {
+    left: 0;
+    top:40%;
+}
+
+.suivant {
+    right: 0;
+    top:40%;
+}
+
+#pte-photos:hover .precedent, #pte-photos:hover .suivant,
+#chambres .conteneur-photos-chambre:hover .precedent, #chambres .conteneur-photos-chambre:hover .suivant {
+    opacity: 1;
+}
+
+
