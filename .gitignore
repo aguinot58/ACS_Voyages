@@ -6,7 +6,6 @@
 /www/config/config_sgbd.php
 /www/config/filedotenv.php
 /www/config/.env
-/www/data
 /www/pages/data_file_*
 /www/pages/new_file_*
 /www/css/data_file_*
